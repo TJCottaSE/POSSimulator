@@ -1,0 +1,525 @@
+\hypertarget{class_form_sim_1_1_generic_handler}{}\section{Form\+Sim.\+Generic\+Handler Class Reference}
+\label{class_form_sim_1_1_generic_handler}\index{Form\+Sim.\+Generic\+Handler@{Form\+Sim.\+Generic\+Handler}}
+
+
+The \mbox{\hyperlink{class_form_sim_1_1_generic_handler}{Generic\+Handler}} class is used as a super class for the more specific \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler}{H\+T\+T\+P\+Handler}} and the \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler}{T\+C\+P\+Handler}} classes which implement the protocol specific functionality. This class sets up the basic entry point for handling Function Request Codes (F\+R\+Cs) that should be implemented with the protocol specific handlers. By utilizing this entry point, Global timers are set up to check for time out occurences and customer references are maintained and tracked.  
+
+
+Inheritance diagram for Form\+Sim.\+Generic\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_form_sim_1_1_generic_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_form_sim_1_1_generic_handler_a49bc6036b85224e56603c6d9401456ef}{Generic\+Handler}} ()
+\item 
+\mbox{\hyperlink{class_form_sim_1_1_generic_handler_aa4beee84a911e42906528ea1d1ad6193}{Generic\+Handler}} (string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a6699d8bfc9cd305baf30ab9413b21605}{Auth\+Token}}, string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ae1d2175b140f4c600d74bbab1e22714e}{Client\+G\+U\+ID}})
+\item 
+\mbox{\hyperlink{class_form_sim_1_1_generic_handler_a39722a58046cfc8b36e3fde80ccc69f1}{Generic\+Handler}} (string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a6699d8bfc9cd305baf30ab9413b21605}{Auth\+Token}}, string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ae1d2175b140f4c600d74bbab1e22714e}{Client\+G\+U\+ID}}, string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a12b51dea082a4d40d86829802adf073b}{I\+P\+Address}}, string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ac6492bb3e4fbe8f66c97b00bd27020c1}{Port}})
+\item 
+virtual async Task$<$ bool $>$ \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a731bd7dada7e2d13fd9c9d768bd387ee}{perform\+Token\+Exchange}} ()
+\begin{DoxyCompactList}\small\item\em Performs the token exchange with the client\+G\+U\+ID and Auth Token in exchange for an access token. N\+O\+TE\+: Both the client\+G\+U\+ID and the Auth\+Token must have been previously set or token exchange will fail. See \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a3c934d9ba3f0efaadac331502ce0189c}{set\+Client\+G\+U\+I\+D(string)}} A\+ND See \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a905d080f02134e993d7afbb1dcc8f44b}{set\+Auth\+Token(string)}} \end{DoxyCompactList}\item 
+async Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{class_form_sim_1_1_generic_handler_affac9485687a2be1595405d657922532}{start}} (Dictionary$<$ string, string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em The primary entry point for executing F\+R\+Cs. \end{DoxyCompactList}\item 
+virtual async Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a806d781f9ad046f8f1574b137ffe86e0}{send\+Raw}} (string raw\+String)
+\begin{DoxyCompactList}\small\item\em Sends a raw request to Shift4 for processing. This is mainly used as a debugging tool, to figure out if there are issues with the request, that can be deciphered ahead of hitting the Shift4 processing engine on the back side. This likely should be run in debug mode when full source is available as common errors that get thrown are not very descriptive. As time permits the error catching should be improved to hopefully throw more useful information about the actual error. \end{DoxyCompactList}\item 
+virtual async Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a9e6731b583644ba3bd5bde94ef86c678}{send\+Raw}} (string raw\+String, Dictionary$<$ string, string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em Overload Sends a raw request to Shift4 for processing. This is mainly used as a debugging tool, to figure out if there are issues with the request, that can be deciphered ahead of hitting the Shift4 processing engine on the back side. This likely should be run in debug mode when full source is available as common errors that get thrown are not very descriptive. As time permits the error catching should be improved to hopefully throw more useful information about the actual error. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a7fa7f097410ae531b30fc6f257bcb393}{set\+I\+P\+Address}} (string address)
+\begin{DoxyCompactList}\small\item\em Sets the IP Address for which the U\+TG / Direct Post endpoint is located. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ab567abdefd58e1fcb3006861c741961c}{get\+I\+P\+Address}} ()
+\begin{DoxyCompactList}\small\item\em Gets the IP Address \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ad22f25ee6f474e2ac46361add5ca7f97}{set\+Port}} (string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ac6492bb3e4fbe8f66c97b00bd27020c1}{Port}})
+\begin{DoxyCompactList}\small\item\em Sets the Port to connect to. N\+O\+TE\+: The use of the Port number only applies when the IP Address is not of the http form. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a0e6f8152a789ba9f82501d45b029de71}{get\+Port}} ()
+\begin{DoxyCompactList}\small\item\em Gets the Current Port Number \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a3c934d9ba3f0efaadac331502ce0189c}{set\+Client\+G\+U\+ID}} (string id)
+\begin{DoxyCompactList}\small\item\em Sets the client G\+U\+ID. This really should not change for production uses, but for a sim it can be changed. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a16fe6657ef9d508f46dae9c8883a3a07}{get\+Client\+G\+U\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current client\+G\+U\+ID. This really should not change for production uses, but for a sim it can be changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a905d080f02134e993d7afbb1dcc8f44b}{set\+Auth\+Token}} (string token)
+\begin{DoxyCompactList}\small\item\em Sets the Auth token that was provided by Shift4. This token needs to be able to be changed in production, so it should not be hard coded like the client\+G\+U\+ID should be. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a4854fdfe77d09a6d2af723d2811099f5}{get\+Auth\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Gets the currently set Auth\+Token \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ac2fe26607f27b8009b3d744bee7ba794}{set\+Access\+Token}} (string token)
+\begin{DoxyCompactList}\small\item\em Sets the Access\+Token. This token is sent in every request and is acquired by perfroming a token exchange. \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a731bd7dada7e2d13fd9c9d768bd387ee}{perform\+Token\+Exchange()}} Failure to get an Access\+Token will result in refused transactions to Shift4. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a220e1a96282940bc7b2fe8d898aec987}{get\+Access\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Gets the Access Token \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a0a3b84b949b002deecb5523cec3cae23}{set\+Merchant\+Type}} (string type)
+\begin{DoxyCompactList}\small\item\em Sets the Merchant Type. In a production environment this is likely already preselected based on their industry, however for a sim it is helpful in managing what fields get sent to the engine. For example, sending the expected length of a hotel stay for a food and beverage vendor does not make sense. Thus setting this to the right values, will prevent unnecessary parameters being passed to the engine. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a9bef42bcd6992d96947612aaab8f88a7}{get\+Merchant\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the Industry Type of the current Merchant \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a8cb06afb7f6aed51488c7418491b9dd3}{start\+Transaction}} (Dictionary$<$ string, string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em Method that sets up the global timers needed to check for timeouts. This method is used internally and should not generally be used except in rare or specific cases. Use of \mbox{\hyperlink{class_form_sim_1_1_generic_handler_affac9485687a2be1595405d657922532}{start(\+Dictionary$<$string, string$>$)}} is advised for best results. \end{DoxyCompactList}\item 
+virtual async Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a824697e5c22a4f1cf8ce4e512b6954ad}{perform\+Transaction}} (Dictionary$<$ string, string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em This method needs to be Overridden by a subclass. Method exists here only to allow complete compilation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ae1d2175b140f4c600d74bbab1e22714e}{Client\+G\+U\+ID}}
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a6699d8bfc9cd305baf30ab9413b21605}{Auth\+Token}}
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ad47864be2c5790106a7538f640b2792f}{Access\+Token}}
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a12b51dea082a4d40d86829802adf073b}{I\+P\+Address}}
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ac6492bb3e4fbe8f66c97b00bd27020c1}{Port}}
+\item 
+\mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}} \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ad66bd80f77548cf730fa7b9bcffb3c0e}{log}} = \mbox{\hyperlink{class_form_sim_1_1_log_writer_ac885dc41c236f618e066cdcee8189f64}{Log\+Writer.\+get\+Instance}}
+\item 
+\mbox{\hyperlink{class_form_sim_1_1_helper}{Helper}} \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a031b68c3e31ae8c99dc60a26d33f5de5}{helper}} = \mbox{\hyperlink{class_form_sim_1_1_helper_ac61d1dca7ce9b1fa7e4ce17e99b0b7e1}{Helper.\+get\+Instance}}
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a8b7d568966660d7d3700eac963caa504}{Merchant\+Type}} = \char`\"{}Mo\+To\+Ecom\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_form_sim_1_1_generic_handler}{Generic\+Handler}} class is used as a super class for the more specific \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler}{H\+T\+T\+P\+Handler}} and the \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler}{T\+C\+P\+Handler}} classes which implement the protocol specific functionality. This class sets up the basic entry point for handling Function Request Codes (F\+R\+Cs) that should be implemented with the protocol specific handlers. By utilizing this entry point, Global timers are set up to check for time out occurences and customer references are maintained and tracked. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a49bc6036b85224e56603c6d9401456ef}\label{class_form_sim_1_1_generic_handler_a49bc6036b85224e56603c6d9401456ef}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!Generic\+Handler@{Generic\+Handler}}
+\index{Generic\+Handler@{Generic\+Handler}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{Generic\+Handler()}{GenericHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Form\+Sim.\+Generic\+Handler.\+Generic\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_aa4beee84a911e42906528ea1d1ad6193}\label{class_form_sim_1_1_generic_handler_aa4beee84a911e42906528ea1d1ad6193}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!Generic\+Handler@{Generic\+Handler}}
+\index{Generic\+Handler@{Generic\+Handler}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{Generic\+Handler()}{GenericHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Form\+Sim.\+Generic\+Handler.\+Generic\+Handler (\begin{DoxyParamCaption}\item[{string}]{Auth\+Token,  }\item[{string}]{Client\+G\+U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a39722a58046cfc8b36e3fde80ccc69f1}\label{class_form_sim_1_1_generic_handler_a39722a58046cfc8b36e3fde80ccc69f1}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!Generic\+Handler@{Generic\+Handler}}
+\index{Generic\+Handler@{Generic\+Handler}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{Generic\+Handler()}{GenericHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Form\+Sim.\+Generic\+Handler.\+Generic\+Handler (\begin{DoxyParamCaption}\item[{string}]{Auth\+Token,  }\item[{string}]{Client\+G\+U\+ID,  }\item[{string}]{I\+P\+Address,  }\item[{string}]{Port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a220e1a96282940bc7b2fe8d898aec987}\label{class_form_sim_1_1_generic_handler_a220e1a96282940bc7b2fe8d898aec987}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!get\+Access\+Token@{get\+Access\+Token}}
+\index{get\+Access\+Token@{get\+Access\+Token}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{get\+Access\+Token()}{getAccessToken()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+get\+Access\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Access Token 
+
+\begin{DoxyReturn}{Returns}
+The Access Token
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_ad24521be35d127e83221c3c7ecf6fbf8}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a4854fdfe77d09a6d2af723d2811099f5}\label{class_form_sim_1_1_generic_handler_a4854fdfe77d09a6d2af723d2811099f5}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!get\+Auth\+Token@{get\+Auth\+Token}}
+\index{get\+Auth\+Token@{get\+Auth\+Token}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{get\+Auth\+Token()}{getAuthToken()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+get\+Auth\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the currently set Auth\+Token 
+
+\begin{DoxyReturn}{Returns}
+The Auth\+Token
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_aeebaee9e36c649daae23db9fc710b261}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a16fe6657ef9d508f46dae9c8883a3a07}\label{class_form_sim_1_1_generic_handler_a16fe6657ef9d508f46dae9c8883a3a07}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!get\+Client\+G\+U\+ID@{get\+Client\+G\+U\+ID}}
+\index{get\+Client\+G\+U\+ID@{get\+Client\+G\+U\+ID}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{get\+Client\+G\+U\+I\+D()}{getClientGUID()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+get\+Client\+G\+U\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current client\+G\+U\+ID. This really should not change for production uses, but for a sim it can be changed. 
+
+\begin{DoxyReturn}{Returns}
+the current client\+G\+U\+ID
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a66f72d339aebc7c5b434026953a79044}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_ab567abdefd58e1fcb3006861c741961c}\label{class_form_sim_1_1_generic_handler_ab567abdefd58e1fcb3006861c741961c}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!get\+I\+P\+Address@{get\+I\+P\+Address}}
+\index{get\+I\+P\+Address@{get\+I\+P\+Address}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{get\+I\+P\+Address()}{getIPAddress()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+get\+I\+P\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the IP Address 
+
+\begin{DoxyReturn}{Returns}
+The string representation of the IP Address
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_ab4c19dd9eb34e0375b8a436fd01b79d0}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a9bef42bcd6992d96947612aaab8f88a7}\label{class_form_sim_1_1_generic_handler_a9bef42bcd6992d96947612aaab8f88a7}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!get\+Merchant\+Type@{get\+Merchant\+Type}}
+\index{get\+Merchant\+Type@{get\+Merchant\+Type}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{get\+Merchant\+Type()}{getMerchantType()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+get\+Merchant\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Industry Type of the current Merchant 
+
+\begin{DoxyReturn}{Returns}
+Industry Type of Merchant
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_ad7484e0f6199cfae3beb33d91d6f1368}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a0e6f8152a789ba9f82501d45b029de71}\label{class_form_sim_1_1_generic_handler_a0e6f8152a789ba9f82501d45b029de71}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!get\+Port@{get\+Port}}
+\index{get\+Port@{get\+Port}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{get\+Port()}{getPort()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Current Port Number 
+
+\begin{DoxyReturn}{Returns}
+String Representation of the current port
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_add0725551d06bb4cfb33c23bef426814}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a731bd7dada7e2d13fd9c9d768bd387ee}\label{class_form_sim_1_1_generic_handler_a731bd7dada7e2d13fd9c9d768bd387ee}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!perform\+Token\+Exchange@{perform\+Token\+Exchange}}
+\index{perform\+Token\+Exchange@{perform\+Token\+Exchange}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{perform\+Token\+Exchange()}{performTokenExchange()}}
+{\footnotesize\ttfamily virtual async Task$<$bool$>$ Form\+Sim.\+Generic\+Handler.\+perform\+Token\+Exchange (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Performs the token exchange with the client\+G\+U\+ID and Auth Token in exchange for an access token. N\+O\+TE\+: Both the client\+G\+U\+ID and the Auth\+Token must have been previously set or token exchange will fail. See \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a3c934d9ba3f0efaadac331502ce0189c}{set\+Client\+G\+U\+I\+D(string)}} A\+ND See \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a905d080f02134e993d7afbb1dcc8f44b}{set\+Auth\+Token(string)}} 
+
+\begin{DoxyReturn}{Returns}
+True if an Access token was received and set, false otherwise
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a32c299d3cb3cdd6c444e76b3671af1b4}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_form_sim_1_1_rest_handler_abd5c425be2b6c9e30ca3cfc0fb696aa9}{Form\+Sim.\+Rest\+Handler}}, \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler_a61075c8a24b97ae7c86d357d6ee5a49e}{Form\+Sim.\+T\+C\+P\+Handler}}, and \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler_ae2ace13d7dc63f0bf1e1ef1a41bf8a3e}{Form\+Sim.\+H\+T\+T\+P\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a824697e5c22a4f1cf8ce4e512b6954ad}\label{class_form_sim_1_1_generic_handler_a824697e5c22a4f1cf8ce4e512b6954ad}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!perform\+Transaction@{perform\+Transaction}}
+\index{perform\+Transaction@{perform\+Transaction}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{perform\+Transaction()}{performTransaction()}}
+{\footnotesize\ttfamily virtual async Task$<$Dictionary$<$string, string$>$ $>$ Form\+Sim.\+Generic\+Handler.\+perform\+Transaction (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+This method needs to be Overridden by a subclass. Method exists here only to allow complete compilation. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Not\+Implemented\+Exception} & If not overridden.\\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & A dictionary of parameters sent from the front end. See \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a2a2a8a776e774e5f8b5e2b7e623a26a6}{F\+R\+C\+\_\+\+Handler.\+start(\+Dictionary$<$string, string$>$)}} for a listing of the parameters in the Dictionary.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A thread with the results of the F\+RC in a dictionary.
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_form_sim_1_1_rest_handler_aaba7a1239d5e4e2eb63e0f24f76341d1}{Form\+Sim.\+Rest\+Handler}}, \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler_a7762d051722dd2ac8bee1c26043760f3}{Form\+Sim.\+T\+C\+P\+Handler}}, and \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler_a1b87e232c94cf390f7a9656744006639}{Form\+Sim.\+H\+T\+T\+P\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a806d781f9ad046f8f1574b137ffe86e0}\label{class_form_sim_1_1_generic_handler_a806d781f9ad046f8f1574b137ffe86e0}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!send\+Raw@{send\+Raw}}
+\index{send\+Raw@{send\+Raw}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{send\+Raw()}{sendRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual async Task$<$Dictionary$<$string, string$>$ $>$ Form\+Sim.\+Generic\+Handler.\+send\+Raw (\begin{DoxyParamCaption}\item[{string}]{raw\+String }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sends a raw request to Shift4 for processing. This is mainly used as a debugging tool, to figure out if there are issues with the request, that can be deciphered ahead of hitting the Shift4 processing engine on the back side. This likely should be run in debug mode when full source is available as common errors that get thrown are not very descriptive. As time permits the error catching should be improved to hopefully throw more useful information about the actual error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+String} & The Raw String to be sent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Dictionary of the returned parameters of the last function called. See N\+O\+TE at\+: \mbox{\hyperlink{class_form_sim_1_1_generic_handler_affac9485687a2be1595405d657922532}{start(\+Dictionary$<$string, string$>$)}} as this note also applies here.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a1f855ed4026632d00ac5fc6784c3bf0f}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler_a810309bc6e943b6ff12ebed8401613f0}{Form\+Sim.\+T\+C\+P\+Handler}}, and \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler_a31006e646afd7cb331784dce27760d5b}{Form\+Sim.\+H\+T\+T\+P\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a9e6731b583644ba3bd5bde94ef86c678}\label{class_form_sim_1_1_generic_handler_a9e6731b583644ba3bd5bde94ef86c678}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!send\+Raw@{send\+Raw}}
+\index{send\+Raw@{send\+Raw}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{send\+Raw()}{sendRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual async Task$<$Dictionary$<$string, string$>$ $>$ Form\+Sim.\+Generic\+Handler.\+send\+Raw (\begin{DoxyParamCaption}\item[{string}]{raw\+String,  }\item[{Dictionary$<$ string, string $>$}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Overload Sends a raw request to Shift4 for processing. This is mainly used as a debugging tool, to figure out if there are issues with the request, that can be deciphered ahead of hitting the Shift4 processing engine on the back side. This likely should be run in debug mode when full source is available as common errors that get thrown are not very descriptive. As time permits the error catching should be improved to hopefully throw more useful information about the actual error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+String} & The raw string to be sent\\
+\hline
+{\em parameters} & A list of parameters from the front end\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_ad4b9146b6142d1d6ded15e5de4ed4675}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a4a777189e9e16dc9970fe8f2557555db}{Form\+Sim.\+Rest\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_ac2fe26607f27b8009b3d744bee7ba794}\label{class_form_sim_1_1_generic_handler_ac2fe26607f27b8009b3d744bee7ba794}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!set\+Access\+Token@{set\+Access\+Token}}
+\index{set\+Access\+Token@{set\+Access\+Token}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{set\+Access\+Token()}{setAccessToken()}}
+{\footnotesize\ttfamily void Form\+Sim.\+Generic\+Handler.\+set\+Access\+Token (\begin{DoxyParamCaption}\item[{string}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the Access\+Token. This token is sent in every request and is acquired by perfroming a token exchange. \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a731bd7dada7e2d13fd9c9d768bd387ee}{perform\+Token\+Exchange()}} Failure to get an Access\+Token will result in refused transactions to Shift4. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & The Access Token\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a6a11b11aaf8b033b87de9fddaf2d325e}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a905d080f02134e993d7afbb1dcc8f44b}\label{class_form_sim_1_1_generic_handler_a905d080f02134e993d7afbb1dcc8f44b}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!set\+Auth\+Token@{set\+Auth\+Token}}
+\index{set\+Auth\+Token@{set\+Auth\+Token}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{set\+Auth\+Token()}{setAuthToken()}}
+{\footnotesize\ttfamily void Form\+Sim.\+Generic\+Handler.\+set\+Auth\+Token (\begin{DoxyParamCaption}\item[{string}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the Auth token that was provided by Shift4. This token needs to be able to be changed in production, so it should not be hard coded like the client\+G\+U\+ID should be. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & The Auth\+Token for a particular mid\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a1314ea0937067435e3326818baa9d0c1}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a3c934d9ba3f0efaadac331502ce0189c}\label{class_form_sim_1_1_generic_handler_a3c934d9ba3f0efaadac331502ce0189c}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!set\+Client\+G\+U\+ID@{set\+Client\+G\+U\+ID}}
+\index{set\+Client\+G\+U\+ID@{set\+Client\+G\+U\+ID}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{set\+Client\+G\+U\+I\+D()}{setClientGUID()}}
+{\footnotesize\ttfamily void Form\+Sim.\+Generic\+Handler.\+set\+Client\+G\+U\+ID (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the client G\+U\+ID. This really should not change for production uses, but for a sim it can be changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & client\+G\+U\+ID provided by Shift4\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a3c77b2e99c98553928e463a9cbb5f7d4}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a7fa7f097410ae531b30fc6f257bcb393}\label{class_form_sim_1_1_generic_handler_a7fa7f097410ae531b30fc6f257bcb393}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!set\+I\+P\+Address@{set\+I\+P\+Address}}
+\index{set\+I\+P\+Address@{set\+I\+P\+Address}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{set\+I\+P\+Address()}{setIPAddress()}}
+{\footnotesize\ttfamily void Form\+Sim.\+Generic\+Handler.\+set\+I\+P\+Address (\begin{DoxyParamCaption}\item[{string}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the IP Address for which the U\+TG / Direct Post endpoint is located. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The IP address of the U\+TG, \\
+\hline
+\end{DoxyParams}
+or
+
+The web address of the direct post endpoint$<$example$>$\href{https://www.shift4test.com}{\tt https\+://www.\+shift4test.\+com}
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a702c2593fce6995a49f0fb509a2c7605}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a0a3b84b949b002deecb5523cec3cae23}\label{class_form_sim_1_1_generic_handler_a0a3b84b949b002deecb5523cec3cae23}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!set\+Merchant\+Type@{set\+Merchant\+Type}}
+\index{set\+Merchant\+Type@{set\+Merchant\+Type}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{set\+Merchant\+Type()}{setMerchantType()}}
+{\footnotesize\ttfamily void Form\+Sim.\+Generic\+Handler.\+set\+Merchant\+Type (\begin{DoxyParamCaption}\item[{string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the Merchant Type. In a production environment this is likely already preselected based on their industry, however for a sim it is helpful in managing what fields get sent to the engine. For example, sending the expected length of a hotel stay for a food and beverage vendor does not make sense. Thus setting this to the right values, will prevent unnecessary parameters being passed to the engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The Merchant Industry Type\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a23a2917fb9455954723cd3982b31b76c}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_ad22f25ee6f474e2ac46361add5ca7f97}\label{class_form_sim_1_1_generic_handler_ad22f25ee6f474e2ac46361add5ca7f97}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!set\+Port@{set\+Port}}
+\index{set\+Port@{set\+Port}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{set\+Port()}{setPort()}}
+{\footnotesize\ttfamily void Form\+Sim.\+Generic\+Handler.\+set\+Port (\begin{DoxyParamCaption}\item[{string}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the Port to connect to. N\+O\+TE\+: The use of the Port number only applies when the IP Address is not of the http form. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a0a0a83b20fd2b3ec4ef9bbe5f5549b35}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_affac9485687a2be1595405d657922532}\label{class_form_sim_1_1_generic_handler_affac9485687a2be1595405d657922532}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!start@{start}}
+\index{start@{start}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily async Task$<$Dictionary$<$string, string$>$ $>$ Form\+Sim.\+Generic\+Handler.\+start (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The primary entry point for executing F\+R\+Cs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & A dictionary of parameters sent from the front end. See \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a2a2a8a776e774e5f8b5e2b7e623a26a6}{F\+R\+C\+\_\+\+Handler.\+start(\+Dictionary$<$string, string$>$)}} for a listing of the parameters in the Dictionary.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A thread with the results of the F\+RC in a dictionary.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a2a2a8a776e774e5f8b5e2b7e623a26a6}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a8cb06afb7f6aed51488c7418491b9dd3}\label{class_form_sim_1_1_generic_handler_a8cb06afb7f6aed51488c7418491b9dd3}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!start\+Transaction@{start\+Transaction}}
+\index{start\+Transaction@{start\+Transaction}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{start\+Transaction()}{startTransaction()}}
+{\footnotesize\ttfamily async Task$<$Dictionary$<$string, string$>$ $>$ Form\+Sim.\+Generic\+Handler.\+start\+Transaction (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Method that sets up the global timers needed to check for timeouts. This method is used internally and should not generally be used except in rare or specific cases. Use of \mbox{\hyperlink{class_form_sim_1_1_generic_handler_affac9485687a2be1595405d657922532}{start(\+Dictionary$<$string, string$>$)}} is advised for best results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & A dictionary of parameters sent from the front end. See \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a2a2a8a776e774e5f8b5e2b7e623a26a6}{F\+R\+C\+\_\+\+Handler.\+start(\+Dictionary$<$string, string$>$)}} for a listing of the parameters in the Dictionary.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A thread with the results of the F\+RC in a dictionary.
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_ad47864be2c5790106a7538f640b2792f}\label{class_form_sim_1_1_generic_handler_ad47864be2c5790106a7538f640b2792f}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!Access\+Token@{Access\+Token}}
+\index{Access\+Token@{Access\+Token}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{Access\+Token}{AccessToken}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+Access\+Token\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a6699d8bfc9cd305baf30ab9413b21605}\label{class_form_sim_1_1_generic_handler_a6699d8bfc9cd305baf30ab9413b21605}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!Auth\+Token@{Auth\+Token}}
+\index{Auth\+Token@{Auth\+Token}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{Auth\+Token}{AuthToken}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+Auth\+Token\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_ae1d2175b140f4c600d74bbab1e22714e}\label{class_form_sim_1_1_generic_handler_ae1d2175b140f4c600d74bbab1e22714e}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!Client\+G\+U\+ID@{Client\+G\+U\+ID}}
+\index{Client\+G\+U\+ID@{Client\+G\+U\+ID}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{Client\+G\+U\+ID}{ClientGUID}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+Client\+G\+U\+ID\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a031b68c3e31ae8c99dc60a26d33f5de5}\label{class_form_sim_1_1_generic_handler_a031b68c3e31ae8c99dc60a26d33f5de5}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!helper@{helper}}
+\index{helper@{helper}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{helper}{helper}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_form_sim_1_1_helper}{Helper}} Form\+Sim.\+Generic\+Handler.\+helper = \mbox{\hyperlink{class_form_sim_1_1_helper_ac61d1dca7ce9b1fa7e4ce17e99b0b7e1}{Helper.\+get\+Instance}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a12b51dea082a4d40d86829802adf073b}\label{class_form_sim_1_1_generic_handler_a12b51dea082a4d40d86829802adf073b}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!I\+P\+Address@{I\+P\+Address}}
+\index{I\+P\+Address@{I\+P\+Address}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{I\+P\+Address}{IPAddress}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+I\+P\+Address\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_ad66bd80f77548cf730fa7b9bcffb3c0e}\label{class_form_sim_1_1_generic_handler_ad66bd80f77548cf730fa7b9bcffb3c0e}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!log@{log}}
+\index{log@{log}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}} Form\+Sim.\+Generic\+Handler.\+log = \mbox{\hyperlink{class_form_sim_1_1_log_writer_ac885dc41c236f618e066cdcee8189f64}{Log\+Writer.\+get\+Instance}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_a8b7d568966660d7d3700eac963caa504}\label{class_form_sim_1_1_generic_handler_a8b7d568966660d7d3700eac963caa504}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!Merchant\+Type@{Merchant\+Type}}
+\index{Merchant\+Type@{Merchant\+Type}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{Merchant\+Type}{MerchantType}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+Merchant\+Type = \char`\"{}Mo\+To\+Ecom\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_generic_handler_ac6492bb3e4fbe8f66c97b00bd27020c1}\label{class_form_sim_1_1_generic_handler_ac6492bb3e4fbe8f66c97b00bd27020c1}} 
+\index{Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}!Port@{Port}}
+\index{Port@{Port}!Form\+Sim\+::\+Generic\+Handler@{Form\+Sim\+::\+Generic\+Handler}}
+\subsubsection{\texorpdfstring{Port}{Port}}
+{\footnotesize\ttfamily string Form\+Sim.\+Generic\+Handler.\+Port\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_generic_handler_8cs}{Generic\+Handler.\+cs}}\end{DoxyCompactItemize}

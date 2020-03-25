@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The XMLHttpRequest Object</h1>
+<form action="https://access.shift4test.com" method="POST" target="_blank">
+    <input type="hidden" name="fuseaction" value="account.authorizeClient">
+    <input type="hidden" name="i4go_clientip" value="10.0.2.124">
+    <input type="hidden" name="i4go_accesstoken" value="390B2B95-E74C-4774-A88B-C07E5B020488">
+    <input type="submit" value="Get Access Token">
+</form>
+<p>---------------------------------------------------------------------------------------------------------------------</p>
+<button type="button" onclick="showManualEntry()">Manual Entry</button>
+<button type="button" onclick="showTrackDataEntry()">Track Data Entry</button>
+<button type="button" onclick="showP2PE_Entry()">P2PE Data Entry</button>
+<div id="manualEntry" hidden>
+    <p>---------------------------------------------------------------------------------------------------------------------</p>
+    <form action="https://i4go-payment.shift4test.com" method="POST">
+        <input type="hidden" name="fuseaction" value="form.cardEntry">
+        <input type="hidden" name="i4go_successurl" value="http://www.google.com">
+        <input type="hidden" name="i4go_failurl" value="http://www.github.com">
+        <label>Access Block: </label><input id="accessBlock" type="text" name="i4go_accessblock"><br>
+        <label>Card Number: </label><input id="cardNumber" type="numeric" name="i4go_cardnumber">
+        <label>Expiration Month: </label><input id="expirationMonth" type="numeric" name="i4go_expirationmonth">
+        <label>Expiration Year: </label><input id="expirationYear" type="numeric" name="i4go_expirationyear">
+        <label>CVV Code</label><input id="CVV" type="numeric" name="i4go_cvv2code">
+        <input type="hidden" name="i4go_cvv2indicator" value="1">
+
+    </form>
+</div>
+
+<div id="trackDataEntry" hidden> <!-- Note this does not work with the AJAX Request, needs id labels to work -->
+    <p>---------------------------------------------------------------------------------------------------------------------</p>
+    <label>Track Data: </label><textarea id="txtArea"></textarea><br>
+    <form id="trackData" action="https://i4go-payment.shift4test.com" method="POST">
+        <input type="hidden" name="fuseaction" value="form.cardEntry">
+        <input type="hidden" name="i4go_successurl" value="http://www.google.com">
+        <input type="hidden" name="i4go_failurl" value="http://www.github.com">
+        <label>Access Block: </label><input type="text" name="i4go_accessblock">	
+
+    </form>
+    <button type="button" onclick="parseTrackData()">Parse</button>
+</div>
+
+<div id="P2PE_Entry" hidden> <!-- Note this does not work with the AJAX Request, needs id labels to work -->
+    <p>---------------------------------------------------------------------------------------------------------------------</p>
+    <form id="P2PE_Data" action="https://i4go-payment.shift4test.com" method="POST">
+        <input type="hidden" name="fuseaction" value="form.cardEntry">
+        <input type="hidden" name="i4go_successurl" value="http://www.google.com">
+        <input type="hidden" name="i4go_failurl" value="http://www.github.com">
+        <label>Access Block: </label><input type="text" name="i4go_accessblock">	
+        <label>P2PE Block: </label><input type="text" name="i4go_p2peblock">
+        <input type="hidden" name="i4go_p2pedevicetype" value="01">
+
+    </form>
+</div>
+<p>---------------------------------------------------------------------------------------------------------------------</p>
+<button type="button" onclick="loadDoc()">Process Transaction</button>
+
+<p id="demo"></p>
+
+
+<script>
+    function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var res = JSON.parse(this.responseText);
+                var inp = document.createElement("textarea");
+                inp.setAttribute("cols", "100");
+                inp.setAttribute("rows", "400");
+                inp.value = JSON.stringify(res, undefined, 4);
+                document.getElementById("demo").appendChild(inp);
+            }
+        };
+        var CHD = "fuseaction=api.jsonPostCardEntry";
+        CHD += "&i4go_accessblock=" + document.getElementById("accessBlock").value;
+        CHD += "&i4go_cardnumber=" + document.getElementById("cardNumber").value;
+        CHD += "&i4go_expirationmonth=" + document.getElementById("expirationMonth").value;
+        CHD += "&i4go_expirationyear=" + document.getElementById("expirationYear").value;
+        CHD += "&i4go_cvv2code=" + document.getElementById("CVV").value;
+        
+        xhttp.open("POST", "https://i4go-payment.shift4test.com/index.cfm", true);
+        xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhttp.send(CHD);
+    }
+
+    function showManualEntry(){
+        document.getElementById("manualEntry").removeAttribute("hidden");
+    }
+    function showTrackDataEntry(){
+        document.getElementById("trackDataEntry").removeAttribute("hidden");
+    }
+    function showP2PE_Entry(){
+        document.getElementById("P2PE_Entry").removeAttribute("hidden");
+    }
+    function parseTrackData(){
+        console.log("Something happened");
+        var trackData1 = document.getElementById("txtArea").value;
+        var input = document.createElement("input");
+        input.setAttribute("type", "hidden");
+        input.setAttribute("name", "i4go_trackinformation");
+        input.setAttribute("value", trackData1);
+
+        if (trackData1.charAt(0) == "%"){
+            // Track 1 Only or Dual Track
+            var expBreak = trackData1.lastIndexOf('^');
+            var exp = trackData1.substring(expBreak + 1, expBreak + 5);
+            var expYear = exp.charAt(0) + exp.charAt(1);
+            var expMonth = exp.charAt(2) + exp.charAt(3);
+            var nameBreak = trackData1.indexOf('^');
+            var cardNumber = trackData1.substring(2, nameBreak);
+        }
+        else {
+            // Track 2 Only
+            var expBreak = trackData1.lastIndexOf('=');
+            var exp = trackData1.substring(expBreak + 1, expBreak + 5);
+            var expYear = exp.charAt(0) + exp.charAt(1);
+            var expMonth = exp.charAt(2) + exp.charAt(3);
+            var cardNumber = trackData1.substring(1, expBreak);
+        }
+        var input2 = document.createElement("input");
+        input2.setAttribute("type", "hidden");
+        input2.setAttribute("name", "i4go_cardnumber");
+        input2.setAttribute("value", cardNumber);
+        var input3 = document.createElement("input");
+        input3.setAttribute("type", "hidden");
+        input3.setAttribute("name", "i4go_expirationmonth");
+        input3.setAttribute("value", expMonth);
+        var input4 = document.createElement("input");
+        input4.setAttribute("type", "hidden");
+        input4.setAttribute("name", "i4go_expirationyear");
+        input4.setAttribute("value", expYear);
+
+        document.getElementById("trackData").appendChild(input);
+        document.getElementById("trackData").appendChild(input2);
+        document.getElementById("trackData").appendChild(input3);
+        document.getElementById("trackData").appendChild(input4);
+    }
+
+</script>
+
+</body>
+</html>

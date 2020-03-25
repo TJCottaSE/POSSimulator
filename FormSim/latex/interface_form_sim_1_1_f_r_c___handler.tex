@@ -1,0 +1,391 @@
+\hypertarget{interface_form_sim_1_1_f_r_c___handler}{}\section{Form\+Sim.\+F\+R\+C\+\_\+\+Handler Interface Reference}
+\label{interface_form_sim_1_1_f_r_c___handler}\index{Form\+Sim.\+F\+R\+C\+\_\+\+Handler@{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}
+Inheritance diagram for Form\+Sim.\+F\+R\+C\+\_\+\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.748466cm]{interface_form_sim_1_1_f_r_c___handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Task$<$ bool $>$ \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a32c299d3cb3cdd6c444e76b3671af1b4}{perform\+Token\+Exchange}} ()
+\begin{DoxyCompactList}\small\item\em Performs the token exchange with the client\+G\+U\+ID and Auth Token in exchange for an access token. N\+O\+TE\+: Both the client\+G\+U\+ID and the Auth\+Token must have been previously set or token exchange will fail. See \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a3c77b2e99c98553928e463a9cbb5f7d4}{set\+Client\+G\+U\+I\+D(string)}} A\+ND See \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a1314ea0937067435e3326818baa9d0c1}{set\+Auth\+Token(string)}} \end{DoxyCompactList}\item 
+Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a2a2a8a776e774e5f8b5e2b7e623a26a6}{start}} (Dictionary$<$ string, string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em This provides the main entry point for the performing of a function based on the function request code that is passed in {\itshape parameters} . It automatically adjusts requestor references, sets a global timer for each function (for timeouts), and performs automatic voids and lookups based on the \char`\"{}\+Basic Transaction Flow\char`\"{} diagram found in the A\+PI Integrations guide. (Ver. 2.\+34, Pub. 6/6/18) \end{DoxyCompactList}\item 
+Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a1f855ed4026632d00ac5fc6784c3bf0f}{send\+Raw}} (string raw\+String)
+\begin{DoxyCompactList}\small\item\em Sends a raw request to Shift4 for processing. This is mainly used as a debugging tool, to figure out if there are issues with the request, that can be deciphered ahead of hitting the Shift4 processing engine on the back side. This likely should be run in debug mode when full source is available as common errors that get thrown are not very descriptive. As time permits the error catching should be improved to hopefully throw more useful information about the actual error. \end{DoxyCompactList}\item 
+Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_ad4b9146b6142d1d6ded15e5de4ed4675}{send\+Raw}} (string raw\+String, Dictionary$<$ string, string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em Overload Sends a raw request to Shift4 for processing. This is mainly used as a debugging tool, to figure out if there are issues with the request, that can be deciphered ahead of hitting the Shift4 processing engine on the back side. This likely should be run in debug mode when full source is available as common errors that get thrown are not very descriptive. As time permits the error catching should be improved to hopefully throw more useful information about the actual error. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a702c2593fce6995a49f0fb509a2c7605}{set\+I\+P\+Address}} (string address)
+\begin{DoxyCompactList}\small\item\em Sets the IP Address for which the U\+TG / Direct Post endpoint is located. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_ab4c19dd9eb34e0375b8a436fd01b79d0}{get\+I\+P\+Address}} ()
+\begin{DoxyCompactList}\small\item\em Gets the IP Address \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a0a0a83b20fd2b3ec4ef9bbe5f5549b35}{set\+Port}} (string port)
+\begin{DoxyCompactList}\small\item\em Sets the Port to connect to. N\+O\+TE\+: The use of the Port number only applies when the IP Address is not of the http form. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_add0725551d06bb4cfb33c23bef426814}{get\+Port}} ()
+\begin{DoxyCompactList}\small\item\em Gets the Current Port Number \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a3c77b2e99c98553928e463a9cbb5f7d4}{set\+Client\+G\+U\+ID}} (string id)
+\begin{DoxyCompactList}\small\item\em Sets the client G\+U\+ID. This really should not change for production uses, but for a sim it can be changed. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a66f72d339aebc7c5b434026953a79044}{get\+Client\+G\+U\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current client\+G\+U\+ID. This really should not change for production uses, but for a sim it can be changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a1314ea0937067435e3326818baa9d0c1}{set\+Auth\+Token}} (string token)
+\begin{DoxyCompactList}\small\item\em Sets the Auth token that was provided by Shift4. This token needs to be able to be changed in production, so it should not be hard coded like the client\+G\+U\+ID should be. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_aeebaee9e36c649daae23db9fc710b261}{get\+Auth\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Gets the currently set Auth\+Token \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a6a11b11aaf8b033b87de9fddaf2d325e}{set\+Access\+Token}} (string token)
+\begin{DoxyCompactList}\small\item\em Sets the Access\+Token. This token is sent in every request and is acquired by perfroming a token exchange. \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a32c299d3cb3cdd6c444e76b3671af1b4}{perform\+Token\+Exchange()}} Failure to get an Access\+Token will result in refused transactions to Shift4. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_ad24521be35d127e83221c3c7ecf6fbf8}{get\+Access\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Gets the Access Token \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a23a2917fb9455954723cd3982b31b76c}{set\+Merchant\+Type}} (string type)
+\begin{DoxyCompactList}\small\item\em Sets the Merchant Type. In a production environment this is likely already preselected based on their industry, however for a sim it is helpful in managing what fields get sent to the engine. For example, sending the expected length of a hotel stay for a food and beverage vendor does not make sense. Thus setting this to the right values, will prevent unnecessary parameters being passed to the engine. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_ad7484e0f6199cfae3beb33d91d6f1368}{get\+Merchant\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the Industry Type of the current Merchant \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_ad24521be35d127e83221c3c7ecf6fbf8}\label{interface_form_sim_1_1_f_r_c___handler_ad24521be35d127e83221c3c7ecf6fbf8}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!get\+Access\+Token@{get\+Access\+Token}}
+\index{get\+Access\+Token@{get\+Access\+Token}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{get\+Access\+Token()}{getAccessToken()}}
+{\footnotesize\ttfamily string Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+get\+Access\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the Access Token 
+
+\begin{DoxyReturn}{Returns}
+The Access Token
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a220e1a96282940bc7b2fe8d898aec987}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_aeebaee9e36c649daae23db9fc710b261}\label{interface_form_sim_1_1_f_r_c___handler_aeebaee9e36c649daae23db9fc710b261}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!get\+Auth\+Token@{get\+Auth\+Token}}
+\index{get\+Auth\+Token@{get\+Auth\+Token}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{get\+Auth\+Token()}{getAuthToken()}}
+{\footnotesize\ttfamily string Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+get\+Auth\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the currently set Auth\+Token 
+
+\begin{DoxyReturn}{Returns}
+The Auth\+Token
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a4854fdfe77d09a6d2af723d2811099f5}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_a66f72d339aebc7c5b434026953a79044}\label{interface_form_sim_1_1_f_r_c___handler_a66f72d339aebc7c5b434026953a79044}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!get\+Client\+G\+U\+ID@{get\+Client\+G\+U\+ID}}
+\index{get\+Client\+G\+U\+ID@{get\+Client\+G\+U\+ID}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{get\+Client\+G\+U\+I\+D()}{getClientGUID()}}
+{\footnotesize\ttfamily string Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+get\+Client\+G\+U\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the current client\+G\+U\+ID. This really should not change for production uses, but for a sim it can be changed. 
+
+\begin{DoxyReturn}{Returns}
+the current client\+G\+U\+ID
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a16fe6657ef9d508f46dae9c8883a3a07}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_ab4c19dd9eb34e0375b8a436fd01b79d0}\label{interface_form_sim_1_1_f_r_c___handler_ab4c19dd9eb34e0375b8a436fd01b79d0}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!get\+I\+P\+Address@{get\+I\+P\+Address}}
+\index{get\+I\+P\+Address@{get\+I\+P\+Address}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{get\+I\+P\+Address()}{getIPAddress()}}
+{\footnotesize\ttfamily string Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+get\+I\+P\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the IP Address 
+
+\begin{DoxyReturn}{Returns}
+The string representation of the IP Address
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ab567abdefd58e1fcb3006861c741961c}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_ad7484e0f6199cfae3beb33d91d6f1368}\label{interface_form_sim_1_1_f_r_c___handler_ad7484e0f6199cfae3beb33d91d6f1368}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!get\+Merchant\+Type@{get\+Merchant\+Type}}
+\index{get\+Merchant\+Type@{get\+Merchant\+Type}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{get\+Merchant\+Type()}{getMerchantType()}}
+{\footnotesize\ttfamily string Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+get\+Merchant\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the Industry Type of the current Merchant 
+
+\begin{DoxyReturn}{Returns}
+Industry Type of Merchant
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a9bef42bcd6992d96947612aaab8f88a7}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_add0725551d06bb4cfb33c23bef426814}\label{interface_form_sim_1_1_f_r_c___handler_add0725551d06bb4cfb33c23bef426814}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!get\+Port@{get\+Port}}
+\index{get\+Port@{get\+Port}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{get\+Port()}{getPort()}}
+{\footnotesize\ttfamily string Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+get\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the Current Port Number 
+
+\begin{DoxyReturn}{Returns}
+String Representation of the current port
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a0e6f8152a789ba9f82501d45b029de71}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_a32c299d3cb3cdd6c444e76b3671af1b4}\label{interface_form_sim_1_1_f_r_c___handler_a32c299d3cb3cdd6c444e76b3671af1b4}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!perform\+Token\+Exchange@{perform\+Token\+Exchange}}
+\index{perform\+Token\+Exchange@{perform\+Token\+Exchange}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{perform\+Token\+Exchange()}{performTokenExchange()}}
+{\footnotesize\ttfamily Task$<$bool$>$ Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+perform\+Token\+Exchange (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Performs the token exchange with the client\+G\+U\+ID and Auth Token in exchange for an access token. N\+O\+TE\+: Both the client\+G\+U\+ID and the Auth\+Token must have been previously set or token exchange will fail. See \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a3c77b2e99c98553928e463a9cbb5f7d4}{set\+Client\+G\+U\+I\+D(string)}} A\+ND See \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a1314ea0937067435e3326818baa9d0c1}{set\+Auth\+Token(string)}} 
+
+\begin{DoxyReturn}{Returns}
+True if an Access token was received and set, false otherwise
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_rest_handler_abd5c425be2b6c9e30ca3cfc0fb696aa9}{Form\+Sim.\+Rest\+Handler}}, \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a731bd7dada7e2d13fd9c9d768bd387ee}{Form\+Sim.\+Generic\+Handler}}, \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler_a61075c8a24b97ae7c86d357d6ee5a49e}{Form\+Sim.\+T\+C\+P\+Handler}}, and \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler_ae2ace13d7dc63f0bf1e1ef1a41bf8a3e}{Form\+Sim.\+H\+T\+T\+P\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_a1f855ed4026632d00ac5fc6784c3bf0f}\label{interface_form_sim_1_1_f_r_c___handler_a1f855ed4026632d00ac5fc6784c3bf0f}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!send\+Raw@{send\+Raw}}
+\index{send\+Raw@{send\+Raw}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{send\+Raw()}{sendRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Task$<$Dictionary$<$string, string$>$ $>$ Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+send\+Raw (\begin{DoxyParamCaption}\item[{string}]{raw\+String }\end{DoxyParamCaption})}
+
+
+
+Sends a raw request to Shift4 for processing. This is mainly used as a debugging tool, to figure out if there are issues with the request, that can be deciphered ahead of hitting the Shift4 processing engine on the back side. This likely should be run in debug mode when full source is available as common errors that get thrown are not very descriptive. As time permits the error catching should be improved to hopefully throw more useful information about the actual error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+String} & The Raw String to be sent\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Dictionary of the returned parameters of the last function called. See N\+O\+TE at\+: \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a2a2a8a776e774e5f8b5e2b7e623a26a6}{start(\+Dictionary$<$string, string$>$)}} as this note also applies here.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler_a810309bc6e943b6ff12ebed8401613f0}{Form\+Sim.\+T\+C\+P\+Handler}}, \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler_a31006e646afd7cb331784dce27760d5b}{Form\+Sim.\+H\+T\+T\+P\+Handler}}, and \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a806d781f9ad046f8f1574b137ffe86e0}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_ad4b9146b6142d1d6ded15e5de4ed4675}\label{interface_form_sim_1_1_f_r_c___handler_ad4b9146b6142d1d6ded15e5de4ed4675}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!send\+Raw@{send\+Raw}}
+\index{send\+Raw@{send\+Raw}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{send\+Raw()}{sendRaw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Task$<$Dictionary$<$string, string$>$ $>$ Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+send\+Raw (\begin{DoxyParamCaption}\item[{string}]{raw\+String,  }\item[{Dictionary$<$ string, string $>$}]{parameters }\end{DoxyParamCaption})}
+
+
+
+Overload Sends a raw request to Shift4 for processing. This is mainly used as a debugging tool, to figure out if there are issues with the request, that can be deciphered ahead of hitting the Shift4 processing engine on the back side. This likely should be run in debug mode when full source is available as common errors that get thrown are not very descriptive. As time permits the error catching should be improved to hopefully throw more useful information about the actual error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+String} & The raw string to be sent\\
+\hline
+{\em parameters} & A list of parameters from the front end\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a4a777189e9e16dc9970fe8f2557555db}{Form\+Sim.\+Rest\+Handler}}, and \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a9e6731b583644ba3bd5bde94ef86c678}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_a6a11b11aaf8b033b87de9fddaf2d325e}\label{interface_form_sim_1_1_f_r_c___handler_a6a11b11aaf8b033b87de9fddaf2d325e}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!set\+Access\+Token@{set\+Access\+Token}}
+\index{set\+Access\+Token@{set\+Access\+Token}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{set\+Access\+Token()}{setAccessToken()}}
+{\footnotesize\ttfamily void Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+set\+Access\+Token (\begin{DoxyParamCaption}\item[{string}]{token }\end{DoxyParamCaption})}
+
+
+
+Sets the Access\+Token. This token is sent in every request and is acquired by perfroming a token exchange. \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a32c299d3cb3cdd6c444e76b3671af1b4}{perform\+Token\+Exchange()}} Failure to get an Access\+Token will result in refused transactions to Shift4. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & The Access Token\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ac2fe26607f27b8009b3d744bee7ba794}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_a1314ea0937067435e3326818baa9d0c1}\label{interface_form_sim_1_1_f_r_c___handler_a1314ea0937067435e3326818baa9d0c1}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!set\+Auth\+Token@{set\+Auth\+Token}}
+\index{set\+Auth\+Token@{set\+Auth\+Token}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{set\+Auth\+Token()}{setAuthToken()}}
+{\footnotesize\ttfamily void Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+set\+Auth\+Token (\begin{DoxyParamCaption}\item[{string}]{token }\end{DoxyParamCaption})}
+
+
+
+Sets the Auth token that was provided by Shift4. This token needs to be able to be changed in production, so it should not be hard coded like the client\+G\+U\+ID should be. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & The Auth\+Token for a particular mid\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a905d080f02134e993d7afbb1dcc8f44b}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_a3c77b2e99c98553928e463a9cbb5f7d4}\label{interface_form_sim_1_1_f_r_c___handler_a3c77b2e99c98553928e463a9cbb5f7d4}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!set\+Client\+G\+U\+ID@{set\+Client\+G\+U\+ID}}
+\index{set\+Client\+G\+U\+ID@{set\+Client\+G\+U\+ID}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{set\+Client\+G\+U\+I\+D()}{setClientGUID()}}
+{\footnotesize\ttfamily void Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+set\+Client\+G\+U\+ID (\begin{DoxyParamCaption}\item[{string}]{id }\end{DoxyParamCaption})}
+
+
+
+Sets the client G\+U\+ID. This really should not change for production uses, but for a sim it can be changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & client\+G\+U\+ID provided by Shift4\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a3c934d9ba3f0efaadac331502ce0189c}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_a702c2593fce6995a49f0fb509a2c7605}\label{interface_form_sim_1_1_f_r_c___handler_a702c2593fce6995a49f0fb509a2c7605}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!set\+I\+P\+Address@{set\+I\+P\+Address}}
+\index{set\+I\+P\+Address@{set\+I\+P\+Address}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{set\+I\+P\+Address()}{setIPAddress()}}
+{\footnotesize\ttfamily void Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+set\+I\+P\+Address (\begin{DoxyParamCaption}\item[{string}]{address }\end{DoxyParamCaption})}
+
+
+
+Sets the IP Address for which the U\+TG / Direct Post endpoint is located. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em address} & The IP address of the U\+TG, \\
+\hline
+\end{DoxyParams}
+or
+
+The web address of the direct post endpoint$<$example$>$\href{https://www.shift4test.com}{\tt https\+://www.\+shift4test.\+com}
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a7fa7f097410ae531b30fc6f257bcb393}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_a23a2917fb9455954723cd3982b31b76c}\label{interface_form_sim_1_1_f_r_c___handler_a23a2917fb9455954723cd3982b31b76c}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!set\+Merchant\+Type@{set\+Merchant\+Type}}
+\index{set\+Merchant\+Type@{set\+Merchant\+Type}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{set\+Merchant\+Type()}{setMerchantType()}}
+{\footnotesize\ttfamily void Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+set\+Merchant\+Type (\begin{DoxyParamCaption}\item[{string}]{type }\end{DoxyParamCaption})}
+
+
+
+Sets the Merchant Type. In a production environment this is likely already preselected based on their industry, however for a sim it is helpful in managing what fields get sent to the engine. For example, sending the expected length of a hotel stay for a food and beverage vendor does not make sense. Thus setting this to the right values, will prevent unnecessary parameters being passed to the engine. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The Merchant Industry Type\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a0a3b84b949b002deecb5523cec3cae23}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_a0a0a83b20fd2b3ec4ef9bbe5f5549b35}\label{interface_form_sim_1_1_f_r_c___handler_a0a0a83b20fd2b3ec4ef9bbe5f5549b35}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!set\+Port@{set\+Port}}
+\index{set\+Port@{set\+Port}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{set\+Port()}{setPort()}}
+{\footnotesize\ttfamily void Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+set\+Port (\begin{DoxyParamCaption}\item[{string}]{port }\end{DoxyParamCaption})}
+
+
+
+Sets the Port to connect to. N\+O\+TE\+: The use of the Port number only applies when the IP Address is not of the http form. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port number\\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ad22f25ee6f474e2ac46361add5ca7f97}{Form\+Sim.\+Generic\+Handler}}.
+
+\mbox{\Hypertarget{interface_form_sim_1_1_f_r_c___handler_a2a2a8a776e774e5f8b5e2b7e623a26a6}\label{interface_form_sim_1_1_f_r_c___handler_a2a2a8a776e774e5f8b5e2b7e623a26a6}} 
+\index{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}!start@{start}}
+\index{start@{start}!Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler@{Form\+Sim\+::\+F\+R\+C\+\_\+\+Handler}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily Task$<$Dictionary$<$string, string$>$ $>$ Form\+Sim.\+F\+R\+C\+\_\+\+Handler.\+start (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters }\end{DoxyParamCaption})}
+
+
+
+This provides the main entry point for the performing of a function based on the function request code that is passed in {\itshape parameters} . It automatically adjusts requestor references, sets a global timer for each function (for timeouts), and performs automatic voids and lookups based on the \char`\"{}\+Basic Transaction Flow\char`\"{} diagram found in the A\+PI Integrations guide. (Ver. 2.\+34, Pub. 6/6/18) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & ~\newline
+ {\bfseries Card\+Number} \+: Represents the unencrypted card number. This is often used when manual card entry is the method of choice. During voids, this number should be the last 4 of the card number, if a token is not available. In transactions where a card number is not being used, it should be blank.~\newline
+ {\bfseries Expiration\+Date} \+: Represents the expiration date of the card. Expected for is M\+M\+YY. Note that no colons or slashes are used, as well as the date is of two digit format.~\newline
+ {\bfseries C\+V\+V2} \+: This is the C\+V\+V2 value of the card, typically 3 or 4 digits.~\newline
+ {\bfseries C\+V\+V2\+Indicator} \+: \char`\"{}1\char`\"{} if the C\+V\+V2 value is present in the parameter C\+V\+V2 above, \char`\"{}0\char`\"{} otherwise.~\newline
+ {\bfseries Card\+Present} \+: \char`\"{}\+Y\char`\"{} if the card is present for the transaction, \char`\"{}\+N\char`\"{} if not. It may be necessary to leave this field blank when performing follow up transactions where this value was previously indicated.~\newline
+ {\bfseries Street\+Address} \+: The billing street address.~\newline
+ {\bfseries Destination\+Zip\+Code} \+: The location the item will be shipped to for mail order / telephone order (M\+O\+TO) or E-\/\+Commerce. For Retail, Lodging, and Auto, it should be the zip code of where the services are rendered, or goods are being sold from.~\newline
+ {\bfseries Card\+Type} \+: N\+OT C\+U\+R\+R\+E\+N\+T\+LY U\+S\+ED -\/ leave blank~\newline
+ {\bfseries Track\+Data} \+: Used for passing unencrypted Track Data when using a standard mag stripe reader (M\+SR).~\newline
+ {\bfseries Unique\+ID} \+: Used to pass a token representing Card Holder Data (C\+HD), Required in True\+Token transactions.~\newline
+ {\bfseries Token\+Serial} \+: Serial of the M\+ID. Should be used when using Token\+Sharing, or a Global Token Store.~\newline
+ {\bfseries A\+P\+I\+Options} \+: A comma delimited list of A\+PI Options to be sent with the request.~\newline
+ {\bfseries Invoice} \+: In invoice number of size not larger than 10 characters.~\newline
+ {\bfseries Primary\+Amount} \+: The subtotal amount not including tax and or tip amounts. Note for T\+CP transactions omit the decimal point.~\newline
+ {\bfseries Sale\+Flag} \+: \char`\"{}\+S\char`\"{} if performing a sale, and \char`\"{}\+C\char`\"{} if performing a refund.~\newline
+ {\bfseries Zip\+Code} \+: The billing zip code.~\newline
+ {\bfseries Secondary\+Amount} \+: The tip amount.~\newline
+ {\bfseries Function\+Request\+Code} \+: The function request code desired to be performed.~\newline
+ {\bfseries Tax\+Indicator} \+: \char`\"{}\+Y\char`\"{} if tax was charged, \char`\"{}\+N\char`\"{} otherwise.~\newline
+ {\bfseries Tax\+Amount} \+: The Amount of Tax Charged. Note for T\+CP Transactions omit the decimal point.~\newline
+ {\bfseries Tran\+ID} \+: The transaction ID sent back from a transaction. Used for rollbacks of failed incremental authorizations.~\newline
+ {\bfseries Clerk} \+: Five digit clerk ID.~\newline
+ {\bfseries Terminal\+ID} \+: The ID of the P\+IN pad set in U\+TG Tune-\/\+Up. Used to prompt and display to P\+IN Pad.~\newline
+ {\bfseries Date} \+: Current Date in M\+M\+D\+D\+YY format.~\newline
+ {\bfseries Time} \+: Current Time in H\+H\+M\+M\+SS format.~\newline
+ {\bfseries Requestor\+Reference} \+: A refernece number for the request.~\newline
+ {\bfseries P2\+P\+E\+Block} \+: The P2\+PE Block form a native P2\+PE device.~\newline
+ {\bfseries Customer\+Name} \+: The name of the Customer.~\newline
+ {\bfseries Void\+Invalid\+A\+VS} \+: A \char`\"{}\+Y\char`\"{} / \char`\"{}\+N\char`\"{} switch used to automatically void responses with invalid A\+VS responses.~\newline
+ {\bfseries Void\+Invalid\+C\+V\+V2} \+: A \char`\"{}\+Y\char`\"{} / \char`\"{}\+N\char`\"{} switch used to automatically void responses with invalid C\+V\+V2 responses.~\newline
+ {\bfseries Use\+Token\+Store} \+: A \char`\"{}\+Y\char`\"{} / \char`\"{}\+N\char`\"{} switch used to use a Token Store.~\newline
+ {\bfseries Use\+Meta\+Token} \+: A \char`\"{}\+Y\char`\"{} / \char`\"{}\+N\char`\"{} switch used to use a Meta\+Token.~\newline
+ {\bfseries Use\+Basic\+Tran\+Flow} \+: A \char`\"{}\+Y\char`\"{} / \char`\"{}\+N\char`\"{} switch used to control if the automaticity of the basic transaction flow is used when issuing function request codes. By turning this switch off, only single F\+R\+Cs will be executed regardlesss of the result that comes back from the server.~\newline
+ {\bfseries Use\+Rollbacks} \+: A \char`\"{}\+Y\char`\"{} / \char`\"{}\+N\char`\"{} switch used to control if a void (F\+RC 08) will be used as a complete transaction void or if it will be used to roll back the transaction to it\textquotesingle{}s last approved state.~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Dictionary of the returned parameters and results of the last function called. 
+
+Note\+: In cases where automatic voids are called for, the response of the original request will N\+OT be retuned, but rather the result of the automatic void will be called. To see all of the transaction requests and responses, please check the log file that is generated.
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_form_sim_1_1_generic_handler_affac9485687a2be1595405d657922532}{Form\+Sim.\+Generic\+Handler}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_f_r_c___handler_8cs}{F\+R\+C\+\_\+\+Handler.\+cs}}\end{DoxyCompactItemize}

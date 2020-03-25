@@ -1,0 +1,740 @@
+\hypertarget{class_form_sim_1_1_rest_handler}{}\section{Form\+Sim.\+Rest\+Handler Class Reference}
+\label{class_form_sim_1_1_rest_handler}\index{Form\+Sim.\+Rest\+Handler@{Form\+Sim.\+Rest\+Handler}}
+
+
+The \mbox{\hyperlink{class_form_sim_1_1_rest_handler}{Rest\+Handler}} class is designed to handle F\+RC\textquotesingle{}s over the H\+T\+TP protocol to the R\+E\+S\+Tful A\+PI. This implementation uses J\+S\+ON as the payload format, so serializing and deserializing are handled here. It also acts as a translation layer between the required Dictionary of strings, and the returned J\+S\+ON from the R\+E\+ST interface.  
+
+
+Inheritance diagram for Form\+Sim.\+Rest\+Handler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_form_sim_1_1_rest_handler}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_form_sim_1_1_rest_handler_a138f2e1c350d4a14c51a0a27d36a13a8}{Rest\+Handler}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_form_sim_1_1_rest_handler_a5a8e7dca756d6fa97fc472c1145af5cf}{Rest\+Handler}} (string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a6699d8bfc9cd305baf30ab9413b21605}{Auth\+Token}}, string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ae1d2175b140f4c600d74bbab1e22714e}{Client\+G\+U\+ID}})
+\begin{DoxyCompactList}\small\item\em Optional Constructor \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_form_sim_1_1_rest_handler_a01f0a6ed0453bcdf536d4062650d5bbf}{Rest\+Handler}} (string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a6699d8bfc9cd305baf30ab9413b21605}{Auth\+Token}}, string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ae1d2175b140f4c600d74bbab1e22714e}{Client\+G\+U\+ID}}, string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_a12b51dea082a4d40d86829802adf073b}{I\+P\+Address}}, string \mbox{\hyperlink{class_form_sim_1_1_generic_handler_ac6492bb3e4fbe8f66c97b00bd27020c1}{Port}})
+\begin{DoxyCompactList}\small\item\em Optional Constructor \end{DoxyCompactList}\item 
+override async Task$<$ bool $>$ \mbox{\hyperlink{class_form_sim_1_1_rest_handler_abd5c425be2b6c9e30ca3cfc0fb696aa9}{perform\+Token\+Exchange}} ()
+\begin{DoxyCompactList}\small\item\em Performs token echange over http to the R\+E\+ST interface by exchanging a client\+G\+U\+ID and Auth\+Token for an Access\+Token. \end{DoxyCompactList}\item 
+async Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a4a777189e9e16dc9970fe8f2557555db}{send\+Raw}} (string raw\+String, Dictionary$<$ string, string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em Allows the user to pass in a raw J\+S\+ON string, representing the P\+O\+ST body of a request. This is useful for testing results and odd requests that a vendor my supply to us. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override async Task$<$ Dictionary$<$ string, string $>$ $>$ \mbox{\hyperlink{class_form_sim_1_1_rest_handler_aaba7a1239d5e4e2eb63e0f24f76341d1}{perform\+Transaction}} (Dictionary$<$ string, string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em Performs a given F\+RC via the R\+E\+S\+Tful A\+PI, provided in the Dictionary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, string $>$ \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a7c2e17caa0c591a104e9e4f9a3825f47}{void\+Transaction}} (Dictionary$<$ string, string $>$ req, Dictionary$<$ string, string $>$ res)
+\begin{DoxyCompactList}\small\item\em N\+OT I\+M\+P\+L\+E\+M\+E\+N\+T\+ED -\/ Programatically voids a transaction... This may not be necessary with R\+E\+ST. \end{DoxyCompactList}\item 
+String\+Content \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a92192f6edc3e39d00b37dea3f8f16d93}{build\+Json\+Object}} (Dictionary$<$ string, string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em Builds the J\+S\+ON object from the passed dictionary using the J\+S\+O\+N\+Converter project classes. \end{DoxyCompactList}\item 
+Dictionary$<$ string, string $>$ \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a08ab06f861daa5acaf1aca9ea2fe8c9b}{parse\+To\+Dict}} (J\+S\+O\+N\+Converter.\+Message message)
+\begin{DoxyCompactList}\small\item\em Parses the R\+E\+ST response body into a consumable Dictionary. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_ab10dcc5c39fdf95b190ed6b50d6e1ce6}{build\+Receipt}} (receipt\mbox{[}$\,$\mbox{]} receipt)
+\begin{DoxyCompactList}\small\item\em Builds a receipt from the returned data that meets E\+MV requirements. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_adb1e6344809870d5b196de0c6e54a3c9}{build\+Left\+Right\+Align}} (receipt receipt\+Item)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_form_sim_1_1_helper}{Helper}} funciton that left justifies the print\+Name and right justifies the print\+Value to 30 chars wide. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a14a4a8f672494cea85c34f23fa508464}{pick\+End\+Point}} (Dictionary$<$ string, string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em Picks the proper R\+E\+ST endpoint given the F\+RC. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a205454167e8716d9c1ed0e05d6e88564}{pick\+Http\+Verb}} (Dictionary$<$ string, string $>$ parameters)
+\begin{DoxyCompactList}\small\item\em Picks the proper H\+T\+TP verb (G\+ET, P\+O\+ST, D\+E\+L\+E\+TE) \end{DoxyCompactList}\item 
+async Task$<$ Http\+Response\+Message $>$ \mbox{\hyperlink{class_form_sim_1_1_rest_handler_adcca9a79f3a98112628190b11fd5c7ca}{send\+G\+ET}} (Dictionary$<$ string, string $>$ parameters, string end\+Point)
+\begin{DoxyCompactList}\small\item\em Sends a G\+ET request with the appropriate headers \end{DoxyCompactList}\item 
+async Task$<$ Http\+Response\+Message $>$ \mbox{\hyperlink{class_form_sim_1_1_rest_handler_ae69e912f1e70c08e4a9200efcb070bf8}{send\+P\+O\+ST}} (Dictionary$<$ string, string $>$ parameters, string end\+Point, String\+Content json\+Body)
+\begin{DoxyCompactList}\small\item\em Sends a P\+O\+ST request with the appropriate headers \end{DoxyCompactList}\item 
+async Task$<$ Http\+Response\+Message $>$ \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a6c259e23bd88dc7191327fcca06232d0}{send\+D\+E\+L\+E\+TE}} (Dictionary$<$ string, string $>$ parameters, string end\+Point)
+\begin{DoxyCompactList}\small\item\em Sends a D\+E\+L\+E\+TE request with the appropriate headers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_form_sim_1_1_rest_handler_ae3f4dd32629759aba164eac64175c71f}{ignore\+S\+S\+Lerrors}} = false
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a6524f2a05b5c6bbe6b3755662f86fdab}{B\+L\+O\+C\+K\+\_\+\+C\+A\+RD}} = \char`\"{}cards/block\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a4338bdac23d0558177bf5df5b3639e55}{C\+A\+R\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+US}} = \char`\"{}cards/blockstatus\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a4c4b833300f1760e624cb25aedcb0cd7}{I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+A\+RD}} = \char`\"{}cards/identify\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a7a93675f32f8a682458f8e2d6fdf9384}{U\+N\+B\+L\+O\+C\+K\+\_\+\+C\+A\+RD}} = \char`\"{}cards/unblock\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_adbde7c45aab3b4a97cf1464065161dcd}{V\+E\+R\+I\+F\+Y\+\_\+\+C\+A\+RD}} = \char`\"{}cards/verify\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a662385f69d094beb118184cc00d0be00}{A\+C\+C\+E\+S\+S\+\_\+\+T\+O\+K\+EN}} = \char`\"{}credentials/accesstoken\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a78b7d4fdea5fe30c1f82dbe17ea2e093}{G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+FO}} = \char`\"{}devices/info\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_ad55f11f47492affe120d64685d11356f}{I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+\_\+\+R\+E\+A\+D\+E\+RS}} = \char`\"{}devices/initializereaders\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a205748c1af29fb6e639c7e6ad4b78bf2}{D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS}} = \char`\"{}devices/lineitems\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a0ed7785fca279bdb9dd7e600f71553c0}{D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+EM}} = \char`\"{}devices/lineitems/\{item\}\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a5b324ad107b08c3bdf9f5fc7814db39c}{C\+L\+E\+A\+R\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS}} = \char`\"{}devices/lineitems\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a0d509105eef3e65ade61d66f22ee08ea}{P\+R\+I\+N\+T\+\_\+\+R\+E\+C\+E\+I\+PT}} = \char`\"{}devices/print\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a072db72ff3cc31ecf995ad17c145f4b4}{P\+R\+O\+C\+E\+S\+S\+\_\+\+F\+O\+R\+MS}} = \char`\"{}devices/processform\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_af90c44f10cd5ead89606b811fc5ae632}{P\+R\+O\+M\+P\+T\+\_\+\+C\+O\+N\+F\+I\+R\+M\+A\+T\+I\+ON}} = \char`\"{}devices/promptconfirmation\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a78226012d7df7c27ae747c20674ca706}{P\+R\+O\+M\+P\+T\+\_\+\+I\+N\+P\+UT}} = \char`\"{}devices/promptinput\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_ac8898c2c9addec5b05604700655dbbe9}{O\+N\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+C\+A\+R\+D\+\_\+\+R\+E\+AD}} = \char`\"{}devices/prompts/cardread\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_affa0a3f303002458dbca9c7cb7dc41a7}{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}} = \char`\"{}devices/promptsignature\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_add1d76cf837e4fae753b1f625b801fc8}{D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+S\+ET}} = \char`\"{}devices/reset\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_af1397ea44e81584c26bcb257d9ce5769}{T\+E\+R\+M\+S\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+NS}} = \char`\"{}devices/termsandconditions\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a8742d658aaab597957ada79707565406}{G\+C\+\_\+\+A\+C\+T\+I\+V\+A\+TE}} = \char`\"{}giftcards/activate\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a91a3268dfe038eac25dc4b294e863fd8}{G\+C\+\_\+\+B\+A\+L\+A\+N\+CE}} = \char`\"{}giftcards/balance\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_ab92584cf05cc40329fb2f2e4a5e8b33a}{G\+C\+\_\+\+C\+A\+N\+C\+EL}} = \char`\"{}giftcards/cancel\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_ae69e88368d469b455b3ae1105f819d08}{G\+C\+\_\+\+C\+A\+S\+H\+O\+UT}} = \char`\"{}giftcards/cashout\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a806a27130463899de1a5a145b0a79c3d}{G\+C\+\_\+\+D\+E\+A\+C\+T\+I\+V\+A\+TE}} = \char`\"{}giftcards/deactivate\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_aee53bacfe8716e4f2e2365bb007218b5}{G\+C\+\_\+\+R\+E\+A\+C\+T\+I\+V\+A\+TE}} = \char`\"{}giftcards/reactivate\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a4edb4283c69328bd540594c288c67fde}{G\+C\+\_\+\+R\+E\+L\+O\+AD}} = \char`\"{}giftcards/reload\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_ae4b8b267aea9f7d55eb821ae567d613b}{M\+E\+R\+C\+H\+A\+NT}} = \char`\"{}merchants/merchant\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a7eaa83dfd3c17adad3483c6785bbae0b}{G\+E\+T\+\_\+\+N\+E\+X\+T\+\_\+\+I\+N\+V\+O\+I\+CE}} = \char`\"{}reports/batchdetails\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a28d4f880c8894174f1f055abfc1f7b30}{T\+O\+T\+A\+L\+S\+\_\+\+R\+E\+P\+O\+RT}} = \char`\"{}reports/batchtotals\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a8e0162fa484b58fc50eb95db9da2784f}{S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+Q\+U\+E\+ST}} = \char`\"{}sessions\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a2f8574a09fb25a8632817d26e6323daf}{G\+E\+T\+\_\+4\+\_\+\+W\+O\+R\+DS}} = \char`\"{}tokens/4words\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a6ae5956fb935833d3e68813b786bd034}{T\+O\+K\+E\+N\+\_\+\+A\+DD}} = \char`\"{}tokens/add\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a4830033d986d2f15704092cd8420f04c}{T\+O\+K\+E\+N\+\_\+\+D\+E\+L\+E\+TE}} = \char`\"{}tokens/delete\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_afd87386544c94ad11669b905304cda99}{T\+O\+K\+E\+N\+\_\+\+D\+U\+P\+L\+I\+C\+A\+TE}} = \char`\"{}tokens/duplicate\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a33f4985d9ea1beb7984876f9e992eaae}{A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON}} = \char`\"{}transactions/authorization\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_afb28bbff572b84c26be4dddf30aa0bdb}{C\+A\+P\+T\+U\+RE}} = \char`\"{}transactions/capture\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_abe32a138ecc549cfc16cc9846d4ca468}{C\+H\+E\+CK}} = \char`\"{}transactions/check\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_adee0030a983637e00e79cda3b5a1dfb6}{I\+N\+V\+O\+I\+CE}} = \char`\"{}transactions/invoice\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a11a3ee0812c27c88988615f24ecb25dc}{M\+A\+N\+U\+A\+L\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON}} = \char`\"{}transactions/manualauthorization\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a8c04225218b1ea8873b6a7e4635147bf}{M\+A\+N\+U\+A\+L\+\_\+\+S\+A\+LE}} = \char`\"{}transactions/manualsale\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a1210812ce0844c10de03694bcffb464c}{R\+E\+F\+U\+ND}} = \char`\"{}transactions/refund\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_aa120f59ea2b44fc2ad0e2d95ab9dd18f}{S\+A\+LE}} = \char`\"{}transactions/sale\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a54fcdefde2b8518a8ce326ca362cf09d}{S\+I\+G\+N\+A\+T\+U\+RE}} = \char`\"{}transactions/signature\char`\"{}
+\item 
+readonly string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_af5d7a5c25979759bf51b7ede862718b2}{S\+E\+S\+S\+I\+ON}} = \char`\"{}status\char`\"{}
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_rest_handler_a2b2da7000557616345192ffd589b4e16}{json\+\_\+out}}
+\item 
+bool \mbox{\hyperlink{class_form_sim_1_1_rest_handler_ad2cd92751f0b8f3317205b32d1ba401d}{headers\+Set}}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_form_sim_1_1_rest_handler}{Rest\+Handler}} class is designed to handle F\+RC\textquotesingle{}s over the H\+T\+TP protocol to the R\+E\+S\+Tful A\+PI. This implementation uses J\+S\+ON as the payload format, so serializing and deserializing are handled here. It also acts as a translation layer between the required Dictionary of strings, and the returned J\+S\+ON from the R\+E\+ST interface. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a138f2e1c350d4a14c51a0a27d36a13a8}\label{class_form_sim_1_1_rest_handler_a138f2e1c350d4a14c51a0a27d36a13a8}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!Rest\+Handler@{Rest\+Handler}}
+\index{Rest\+Handler@{Rest\+Handler}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{Rest\+Handler()}{RestHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Form\+Sim.\+Rest\+Handler.\+Rest\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default Constructor 
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a5a8e7dca756d6fa97fc472c1145af5cf}\label{class_form_sim_1_1_rest_handler_a5a8e7dca756d6fa97fc472c1145af5cf}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!Rest\+Handler@{Rest\+Handler}}
+\index{Rest\+Handler@{Rest\+Handler}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{Rest\+Handler()}{RestHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Form\+Sim.\+Rest\+Handler.\+Rest\+Handler (\begin{DoxyParamCaption}\item[{string}]{Auth\+Token,  }\item[{string}]{Client\+G\+U\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Optional Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Auth\+Token} & The Auth\+Token provided by Shift4 for a given M\+ID.\\
+\hline
+{\em Client\+G\+U\+ID} & The Client\+G\+U\+ID assigned by Shift4 for a given interface.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a01f0a6ed0453bcdf536d4062650d5bbf}\label{class_form_sim_1_1_rest_handler_a01f0a6ed0453bcdf536d4062650d5bbf}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!Rest\+Handler@{Rest\+Handler}}
+\index{Rest\+Handler@{Rest\+Handler}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{Rest\+Handler()}{RestHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Form\+Sim.\+Rest\+Handler.\+Rest\+Handler (\begin{DoxyParamCaption}\item[{string}]{Auth\+Token,  }\item[{string}]{Client\+G\+U\+ID,  }\item[{string}]{I\+P\+Address,  }\item[{string}]{Port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Optional Constructor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Auth\+Token} & The Auth\+Token provided by Shift4 for a given M\+ID.\\
+\hline
+{\em Client\+G\+U\+ID} & The Client\+G\+U\+ID assigned by Shift4 for a given interface.\\
+\hline
+{\em I\+P\+Address} & The IP address, or base U\+RL of the Shift4 U\+TG.\\
+\hline
+{\em Port} & The port over which to communicate.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a92192f6edc3e39d00b37dea3f8f16d93}\label{class_form_sim_1_1_rest_handler_a92192f6edc3e39d00b37dea3f8f16d93}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!build\+Json\+Object@{build\+Json\+Object}}
+\index{build\+Json\+Object@{build\+Json\+Object}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{build\+Json\+Object()}{buildJsonObject()}}
+{\footnotesize\ttfamily String\+Content Form\+Sim.\+Rest\+Handler.\+build\+Json\+Object (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Builds the J\+S\+ON object from the passed dictionary using the J\+S\+O\+N\+Converter project classes. 
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_adb1e6344809870d5b196de0c6e54a3c9}\label{class_form_sim_1_1_rest_handler_adb1e6344809870d5b196de0c6e54a3c9}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!build\+Left\+Right\+Align@{build\+Left\+Right\+Align}}
+\index{build\+Left\+Right\+Align@{build\+Left\+Right\+Align}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{build\+Left\+Right\+Align()}{buildLeftRightAlign()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Rest\+Handler.\+build\+Left\+Right\+Align (\begin{DoxyParamCaption}\item[{receipt}]{receipt\+Item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\mbox{\hyperlink{class_form_sim_1_1_helper}{Helper}} funciton that left justifies the print\+Name and right justifies the print\+Value to 30 chars wide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em receipt\+Item} & A single line item for the receipt.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The properly spaced string representation of the line item.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_ab10dcc5c39fdf95b190ed6b50d6e1ce6}\label{class_form_sim_1_1_rest_handler_ab10dcc5c39fdf95b190ed6b50d6e1ce6}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!build\+Receipt@{build\+Receipt}}
+\index{build\+Receipt@{build\+Receipt}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{build\+Receipt()}{buildReceipt()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Rest\+Handler.\+build\+Receipt (\begin{DoxyParamCaption}\item[{receipt \mbox{[}$\,$\mbox{]}}]{receipt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Builds a receipt from the returned data that meets E\+MV requirements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em receipt} & An array of receipt items returned from Shift4.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string representation of the receipt text. The receipt is left justified and 30 chars wide.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a08ab06f861daa5acaf1aca9ea2fe8c9b}\label{class_form_sim_1_1_rest_handler_a08ab06f861daa5acaf1aca9ea2fe8c9b}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!parse\+To\+Dict@{parse\+To\+Dict}}
+\index{parse\+To\+Dict@{parse\+To\+Dict}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{parse\+To\+Dict()}{parseToDict()}}
+{\footnotesize\ttfamily Dictionary$<$string, string$>$ Form\+Sim.\+Rest\+Handler.\+parse\+To\+Dict (\begin{DoxyParamCaption}\item[{J\+S\+O\+N\+Converter.\+Message}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Parses the R\+E\+ST response body into a consumable Dictionary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The top level J\+S\+ON Object sent or returned to Shift4\textquotesingle{}s R\+E\+S\+Tful A\+PI.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Dictionary representation of a response or request body from a J\+S\+ON Message Object.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_abd5c425be2b6c9e30ca3cfc0fb696aa9}\label{class_form_sim_1_1_rest_handler_abd5c425be2b6c9e30ca3cfc0fb696aa9}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!perform\+Token\+Exchange@{perform\+Token\+Exchange}}
+\index{perform\+Token\+Exchange@{perform\+Token\+Exchange}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{perform\+Token\+Exchange()}{performTokenExchange()}}
+{\footnotesize\ttfamily override async Task$<$bool$>$ Form\+Sim.\+Rest\+Handler.\+perform\+Token\+Exchange (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Performs token echange over http to the R\+E\+ST interface by exchanging a client\+G\+U\+ID and Auth\+Token for an Access\+Token. 
+
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a32c299d3cb3cdd6c444e76b3671af1b4}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_aaba7a1239d5e4e2eb63e0f24f76341d1}\label{class_form_sim_1_1_rest_handler_aaba7a1239d5e4e2eb63e0f24f76341d1}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!perform\+Transaction@{perform\+Transaction}}
+\index{perform\+Transaction@{perform\+Transaction}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{perform\+Transaction()}{performTransaction()}}
+{\footnotesize\ttfamily override async Task$<$Dictionary$<$string, string$>$ $>$ Form\+Sim.\+Rest\+Handler.\+perform\+Transaction (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Performs a given F\+RC via the R\+E\+S\+Tful A\+PI, provided in the Dictionary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & See \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_a2a2a8a776e774e5f8b5e2b7e623a26a6}{F\+R\+C\+\_\+\+Handler.\+start(\+Dictionary$<$string, string$>$)}}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A thread with the results of the transaction in a dictionary.
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler_a1b87e232c94cf390f7a9656744006639}{Form\+Sim.\+H\+T\+T\+P\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a14a4a8f672494cea85c34f23fa508464}\label{class_form_sim_1_1_rest_handler_a14a4a8f672494cea85c34f23fa508464}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!pick\+End\+Point@{pick\+End\+Point}}
+\index{pick\+End\+Point@{pick\+End\+Point}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{pick\+End\+Point()}{pickEndPoint()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Rest\+Handler.\+pick\+End\+Point (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Picks the proper R\+E\+ST endpoint given the F\+RC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & A Dictionary of the request fields that will be sent.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representaiton of the U\+RI for the given F\+RC.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a205454167e8716d9c1ed0e05d6e88564}\label{class_form_sim_1_1_rest_handler_a205454167e8716d9c1ed0e05d6e88564}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!pick\+Http\+Verb@{pick\+Http\+Verb}}
+\index{pick\+Http\+Verb@{pick\+Http\+Verb}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{pick\+Http\+Verb()}{pickHttpVerb()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Rest\+Handler.\+pick\+Http\+Verb (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Picks the proper H\+T\+TP verb (G\+ET, P\+O\+ST, D\+E\+L\+E\+TE) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & A Dictionary of the request fields that will be sent.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representation of the H\+T\+TP verb to use in the request.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a6c259e23bd88dc7191327fcca06232d0}\label{class_form_sim_1_1_rest_handler_a6c259e23bd88dc7191327fcca06232d0}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!send\+D\+E\+L\+E\+TE@{send\+D\+E\+L\+E\+TE}}
+\index{send\+D\+E\+L\+E\+TE@{send\+D\+E\+L\+E\+TE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{send\+D\+E\+L\+E\+T\+E()}{sendDELETE()}}
+{\footnotesize\ttfamily async Task$<$Http\+Response\+Message$>$ Form\+Sim.\+Rest\+Handler.\+send\+D\+E\+L\+E\+TE (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters,  }\item[{string}]{end\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sends a D\+E\+L\+E\+TE request with the appropriate headers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & A Dictionary of the request fields that will be sent.\\
+\hline
+{\em end\+Point} & The endpoint the D\+E\+L\+E\+TE request is supposed to hit.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A thread with the Http\+Response\+Message returned from the endpoint.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_adcca9a79f3a98112628190b11fd5c7ca}\label{class_form_sim_1_1_rest_handler_adcca9a79f3a98112628190b11fd5c7ca}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!send\+G\+ET@{send\+G\+ET}}
+\index{send\+G\+ET@{send\+G\+ET}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{send\+G\+E\+T()}{sendGET()}}
+{\footnotesize\ttfamily async Task$<$Http\+Response\+Message$>$ Form\+Sim.\+Rest\+Handler.\+send\+G\+ET (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters,  }\item[{string}]{end\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sends a G\+ET request with the appropriate headers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & A Dictionary of the request fields that will be sent.\\
+\hline
+{\em end\+Point} & The endpoint the G\+ET request is supposed to hit.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A thread with the Http\+Response\+Message returned from the endpoint.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_ae69e912f1e70c08e4a9200efcb070bf8}\label{class_form_sim_1_1_rest_handler_ae69e912f1e70c08e4a9200efcb070bf8}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!send\+P\+O\+ST@{send\+P\+O\+ST}}
+\index{send\+P\+O\+ST@{send\+P\+O\+ST}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{send\+P\+O\+S\+T()}{sendPOST()}}
+{\footnotesize\ttfamily async Task$<$Http\+Response\+Message$>$ Form\+Sim.\+Rest\+Handler.\+send\+P\+O\+ST (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters,  }\item[{string}]{end\+Point,  }\item[{String\+Content}]{json\+Body }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sends a P\+O\+ST request with the appropriate headers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & A Dictionary of the request fields that will be sent.\\
+\hline
+{\em end\+Point} & The endpoint the P\+O\+ST request is supposed to hit.\\
+\hline
+{\em json\+Body} & The J\+S\+ON body of the P\+O\+ST request.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A thread with the Http\+Response\+Message returned from the endpoint.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a4a777189e9e16dc9970fe8f2557555db}\label{class_form_sim_1_1_rest_handler_a4a777189e9e16dc9970fe8f2557555db}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!send\+Raw@{send\+Raw}}
+\index{send\+Raw@{send\+Raw}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{send\+Raw()}{sendRaw()}}
+{\footnotesize\ttfamily async Task$<$Dictionary$<$string, string$>$ $>$ Form\+Sim.\+Rest\+Handler.\+send\+Raw (\begin{DoxyParamCaption}\item[{string}]{raw\+String,  }\item[{Dictionary$<$ string, string $>$}]{parameters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Allows the user to pass in a raw J\+S\+ON string, representing the P\+O\+ST body of a request. This is useful for testing results and odd requests that a vendor my supply to us. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+String} & The J\+S\+ON body of a post request.\\
+\hline
+{\em parameters} & A Dictionary with just enough fields to indicate what endpoint to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A thread with a Dictionary of the results of the \char`\"{}raw\char`\"{} request.
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler_ad4b9146b6142d1d6ded15e5de4ed4675}{Form\+Sim.\+F\+R\+C\+\_\+\+Handler}}.
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a7c2e17caa0c591a104e9e4f9a3825f47}\label{class_form_sim_1_1_rest_handler_a7c2e17caa0c591a104e9e4f9a3825f47}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!void\+Transaction@{void\+Transaction}}
+\index{void\+Transaction@{void\+Transaction}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{void\+Transaction()}{voidTransaction()}}
+{\footnotesize\ttfamily Dictionary$<$string, string$>$ Form\+Sim.\+Rest\+Handler.\+void\+Transaction (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{req,  }\item[{Dictionary$<$ string, string $>$}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+N\+OT I\+M\+P\+L\+E\+M\+E\+N\+T\+ED -\/ Programatically voids a transaction... This may not be necessary with R\+E\+ST. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & A Dictionary that represent the fields that were sent in the initial request.\\
+\hline
+{\em res} & A Dictionary that represents the fields that were returned from the initial requst.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a662385f69d094beb118184cc00d0be00}\label{class_form_sim_1_1_rest_handler_a662385f69d094beb118184cc00d0be00}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!A\+C\+C\+E\+S\+S\+\_\+\+T\+O\+K\+EN@{A\+C\+C\+E\+S\+S\+\_\+\+T\+O\+K\+EN}}
+\index{A\+C\+C\+E\+S\+S\+\_\+\+T\+O\+K\+EN@{A\+C\+C\+E\+S\+S\+\_\+\+T\+O\+K\+EN}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{A\+C\+C\+E\+S\+S\+\_\+\+T\+O\+K\+EN}{ACCESS\_TOKEN}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+A\+C\+C\+E\+S\+S\+\_\+\+T\+O\+K\+EN = \char`\"{}credentials/accesstoken\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a33f4985d9ea1beb7984876f9e992eaae}\label{class_form_sim_1_1_rest_handler_a33f4985d9ea1beb7984876f9e992eaae}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON@{A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON}}
+\index{A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON@{A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON}{AUTHORIZATION}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON = \char`\"{}transactions/authorization\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a6524f2a05b5c6bbe6b3755662f86fdab}\label{class_form_sim_1_1_rest_handler_a6524f2a05b5c6bbe6b3755662f86fdab}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!B\+L\+O\+C\+K\+\_\+\+C\+A\+RD@{B\+L\+O\+C\+K\+\_\+\+C\+A\+RD}}
+\index{B\+L\+O\+C\+K\+\_\+\+C\+A\+RD@{B\+L\+O\+C\+K\+\_\+\+C\+A\+RD}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{B\+L\+O\+C\+K\+\_\+\+C\+A\+RD}{BLOCK\_CARD}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+B\+L\+O\+C\+K\+\_\+\+C\+A\+RD = \char`\"{}cards/block\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_afb28bbff572b84c26be4dddf30aa0bdb}\label{class_form_sim_1_1_rest_handler_afb28bbff572b84c26be4dddf30aa0bdb}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!C\+A\+P\+T\+U\+RE@{C\+A\+P\+T\+U\+RE}}
+\index{C\+A\+P\+T\+U\+RE@{C\+A\+P\+T\+U\+RE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{C\+A\+P\+T\+U\+RE}{CAPTURE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+C\+A\+P\+T\+U\+RE = \char`\"{}transactions/capture\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a4338bdac23d0558177bf5df5b3639e55}\label{class_form_sim_1_1_rest_handler_a4338bdac23d0558177bf5df5b3639e55}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!C\+A\+R\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+US@{C\+A\+R\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+US}}
+\index{C\+A\+R\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+US@{C\+A\+R\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+US}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{C\+A\+R\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+US}{CARD\_BLOCK\_STATUS}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+C\+A\+R\+D\+\_\+\+B\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+US = \char`\"{}cards/blockstatus\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_abe32a138ecc549cfc16cc9846d4ca468}\label{class_form_sim_1_1_rest_handler_abe32a138ecc549cfc16cc9846d4ca468}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!C\+H\+E\+CK@{C\+H\+E\+CK}}
+\index{C\+H\+E\+CK@{C\+H\+E\+CK}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{C\+H\+E\+CK}{CHECK}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+C\+H\+E\+CK = \char`\"{}transactions/check\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a5b324ad107b08c3bdf9f5fc7814db39c}\label{class_form_sim_1_1_rest_handler_a5b324ad107b08c3bdf9f5fc7814db39c}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!C\+L\+E\+A\+R\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS@{C\+L\+E\+A\+R\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS}}
+\index{C\+L\+E\+A\+R\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS@{C\+L\+E\+A\+R\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{C\+L\+E\+A\+R\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS}{CLEAR\_LINE\_ITEMS}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+C\+L\+E\+A\+R\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS = \char`\"{}devices/lineitems\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_add1d76cf837e4fae753b1f625b801fc8}\label{class_form_sim_1_1_rest_handler_add1d76cf837e4fae753b1f625b801fc8}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+S\+ET@{D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+S\+ET}}
+\index{D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+S\+ET@{D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+S\+ET}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+S\+ET}{DEVICE\_RESET}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+D\+E\+V\+I\+C\+E\+\_\+\+R\+E\+S\+ET = \char`\"{}devices/reset\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a0ed7785fca279bdb9dd7e600f71553c0}\label{class_form_sim_1_1_rest_handler_a0ed7785fca279bdb9dd7e600f71553c0}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+EM@{D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+EM}}
+\index{D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+EM@{D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+EM}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+EM}{DISPLAY\_LINE\_ITEM}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+EM = \char`\"{}devices/lineitems/\{item\}\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a205748c1af29fb6e639c7e6ad4b78bf2}\label{class_form_sim_1_1_rest_handler_a205748c1af29fb6e639c7e6ad4b78bf2}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS@{D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS}}
+\index{D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS@{D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS}{DISPLAY\_LINE\_ITEMS}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+L\+I\+N\+E\+\_\+\+I\+T\+E\+MS = \char`\"{}devices/lineitems\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a8742d658aaab597957ada79707565406}\label{class_form_sim_1_1_rest_handler_a8742d658aaab597957ada79707565406}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!G\+C\+\_\+\+A\+C\+T\+I\+V\+A\+TE@{G\+C\+\_\+\+A\+C\+T\+I\+V\+A\+TE}}
+\index{G\+C\+\_\+\+A\+C\+T\+I\+V\+A\+TE@{G\+C\+\_\+\+A\+C\+T\+I\+V\+A\+TE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{G\+C\+\_\+\+A\+C\+T\+I\+V\+A\+TE}{GC\_ACTIVATE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+G\+C\+\_\+\+A\+C\+T\+I\+V\+A\+TE = \char`\"{}giftcards/activate\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a91a3268dfe038eac25dc4b294e863fd8}\label{class_form_sim_1_1_rest_handler_a91a3268dfe038eac25dc4b294e863fd8}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!G\+C\+\_\+\+B\+A\+L\+A\+N\+CE@{G\+C\+\_\+\+B\+A\+L\+A\+N\+CE}}
+\index{G\+C\+\_\+\+B\+A\+L\+A\+N\+CE@{G\+C\+\_\+\+B\+A\+L\+A\+N\+CE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{G\+C\+\_\+\+B\+A\+L\+A\+N\+CE}{GC\_BALANCE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+G\+C\+\_\+\+B\+A\+L\+A\+N\+CE = \char`\"{}giftcards/balance\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_ab92584cf05cc40329fb2f2e4a5e8b33a}\label{class_form_sim_1_1_rest_handler_ab92584cf05cc40329fb2f2e4a5e8b33a}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!G\+C\+\_\+\+C\+A\+N\+C\+EL@{G\+C\+\_\+\+C\+A\+N\+C\+EL}}
+\index{G\+C\+\_\+\+C\+A\+N\+C\+EL@{G\+C\+\_\+\+C\+A\+N\+C\+EL}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{G\+C\+\_\+\+C\+A\+N\+C\+EL}{GC\_CANCEL}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+G\+C\+\_\+\+C\+A\+N\+C\+EL = \char`\"{}giftcards/cancel\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_ae69e88368d469b455b3ae1105f819d08}\label{class_form_sim_1_1_rest_handler_ae69e88368d469b455b3ae1105f819d08}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!G\+C\+\_\+\+C\+A\+S\+H\+O\+UT@{G\+C\+\_\+\+C\+A\+S\+H\+O\+UT}}
+\index{G\+C\+\_\+\+C\+A\+S\+H\+O\+UT@{G\+C\+\_\+\+C\+A\+S\+H\+O\+UT}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{G\+C\+\_\+\+C\+A\+S\+H\+O\+UT}{GC\_CASHOUT}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+G\+C\+\_\+\+C\+A\+S\+H\+O\+UT = \char`\"{}giftcards/cashout\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a806a27130463899de1a5a145b0a79c3d}\label{class_form_sim_1_1_rest_handler_a806a27130463899de1a5a145b0a79c3d}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!G\+C\+\_\+\+D\+E\+A\+C\+T\+I\+V\+A\+TE@{G\+C\+\_\+\+D\+E\+A\+C\+T\+I\+V\+A\+TE}}
+\index{G\+C\+\_\+\+D\+E\+A\+C\+T\+I\+V\+A\+TE@{G\+C\+\_\+\+D\+E\+A\+C\+T\+I\+V\+A\+TE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{G\+C\+\_\+\+D\+E\+A\+C\+T\+I\+V\+A\+TE}{GC\_DEACTIVATE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+G\+C\+\_\+\+D\+E\+A\+C\+T\+I\+V\+A\+TE = \char`\"{}giftcards/deactivate\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_aee53bacfe8716e4f2e2365bb007218b5}\label{class_form_sim_1_1_rest_handler_aee53bacfe8716e4f2e2365bb007218b5}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!G\+C\+\_\+\+R\+E\+A\+C\+T\+I\+V\+A\+TE@{G\+C\+\_\+\+R\+E\+A\+C\+T\+I\+V\+A\+TE}}
+\index{G\+C\+\_\+\+R\+E\+A\+C\+T\+I\+V\+A\+TE@{G\+C\+\_\+\+R\+E\+A\+C\+T\+I\+V\+A\+TE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{G\+C\+\_\+\+R\+E\+A\+C\+T\+I\+V\+A\+TE}{GC\_REACTIVATE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+G\+C\+\_\+\+R\+E\+A\+C\+T\+I\+V\+A\+TE = \char`\"{}giftcards/reactivate\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a4edb4283c69328bd540594c288c67fde}\label{class_form_sim_1_1_rest_handler_a4edb4283c69328bd540594c288c67fde}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!G\+C\+\_\+\+R\+E\+L\+O\+AD@{G\+C\+\_\+\+R\+E\+L\+O\+AD}}
+\index{G\+C\+\_\+\+R\+E\+L\+O\+AD@{G\+C\+\_\+\+R\+E\+L\+O\+AD}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{G\+C\+\_\+\+R\+E\+L\+O\+AD}{GC\_RELOAD}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+G\+C\+\_\+\+R\+E\+L\+O\+AD = \char`\"{}giftcards/reload\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a2f8574a09fb25a8632817d26e6323daf}\label{class_form_sim_1_1_rest_handler_a2f8574a09fb25a8632817d26e6323daf}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!G\+E\+T\+\_\+4\+\_\+\+W\+O\+R\+DS@{G\+E\+T\+\_\+4\+\_\+\+W\+O\+R\+DS}}
+\index{G\+E\+T\+\_\+4\+\_\+\+W\+O\+R\+DS@{G\+E\+T\+\_\+4\+\_\+\+W\+O\+R\+DS}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{G\+E\+T\+\_\+4\+\_\+\+W\+O\+R\+DS}{GET\_4\_WORDS}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+G\+E\+T\+\_\+4\+\_\+\+W\+O\+R\+DS = \char`\"{}tokens/4words\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a78b7d4fdea5fe30c1f82dbe17ea2e093}\label{class_form_sim_1_1_rest_handler_a78b7d4fdea5fe30c1f82dbe17ea2e093}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+FO@{G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+FO}}
+\index{G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+FO@{G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+FO}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+FO}{GET\_DEVICE\_INFO}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+G\+E\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+I\+N\+FO = \char`\"{}devices/info\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a7eaa83dfd3c17adad3483c6785bbae0b}\label{class_form_sim_1_1_rest_handler_a7eaa83dfd3c17adad3483c6785bbae0b}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!G\+E\+T\+\_\+\+N\+E\+X\+T\+\_\+\+I\+N\+V\+O\+I\+CE@{G\+E\+T\+\_\+\+N\+E\+X\+T\+\_\+\+I\+N\+V\+O\+I\+CE}}
+\index{G\+E\+T\+\_\+\+N\+E\+X\+T\+\_\+\+I\+N\+V\+O\+I\+CE@{G\+E\+T\+\_\+\+N\+E\+X\+T\+\_\+\+I\+N\+V\+O\+I\+CE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{G\+E\+T\+\_\+\+N\+E\+X\+T\+\_\+\+I\+N\+V\+O\+I\+CE}{GET\_NEXT\_INVOICE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+G\+E\+T\+\_\+\+N\+E\+X\+T\+\_\+\+I\+N\+V\+O\+I\+CE = \char`\"{}reports/batchdetails\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_ad2cd92751f0b8f3317205b32d1ba401d}\label{class_form_sim_1_1_rest_handler_ad2cd92751f0b8f3317205b32d1ba401d}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!headers\+Set@{headers\+Set}}
+\index{headers\+Set@{headers\+Set}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{headers\+Set}{headersSet}}
+{\footnotesize\ttfamily bool Form\+Sim.\+Rest\+Handler.\+headers\+Set\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a4c4b833300f1760e624cb25aedcb0cd7}\label{class_form_sim_1_1_rest_handler_a4c4b833300f1760e624cb25aedcb0cd7}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+A\+RD@{I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+A\+RD}}
+\index{I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+A\+RD@{I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+A\+RD}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+A\+RD}{IDENTIFY\_CARD}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+I\+D\+E\+N\+T\+I\+F\+Y\+\_\+\+C\+A\+RD = \char`\"{}cards/identify\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_ae3f4dd32629759aba164eac64175c71f}\label{class_form_sim_1_1_rest_handler_ae3f4dd32629759aba164eac64175c71f}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!ignore\+S\+S\+Lerrors@{ignore\+S\+S\+Lerrors}}
+\index{ignore\+S\+S\+Lerrors@{ignore\+S\+S\+Lerrors}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{ignore\+S\+S\+Lerrors}{ignoreSSLerrors}}
+{\footnotesize\ttfamily bool Form\+Sim.\+Rest\+Handler.\+ignore\+S\+S\+Lerrors = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_ad55f11f47492affe120d64685d11356f}\label{class_form_sim_1_1_rest_handler_ad55f11f47492affe120d64685d11356f}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+\_\+\+R\+E\+A\+D\+E\+RS@{I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+\_\+\+R\+E\+A\+D\+E\+RS}}
+\index{I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+\_\+\+R\+E\+A\+D\+E\+RS@{I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+\_\+\+R\+E\+A\+D\+E\+RS}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+\_\+\+R\+E\+A\+D\+E\+RS}{INITIALIZE\_READERS}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+I\+N\+I\+T\+I\+A\+L\+I\+Z\+E\+\_\+\+R\+E\+A\+D\+E\+RS = \char`\"{}devices/initializereaders\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_adee0030a983637e00e79cda3b5a1dfb6}\label{class_form_sim_1_1_rest_handler_adee0030a983637e00e79cda3b5a1dfb6}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!I\+N\+V\+O\+I\+CE@{I\+N\+V\+O\+I\+CE}}
+\index{I\+N\+V\+O\+I\+CE@{I\+N\+V\+O\+I\+CE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{I\+N\+V\+O\+I\+CE}{INVOICE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+I\+N\+V\+O\+I\+CE = \char`\"{}transactions/invoice\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a2b2da7000557616345192ffd589b4e16}\label{class_form_sim_1_1_rest_handler_a2b2da7000557616345192ffd589b4e16}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!json\+\_\+out@{json\+\_\+out}}
+\index{json\+\_\+out@{json\+\_\+out}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{json\+\_\+out}{json\_out}}
+{\footnotesize\ttfamily string Form\+Sim.\+Rest\+Handler.\+json\+\_\+out\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a11a3ee0812c27c88988615f24ecb25dc}\label{class_form_sim_1_1_rest_handler_a11a3ee0812c27c88988615f24ecb25dc}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!M\+A\+N\+U\+A\+L\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON@{M\+A\+N\+U\+A\+L\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON}}
+\index{M\+A\+N\+U\+A\+L\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON@{M\+A\+N\+U\+A\+L\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{M\+A\+N\+U\+A\+L\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON}{MANUAL\_AUTHORIZATION}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+M\+A\+N\+U\+A\+L\+\_\+\+A\+U\+T\+H\+O\+R\+I\+Z\+A\+T\+I\+ON = \char`\"{}transactions/manualauthorization\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a8c04225218b1ea8873b6a7e4635147bf}\label{class_form_sim_1_1_rest_handler_a8c04225218b1ea8873b6a7e4635147bf}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!M\+A\+N\+U\+A\+L\+\_\+\+S\+A\+LE@{M\+A\+N\+U\+A\+L\+\_\+\+S\+A\+LE}}
+\index{M\+A\+N\+U\+A\+L\+\_\+\+S\+A\+LE@{M\+A\+N\+U\+A\+L\+\_\+\+S\+A\+LE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{M\+A\+N\+U\+A\+L\+\_\+\+S\+A\+LE}{MANUAL\_SALE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+M\+A\+N\+U\+A\+L\+\_\+\+S\+A\+LE = \char`\"{}transactions/manualsale\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_ae4b8b267aea9f7d55eb821ae567d613b}\label{class_form_sim_1_1_rest_handler_ae4b8b267aea9f7d55eb821ae567d613b}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!M\+E\+R\+C\+H\+A\+NT@{M\+E\+R\+C\+H\+A\+NT}}
+\index{M\+E\+R\+C\+H\+A\+NT@{M\+E\+R\+C\+H\+A\+NT}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{M\+E\+R\+C\+H\+A\+NT}{MERCHANT}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+M\+E\+R\+C\+H\+A\+NT = \char`\"{}merchants/merchant\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_ac8898c2c9addec5b05604700655dbbe9}\label{class_form_sim_1_1_rest_handler_ac8898c2c9addec5b05604700655dbbe9}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!O\+N\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+C\+A\+R\+D\+\_\+\+R\+E\+AD@{O\+N\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+C\+A\+R\+D\+\_\+\+R\+E\+AD}}
+\index{O\+N\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+C\+A\+R\+D\+\_\+\+R\+E\+AD@{O\+N\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+C\+A\+R\+D\+\_\+\+R\+E\+AD}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{O\+N\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+C\+A\+R\+D\+\_\+\+R\+E\+AD}{ON\_DEMAND\_CARD\_READ}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+O\+N\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+C\+A\+R\+D\+\_\+\+R\+E\+AD = \char`\"{}devices/prompts/cardread\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a0d509105eef3e65ade61d66f22ee08ea}\label{class_form_sim_1_1_rest_handler_a0d509105eef3e65ade61d66f22ee08ea}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!P\+R\+I\+N\+T\+\_\+\+R\+E\+C\+E\+I\+PT@{P\+R\+I\+N\+T\+\_\+\+R\+E\+C\+E\+I\+PT}}
+\index{P\+R\+I\+N\+T\+\_\+\+R\+E\+C\+E\+I\+PT@{P\+R\+I\+N\+T\+\_\+\+R\+E\+C\+E\+I\+PT}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{P\+R\+I\+N\+T\+\_\+\+R\+E\+C\+E\+I\+PT}{PRINT\_RECEIPT}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+P\+R\+I\+N\+T\+\_\+\+R\+E\+C\+E\+I\+PT = \char`\"{}devices/print\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a072db72ff3cc31ecf995ad17c145f4b4}\label{class_form_sim_1_1_rest_handler_a072db72ff3cc31ecf995ad17c145f4b4}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!P\+R\+O\+C\+E\+S\+S\+\_\+\+F\+O\+R\+MS@{P\+R\+O\+C\+E\+S\+S\+\_\+\+F\+O\+R\+MS}}
+\index{P\+R\+O\+C\+E\+S\+S\+\_\+\+F\+O\+R\+MS@{P\+R\+O\+C\+E\+S\+S\+\_\+\+F\+O\+R\+MS}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{P\+R\+O\+C\+E\+S\+S\+\_\+\+F\+O\+R\+MS}{PROCESS\_FORMS}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+P\+R\+O\+C\+E\+S\+S\+\_\+\+F\+O\+R\+MS = \char`\"{}devices/processform\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_af90c44f10cd5ead89606b811fc5ae632}\label{class_form_sim_1_1_rest_handler_af90c44f10cd5ead89606b811fc5ae632}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!P\+R\+O\+M\+P\+T\+\_\+\+C\+O\+N\+F\+I\+R\+M\+A\+T\+I\+ON@{P\+R\+O\+M\+P\+T\+\_\+\+C\+O\+N\+F\+I\+R\+M\+A\+T\+I\+ON}}
+\index{P\+R\+O\+M\+P\+T\+\_\+\+C\+O\+N\+F\+I\+R\+M\+A\+T\+I\+ON@{P\+R\+O\+M\+P\+T\+\_\+\+C\+O\+N\+F\+I\+R\+M\+A\+T\+I\+ON}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{P\+R\+O\+M\+P\+T\+\_\+\+C\+O\+N\+F\+I\+R\+M\+A\+T\+I\+ON}{PROMPT\_CONFIRMATION}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+P\+R\+O\+M\+P\+T\+\_\+\+C\+O\+N\+F\+I\+R\+M\+A\+T\+I\+ON = \char`\"{}devices/promptconfirmation\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a78226012d7df7c27ae747c20674ca706}\label{class_form_sim_1_1_rest_handler_a78226012d7df7c27ae747c20674ca706}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!P\+R\+O\+M\+P\+T\+\_\+\+I\+N\+P\+UT@{P\+R\+O\+M\+P\+T\+\_\+\+I\+N\+P\+UT}}
+\index{P\+R\+O\+M\+P\+T\+\_\+\+I\+N\+P\+UT@{P\+R\+O\+M\+P\+T\+\_\+\+I\+N\+P\+UT}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{P\+R\+O\+M\+P\+T\+\_\+\+I\+N\+P\+UT}{PROMPT\_INPUT}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+P\+R\+O\+M\+P\+T\+\_\+\+I\+N\+P\+UT = \char`\"{}devices/promptinput\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a1210812ce0844c10de03694bcffb464c}\label{class_form_sim_1_1_rest_handler_a1210812ce0844c10de03694bcffb464c}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!R\+E\+F\+U\+ND@{R\+E\+F\+U\+ND}}
+\index{R\+E\+F\+U\+ND@{R\+E\+F\+U\+ND}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{R\+E\+F\+U\+ND}{REFUND}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+R\+E\+F\+U\+ND = \char`\"{}transactions/refund\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_affa0a3f303002458dbca9c7cb7dc41a7}\label{class_form_sim_1_1_rest_handler_affa0a3f303002458dbca9c7cb7dc41a7}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}}
+\index{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE@{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}{REQUEST\_SIGNATURE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+R\+E\+Q\+U\+E\+S\+T\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE = \char`\"{}devices/promptsignature\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_aa120f59ea2b44fc2ad0e2d95ab9dd18f}\label{class_form_sim_1_1_rest_handler_aa120f59ea2b44fc2ad0e2d95ab9dd18f}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!S\+A\+LE@{S\+A\+LE}}
+\index{S\+A\+LE@{S\+A\+LE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{S\+A\+LE}{SALE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+S\+A\+LE = \char`\"{}transactions/sale\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_af5d7a5c25979759bf51b7ede862718b2}\label{class_form_sim_1_1_rest_handler_af5d7a5c25979759bf51b7ede862718b2}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!S\+E\+S\+S\+I\+ON@{S\+E\+S\+S\+I\+ON}}
+\index{S\+E\+S\+S\+I\+ON@{S\+E\+S\+S\+I\+ON}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{S\+E\+S\+S\+I\+ON}{SESSION}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+S\+E\+S\+S\+I\+ON = \char`\"{}status\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a54fcdefde2b8518a8ce326ca362cf09d}\label{class_form_sim_1_1_rest_handler_a54fcdefde2b8518a8ce326ca362cf09d}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!S\+I\+G\+N\+A\+T\+U\+RE@{S\+I\+G\+N\+A\+T\+U\+RE}}
+\index{S\+I\+G\+N\+A\+T\+U\+RE@{S\+I\+G\+N\+A\+T\+U\+RE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{S\+I\+G\+N\+A\+T\+U\+RE}{SIGNATURE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+S\+I\+G\+N\+A\+T\+U\+RE = \char`\"{}transactions/signature\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a8e0162fa484b58fc50eb95db9da2784f}\label{class_form_sim_1_1_rest_handler_a8e0162fa484b58fc50eb95db9da2784f}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+Q\+U\+E\+ST@{S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+Q\+U\+E\+ST}}
+\index{S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+Q\+U\+E\+ST@{S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+Q\+U\+E\+ST}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+Q\+U\+E\+ST}{STATUS\_REQUEST}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+S\+T\+A\+T\+U\+S\+\_\+\+R\+E\+Q\+U\+E\+ST = \char`\"{}sessions\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_af1397ea44e81584c26bcb257d9ce5769}\label{class_form_sim_1_1_rest_handler_af1397ea44e81584c26bcb257d9ce5769}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!T\+E\+R\+M\+S\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+NS@{T\+E\+R\+M\+S\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+NS}}
+\index{T\+E\+R\+M\+S\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+NS@{T\+E\+R\+M\+S\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+NS}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{T\+E\+R\+M\+S\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+NS}{TERMS\_AND\_CONDITIONS}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+T\+E\+R\+M\+S\+\_\+\+A\+N\+D\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+NS = \char`\"{}devices/termsandconditions\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a6ae5956fb935833d3e68813b786bd034}\label{class_form_sim_1_1_rest_handler_a6ae5956fb935833d3e68813b786bd034}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!T\+O\+K\+E\+N\+\_\+\+A\+DD@{T\+O\+K\+E\+N\+\_\+\+A\+DD}}
+\index{T\+O\+K\+E\+N\+\_\+\+A\+DD@{T\+O\+K\+E\+N\+\_\+\+A\+DD}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+A\+DD}{TOKEN\_ADD}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+T\+O\+K\+E\+N\+\_\+\+A\+DD = \char`\"{}tokens/add\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a4830033d986d2f15704092cd8420f04c}\label{class_form_sim_1_1_rest_handler_a4830033d986d2f15704092cd8420f04c}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!T\+O\+K\+E\+N\+\_\+\+D\+E\+L\+E\+TE@{T\+O\+K\+E\+N\+\_\+\+D\+E\+L\+E\+TE}}
+\index{T\+O\+K\+E\+N\+\_\+\+D\+E\+L\+E\+TE@{T\+O\+K\+E\+N\+\_\+\+D\+E\+L\+E\+TE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+D\+E\+L\+E\+TE}{TOKEN\_DELETE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+T\+O\+K\+E\+N\+\_\+\+D\+E\+L\+E\+TE = \char`\"{}tokens/delete\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_afd87386544c94ad11669b905304cda99}\label{class_form_sim_1_1_rest_handler_afd87386544c94ad11669b905304cda99}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!T\+O\+K\+E\+N\+\_\+\+D\+U\+P\+L\+I\+C\+A\+TE@{T\+O\+K\+E\+N\+\_\+\+D\+U\+P\+L\+I\+C\+A\+TE}}
+\index{T\+O\+K\+E\+N\+\_\+\+D\+U\+P\+L\+I\+C\+A\+TE@{T\+O\+K\+E\+N\+\_\+\+D\+U\+P\+L\+I\+C\+A\+TE}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+D\+U\+P\+L\+I\+C\+A\+TE}{TOKEN\_DUPLICATE}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+T\+O\+K\+E\+N\+\_\+\+D\+U\+P\+L\+I\+C\+A\+TE = \char`\"{}tokens/duplicate\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a28d4f880c8894174f1f055abfc1f7b30}\label{class_form_sim_1_1_rest_handler_a28d4f880c8894174f1f055abfc1f7b30}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!T\+O\+T\+A\+L\+S\+\_\+\+R\+E\+P\+O\+RT@{T\+O\+T\+A\+L\+S\+\_\+\+R\+E\+P\+O\+RT}}
+\index{T\+O\+T\+A\+L\+S\+\_\+\+R\+E\+P\+O\+RT@{T\+O\+T\+A\+L\+S\+\_\+\+R\+E\+P\+O\+RT}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{T\+O\+T\+A\+L\+S\+\_\+\+R\+E\+P\+O\+RT}{TOTALS\_REPORT}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+T\+O\+T\+A\+L\+S\+\_\+\+R\+E\+P\+O\+RT = \char`\"{}reports/batchtotals\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_a7a93675f32f8a682458f8e2d6fdf9384}\label{class_form_sim_1_1_rest_handler_a7a93675f32f8a682458f8e2d6fdf9384}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!U\+N\+B\+L\+O\+C\+K\+\_\+\+C\+A\+RD@{U\+N\+B\+L\+O\+C\+K\+\_\+\+C\+A\+RD}}
+\index{U\+N\+B\+L\+O\+C\+K\+\_\+\+C\+A\+RD@{U\+N\+B\+L\+O\+C\+K\+\_\+\+C\+A\+RD}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{U\+N\+B\+L\+O\+C\+K\+\_\+\+C\+A\+RD}{UNBLOCK\_CARD}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+U\+N\+B\+L\+O\+C\+K\+\_\+\+C\+A\+RD = \char`\"{}cards/unblock\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_rest_handler_adbde7c45aab3b4a97cf1464065161dcd}\label{class_form_sim_1_1_rest_handler_adbde7c45aab3b4a97cf1464065161dcd}} 
+\index{Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}!V\+E\+R\+I\+F\+Y\+\_\+\+C\+A\+RD@{V\+E\+R\+I\+F\+Y\+\_\+\+C\+A\+RD}}
+\index{V\+E\+R\+I\+F\+Y\+\_\+\+C\+A\+RD@{V\+E\+R\+I\+F\+Y\+\_\+\+C\+A\+RD}!Form\+Sim\+::\+Rest\+Handler@{Form\+Sim\+::\+Rest\+Handler}}
+\subsubsection{\texorpdfstring{V\+E\+R\+I\+F\+Y\+\_\+\+C\+A\+RD}{VERIFY\_CARD}}
+{\footnotesize\ttfamily readonly string Form\+Sim.\+Rest\+Handler.\+V\+E\+R\+I\+F\+Y\+\_\+\+C\+A\+RD = \char`\"{}cards/verify\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_rest_handler_8cs}{Rest\+Handler.\+cs}}\end{DoxyCompactItemize}

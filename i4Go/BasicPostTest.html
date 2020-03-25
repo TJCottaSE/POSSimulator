@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html><body>
+	<script>
+		function showManualEntry(){
+			document.getElementById("manualEntry").removeAttribute("hidden");
+		}
+		function showTrackDataEntry(){
+			document.getElementById("trackDataEntry").removeAttribute("hidden");
+		}
+		function showP2PE_Entry(){
+			document.getElementById("P2PE_Entry").removeAttribute("hidden");
+		}
+		function parseTrackData(){
+			console.log("Something happened");
+			var trackData1 = document.getElementById("txtArea").value;
+			var input = document.createElement("input");
+			input.setAttribute("type", "hidden");
+			input.setAttribute("name", "i4go_trackinformation");
+			input.setAttribute("value", trackData1);
+
+			if (trackData1.charAt(0) == "%"){
+				// Track 1 Only or Dual Track
+				var expBreak = trackData1.lastIndexOf('^');
+				var exp = trackData1.substring(expBreak + 1, expBreak + 5);
+				var expYear = exp.charAt(0) + exp.charAt(1);
+				var expMonth = exp.charAt(2) + exp.charAt(3);
+				var nameBreak = trackData1.indexOf('^');
+				var cardNumber = trackData1.substring(2, nameBreak);
+			}
+			else {
+				// Track 2 Only
+				var expBreak = trackData1.lastIndexOf('=');
+				var exp = trackData1.substring(expBreak + 1, expBreak + 5);
+				var expYear = exp.charAt(0) + exp.charAt(1);
+				var expMonth = exp.charAt(2) + exp.charAt(3);
+				var cardNumber = trackData1.substring(1, expBreak);
+			}
+			var input2 = document.createElement("input");
+			input2.setAttribute("type", "hidden");
+			input2.setAttribute("name", "i4go_cardnumber");
+			input2.setAttribute("value", cardNumber);
+			var input3 = document.createElement("input");
+			input3.setAttribute("type", "hidden");
+			input3.setAttribute("name", "i4go_expirationmonth");
+			input3.setAttribute("value", expMonth);
+			var input4 = document.createElement("input");
+			input4.setAttribute("type", "hidden");
+			input4.setAttribute("name", "i4go_expirationyear");
+			input4.setAttribute("value", expYear);
+
+			document.getElementById("trackData").appendChild(input);
+			document.getElementById("trackData").appendChild(input2);
+			document.getElementById("trackData").appendChild(input3);
+			document.getElementById("trackData").appendChild(input4);
+		}
+	</script>
+	<p>Get access block</p>
+	<form action="https://access.shift4test.com" method="POST" target="_blank">
+		<input type="hidden" name="fuseaction" value="account.authorizeClient">
+		<input type="hidden" name="i4go_clientip" value="127.0.0.1">
+		<input type="hidden" name="i4go_accesstoken" value="390B2B95-E74C-4774-A88B-C07E5B020488">
+		<input type="hidden" name="i4go_metaToken" value="IL">
+		<input type="submit" value="Submit">
+	</form>
+	<br>
+	<p>---------------------------------------------------------------------------------------------------------------------</p>
+	<button type="button" onclick="showManualEntry()">Manual Entry</button>
+	<button type="button" onclick="showTrackDataEntry()">Track Data Entry</button>
+	<button type="button" onclick="showP2PE_Entry()">P2PE Data Entry</button>
+	<div id="manualEntry" hidden>
+		<p>---------------------------------------------------------------------------------------------------------------------</p>
+		<form action="https://i4go-payment.shift4test.com" method="POST">
+			<input type="hidden" name="fuseaction" value="form.cardEntry">
+			<input type="hidden" name="i4go_successurl" value="http://www.google.com">
+			<input type="hidden" name="i4go_failurl" value="http://www.github.com">
+			<label>Access Block: </label><input type="text" name="i4go_accessblock"><br>
+			<label>Card Number: </label><input type="numeric" name="i4go_cardnumber">
+			<label>Expiration Month: </label><input type="numeric" name="i4go_expirationmonth">
+			<label>Expiration Year: </label><input type="numeric" name="i4go_expirationyear">
+			<label>CVV Code</label><input type="numeric" name="i4go_cvv2code">
+			<label>Cardholder Name</label><input type="text" name="i4go_cardholdername" value="Sterling Archer">
+			<label>Street Address</label><input type="text" name="i4go_streetaddress" value="65 Main St.">
+			<label>Zip Code</label><input type="numeric" name="i4go_postalcode" value="65000">
+			<!--<label>CVV Indicator</label><input type="text" name="i4go_cvv2indicator" value="1">-->
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+	
+	<div id="trackDataEntry" hidden>
+		<p>---------------------------------------------------------------------------------------------------------------------</p>
+		<label>Track Data: </label><textarea id="txtArea"></textarea><br>
+		<form id="trackData" action="https://i4go-payment.shift4test.com" method="POST">
+			<input type="hidden" name="fuseaction" value="form.cardEntry">
+			<input type="hidden" name="i4go_successurl" value="http://www.google.com">
+			<input type="hidden" name="i4go_failurl" value="http://www.github.com">
+			<label>Access Block: </label><input type="text" name="i4go_accessblock">	
+			<input type="submit" value="Submit">
+		</form>
+		<button type="button" onclick="parseTrackData()">Parse</button>
+	</div>
+	
+	<div id="P2PE_Entry" hidden>
+		<p>---------------------------------------------------------------------------------------------------------------------</p>
+		<form id="P2PE_Data" action="https://i4go-payment.shift4test.com" method="POST">
+			<input type="hidden" name="fuseaction" value="form.cardEntry">
+			<input type="hidden" name="i4go_successurl" value="http://www.google.com">
+			<input type="hidden" name="i4go_failurl" value="http://www.github.com">
+			<label>Access Block: </label><input type="text" name="i4go_accessblock">	
+			<label>P2PE Block: </label><input type="text" name="i4go_p2peblock">
+			<input type="hidden" name="i4go_p2pedevicetype" value="01">
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+
+</body></html>

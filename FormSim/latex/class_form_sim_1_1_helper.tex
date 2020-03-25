@@ -1,0 +1,167 @@
+\hypertarget{class_form_sim_1_1_helper}{}\section{Form\+Sim.\+Helper Class Reference}
+\label{class_form_sim_1_1_helper}\index{Form\+Sim.\+Helper@{Form\+Sim.\+Helper}}
+
+
+This is a helper class designed to do some parsing and padding. It was designed to reduce code re-\/use across both the \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler}{H\+T\+T\+P\+Handler}} and \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler}{T\+C\+P\+Handler}} classes. Due to the shared nature of this class, any changes made here should be tested with both the T\+CP and H\+T\+TP handlers after an update.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ string, string $>$ \mbox{\hyperlink{class_form_sim_1_1_helper_a78ee613f626109557d9ee517de730d45}{strip\+A\+P\+I\+Parameters}} (Dictionary$<$ string, string $>$ parameters, string to\+Be\+Stripped)
+\begin{DoxyCompactList}\small\item\em Strips the given parameter from the list of A\+P\+I\+Options contained within the parameters dictionary. \end{DoxyCompactList}\item 
+Dictionary$<$ string, string $>$ \mbox{\hyperlink{class_form_sim_1_1_helper_a8a6a59356795949c64f587e9f39037f7}{strip\+A\+P\+I\+Parameters}} (Dictionary$<$ string, string $>$ parameters, string\mbox{[}$\,$\mbox{]} to\+Be\+Stripped)
+\begin{DoxyCompactList}\small\item\em Strips a list of A\+P\+I\+Options from the list of A\+P\+I\+Options contained within the parameters dictionary. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_helper_a1f47101e1905473c2cfb068029be26a4}{parse\+Dict}} (Dictionary$<$ string, string $>$ dict)
+\begin{DoxyCompactList}\small\item\em Parses out a Dictionary of strings into a user readable string that can be used for printing or logging. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_helper_a3968424b9dab262dce2c066807926c77}{get\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current date, and returns it in the proper format. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_form_sim_1_1_helper_a1bfb27c73d68bbcd7224e5f041ba3606}{get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current time, and returns it in proper format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_form_sim_1_1_helper}{Helper}} \mbox{\hyperlink{class_form_sim_1_1_helper_ac61d1dca7ce9b1fa7e4ce17e99b0b7e1}{get\+Instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_form_sim_1_1_helper_a49fc4e03c9116e60aa1462c139f747ad}{Helper}} ()
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_helper_a5c4a7f2cdee7bb6466b8dd9f7ea11745}{date\+Pad}} (string value)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{class_form_sim_1_1_helper}{Helper}} \mbox{\hyperlink{class_form_sim_1_1_helper_a100712088360a52887cbecd891548038}{instance}} = new \mbox{\hyperlink{class_form_sim_1_1_helper}{Helper}}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a helper class designed to do some parsing and padding. It was designed to reduce code re-\/use across both the \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler}{H\+T\+T\+P\+Handler}} and \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler}{T\+C\+P\+Handler}} classes. Due to the shared nature of this class, any changes made here should be tested with both the T\+CP and H\+T\+TP handlers after an update. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_helper_a49fc4e03c9116e60aa1462c139f747ad}\label{class_form_sim_1_1_helper_a49fc4e03c9116e60aa1462c139f747ad}} 
+\index{Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}!Helper@{Helper}}
+\index{Helper@{Helper}!Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}}
+\subsubsection{\texorpdfstring{Helper()}{Helper()}}
+{\footnotesize\ttfamily Form\+Sim.\+Helper.\+Helper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_helper_a5c4a7f2cdee7bb6466b8dd9f7ea11745}\label{class_form_sim_1_1_helper_a5c4a7f2cdee7bb6466b8dd9f7ea11745}} 
+\index{Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}!date\+Pad@{date\+Pad}}
+\index{date\+Pad@{date\+Pad}!Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}}
+\subsubsection{\texorpdfstring{date\+Pad()}{datePad()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Helper.\+date\+Pad (\begin{DoxyParamCaption}\item[{string}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_helper_a3968424b9dab262dce2c066807926c77}\label{class_form_sim_1_1_helper_a3968424b9dab262dce2c066807926c77}} 
+\index{Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}!get\+Date@{get\+Date}}
+\index{get\+Date@{get\+Date}!Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}}
+\subsubsection{\texorpdfstring{get\+Date()}{getDate()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Helper.\+get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current date, and returns it in the proper format. 
+
+\begin{DoxyReturn}{Returns}
+Returns todays date in M\+M\+D\+D\+YY format.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_helper_a1bfb27c73d68bbcd7224e5f041ba3606}\label{class_form_sim_1_1_helper_a1bfb27c73d68bbcd7224e5f041ba3606}} 
+\index{Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}!get\+Time@{get\+Time}}
+\index{get\+Time@{get\+Time}!Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}}
+\subsubsection{\texorpdfstring{get\+Time()}{getTime()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Helper.\+get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the current time, and returns it in proper format. 
+
+\begin{DoxyReturn}{Returns}
+The current time returned in H\+H\+M\+M\+SS format.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_helper_a1f47101e1905473c2cfb068029be26a4}\label{class_form_sim_1_1_helper_a1f47101e1905473c2cfb068029be26a4}} 
+\index{Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}!parse\+Dict@{parse\+Dict}}
+\index{parse\+Dict@{parse\+Dict}!Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}}
+\subsubsection{\texorpdfstring{parse\+Dict()}{parseDict()}}
+{\footnotesize\ttfamily string Form\+Sim.\+Helper.\+parse\+Dict (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{dict }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parses out a Dictionary of strings into a user readable string that can be used for printing or logging. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dict} & The Dictionary to be parsed.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representation of the contents of the Dictionary.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_helper_a78ee613f626109557d9ee517de730d45}\label{class_form_sim_1_1_helper_a78ee613f626109557d9ee517de730d45}} 
+\index{Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}!strip\+A\+P\+I\+Parameters@{strip\+A\+P\+I\+Parameters}}
+\index{strip\+A\+P\+I\+Parameters@{strip\+A\+P\+I\+Parameters}!Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}}
+\subsubsection{\texorpdfstring{strip\+A\+P\+I\+Parameters()}{stripAPIParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Dictionary$<$string, string$>$ Form\+Sim.\+Helper.\+strip\+A\+P\+I\+Parameters (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters,  }\item[{string}]{to\+Be\+Stripped }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Strips the given parameter from the list of A\+P\+I\+Options contained within the parameters dictionary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & The Dictionary of all the parameters for an F\+RC.\\
+\hline
+{\em to\+Be\+Stripped} & The A\+PI Option to be removed from the list of options.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Dictionary of all the parameters for an F\+RC minus the A\+PI Option that was removed.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_helper_a8a6a59356795949c64f587e9f39037f7}\label{class_form_sim_1_1_helper_a8a6a59356795949c64f587e9f39037f7}} 
+\index{Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}!strip\+A\+P\+I\+Parameters@{strip\+A\+P\+I\+Parameters}}
+\index{strip\+A\+P\+I\+Parameters@{strip\+A\+P\+I\+Parameters}!Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}}
+\subsubsection{\texorpdfstring{strip\+A\+P\+I\+Parameters()}{stripAPIParameters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Dictionary$<$string, string$>$ Form\+Sim.\+Helper.\+strip\+A\+P\+I\+Parameters (\begin{DoxyParamCaption}\item[{Dictionary$<$ string, string $>$}]{parameters,  }\item[{string \mbox{[}$\,$\mbox{]}}]{to\+Be\+Stripped }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Strips a list of A\+P\+I\+Options from the list of A\+P\+I\+Options contained within the parameters dictionary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameters} & The Dictionary of all the parameters for an F\+RC.\\
+\hline
+{\em to\+Be\+Stripped} & The A\+PI Option list to be removed from the list of options.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Dictionary of all the parameters for an F\+RC minus the A\+PI Options that were removed.
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_helper_a100712088360a52887cbecd891548038}\label{class_form_sim_1_1_helper_a100712088360a52887cbecd891548038}} 
+\index{Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}!instance@{instance}}
+\index{instance@{instance}!Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}}
+\subsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{class_form_sim_1_1_helper}{Helper}} Form\+Sim.\+Helper.\+instance = new \mbox{\hyperlink{class_form_sim_1_1_helper}{Helper}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_helper_ac61d1dca7ce9b1fa7e4ce17e99b0b7e1}\label{class_form_sim_1_1_helper_ac61d1dca7ce9b1fa7e4ce17e99b0b7e1}} 
+\index{Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Form\+Sim\+::\+Helper@{Form\+Sim\+::\+Helper}}
+\subsubsection{\texorpdfstring{get\+Instance}{getInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_form_sim_1_1_helper}{Helper}} Form\+Sim.\+Helper.\+get\+Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_helper_8cs}{Helper.\+cs}}\end{DoxyCompactItemize}

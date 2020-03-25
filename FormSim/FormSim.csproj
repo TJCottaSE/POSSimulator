@@ -1,0 +1,627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{514BD0FB-4199-434C-9E00-84C43130A409}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FormSim</RootNamespace>
+    <AssemblyName>FormSim</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Docs\.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="EncryptionInfo.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenericHandler.cs" />
+    <Compile Include="Helper.cs" />
+    <Compile Include="HTTPHandler.cs" />
+    <Compile Include="FRC_Handler.cs" />
+    <Compile Include="IDTechHandler.cs" />
+    <Compile Include="LogWriter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RestHandler.cs" />
+    <Compile Include="TCPHandler.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Augusta_config">
+      <HintPath>..\Libraries(DLLs)\Augusta_config.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_ctls">
+      <HintPath>..\Libraries(DLLs)\Augusta_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_device">
+      <HintPath>..\Libraries(DLLs)\Augusta_device.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_emv">
+      <HintPath>..\Libraries(DLLs)\Augusta_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_icc">
+      <HintPath>..\Libraries(DLLs)\Augusta_icc.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_KB_config">
+      <HintPath>..\Libraries(DLLs)\Augusta_KB_config.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_KB_ctls">
+      <HintPath>..\Libraries(DLLs)\Augusta_KB_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_KB_device">
+      <HintPath>..\Libraries(DLLs)\Augusta_KB_device.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_KB_emv">
+      <HintPath>..\Libraries(DLLs)\Augusta_KB_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_KB_icc">
+      <HintPath>..\Libraries(DLLs)\Augusta_KB_icc.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_KB_lcd">
+      <HintPath>..\Libraries(DLLs)\Augusta_KB_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_KB_msr">
+      <HintPath>..\Libraries(DLLs)\Augusta_KB_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_KB_parse_">
+      <HintPath>..\Libraries(DLLs)\Augusta_KB_parse_.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_KB_pin">
+      <HintPath>..\Libraries(DLLs)\Augusta_KB_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_lcd">
+      <HintPath>..\Libraries(DLLs)\Augusta_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_msr">
+      <HintPath>..\Libraries(DLLs)\Augusta_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_parse">
+      <HintPath>..\Libraries(DLLs)\Augusta_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="Augusta_pin">
+      <HintPath>..\Libraries(DLLs)\Augusta_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="BTMag_config">
+      <HintPath>..\Libraries(DLLs)\BTMag_config.dll</HintPath>
+    </Reference>
+    <Reference Include="BTMag_ctls">
+      <HintPath>..\Libraries(DLLs)\BTMag_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="BTMag_device">
+      <HintPath>..\Libraries(DLLs)\BTMag_device.dll</HintPath>
+    </Reference>
+    <Reference Include="BTMag_emv">
+      <HintPath>..\Libraries(DLLs)\BTMag_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="BTMag_icc_">
+      <HintPath>..\Libraries(DLLs)\BTMag_icc_.dll</HintPath>
+    </Reference>
+    <Reference Include="BTMag_lcd_">
+      <HintPath>..\Libraries(DLLs)\BTMag_lcd_.dll</HintPath>
+    </Reference>
+    <Reference Include="BTMag_msr">
+      <HintPath>..\Libraries(DLLs)\BTMag_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="BTMag_parse">
+      <HintPath>..\Libraries(DLLs)\BTMag_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="BTMag_pin">
+      <HintPath>..\Libraries(DLLs)\BTMag_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="BTPay_config">
+      <HintPath>..\Libraries(DLLs)\BTPay_config.dll</HintPath>
+    </Reference>
+    <Reference Include="BTPay_ctls">
+      <HintPath>..\Libraries(DLLs)\BTPay_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="BTPay_emv">
+      <HintPath>..\Libraries(DLLs)\BTPay_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="BTPay_icc">
+      <HintPath>..\Libraries(DLLs)\BTPay_icc.dll</HintPath>
+    </Reference>
+    <Reference Include="BTPay_lcd">
+      <HintPath>..\Libraries(DLLs)\BTPay_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="BTPay_msr">
+      <HintPath>..\Libraries(DLLs)\BTPay_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="BTPay_parse">
+      <HintPath>..\Libraries(DLLs)\BTPay_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="BTPay_pin">
+      <HintPath>..\Libraries(DLLs)\BTPay_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="CM100_config">
+      <HintPath>..\Libraries(DLLs)\CM100_config.dll</HintPath>
+    </Reference>
+    <Reference Include="CM100_ctls">
+      <HintPath>..\Libraries(DLLs)\CM100_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="CM100_device">
+      <HintPath>..\Libraries(DLLs)\CM100_device.dll</HintPath>
+    </Reference>
+    <Reference Include="CM100_emv">
+      <HintPath>..\Libraries(DLLs)\CM100_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="CM100_icc">
+      <HintPath>..\Libraries(DLLs)\CM100_icc.dll</HintPath>
+    </Reference>
+    <Reference Include="CM100_lcd">
+      <HintPath>..\Libraries(DLLs)\CM100_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="CM100_msr">
+      <HintPath>..\Libraries(DLLs)\CM100_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="CM100_parse">
+      <HintPath>..\Libraries(DLLs)\CM100_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="CM100_pin">
+      <HintPath>..\Libraries(DLLs)\CM100_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="IDTechPKI">
+      <HintPath>..\Libraries(DLLs)\IDTechPKI.dll</HintPath>
+    </Reference>
+    <Reference Include="IDTechSDK">
+      <HintPath>..\Libraries(DLLs)\IDTechSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="K100_config">
+      <HintPath>..\Libraries(DLLs)\K100_config.dll</HintPath>
+    </Reference>
+    <Reference Include="K100_device">
+      <HintPath>..\Libraries(DLLs)\K100_device.dll</HintPath>
+    </Reference>
+    <Reference Include="K100_parse">
+      <HintPath>..\Libraries(DLLs)\K100_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="K100_pin">
+      <HintPath>..\Libraries(DLLs)\K100_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="KioskIII_config">
+      <HintPath>..\Libraries(DLLs)\KioskIII_config.dll</HintPath>
+    </Reference>
+    <Reference Include="KioskIII_ctls">
+      <HintPath>..\Libraries(DLLs)\KioskIII_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="KioskIII_device">
+      <HintPath>..\Libraries(DLLs)\KioskIII_device.dll</HintPath>
+    </Reference>
+    <Reference Include="KioskIII_emv">
+      <HintPath>..\Libraries(DLLs)\KioskIII_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="KioskIII_icc">
+      <HintPath>..\Libraries(DLLs)\KioskIII_icc.dll</HintPath>
+    </Reference>
+    <Reference Include="KioskIII_lcd">
+      <HintPath>..\Libraries(DLLs)\KioskIII_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="KioskIII_msr">
+      <HintPath>..\Libraries(DLLs)\KioskIII_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="KioskIII_parse">
+      <HintPath>..\Libraries(DLLs)\KioskIII_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="KioskIII_pin">
+      <HintPath>..\Libraries(DLLs)\KioskIII_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="L100_config">
+      <HintPath>..\Libraries(DLLs)\L100_config.dll</HintPath>
+    </Reference>
+    <Reference Include="L100_ctls">
+      <HintPath>..\Libraries(DLLs)\L100_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="L100_device">
+      <HintPath>..\Libraries(DLLs)\L100_device.dll</HintPath>
+    </Reference>
+    <Reference Include="L100_emv">
+      <HintPath>..\Libraries(DLLs)\L100_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="L100_icc">
+      <HintPath>..\Libraries(DLLs)\L100_icc.dll</HintPath>
+    </Reference>
+    <Reference Include="L100_lcd">
+      <HintPath>..\Libraries(DLLs)\L100_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="L100_msr">
+      <HintPath>..\Libraries(DLLs)\L100_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="L100_parse">
+      <HintPath>..\Libraries(DLLs)\L100_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="L100_pin">
+      <HintPath>..\Libraries(DLLs)\L100_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MiniSmartII_config">
+      <HintPath>..\Libraries(DLLs)\MiniSmartII_config.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniSmartII_ctls">
+      <HintPath>..\Libraries(DLLs)\MiniSmartII_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniSmartII_device">
+      <HintPath>..\Libraries(DLLs)\MiniSmartII_device.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniSmartII_emv">
+      <HintPath>..\Libraries(DLLs)\MiniSmartII_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniSmartII_icc">
+      <HintPath>..\Libraries(DLLs)\MiniSmartII_icc.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniSmartII_lcd">
+      <HintPath>..\Libraries(DLLs)\MiniSmartII_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniSmartII_msr">
+      <HintPath>..\Libraries(DLLs)\MiniSmartII_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniSmartII_parse">
+      <HintPath>..\Libraries(DLLs)\MiniSmartII_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniSmartII_pin">
+      <HintPath>..\Libraries(DLLs)\MiniSmartII_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="NEO2_config">
+      <HintPath>..\Libraries(DLLs)\NEO2_config.dll</HintPath>
+    </Reference>
+    <Reference Include="NEO2_ctls">
+      <HintPath>..\Libraries(DLLs)\NEO2_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="NEO2_device">
+      <HintPath>..\Libraries(DLLs)\NEO2_device.dll</HintPath>
+    </Reference>
+    <Reference Include="NEO2_emv">
+      <HintPath>..\Libraries(DLLs)\NEO2_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="NEO2_icc">
+      <HintPath>..\Libraries(DLLs)\NEO2_icc.dll</HintPath>
+    </Reference>
+    <Reference Include="NEO2_lcd">
+      <HintPath>..\Libraries(DLLs)\NEO2_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="NEO2_msr">
+      <HintPath>..\Libraries(DLLs)\NEO2_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="NEO2_parse">
+      <HintPath>..\Libraries(DLLs)\NEO2_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="NEO2_pin">
+      <HintPath>..\Libraries(DLLs)\NEO2_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="NEO2_ws">
+      <HintPath>..\Libraries(DLLs)\NEO2_ws.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PKIWeb">
+      <HintPath>..\Libraries(DLLs)\PKIWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="RKIUtility">
+      <HintPath>..\Libraries(DLLs)\RKIUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="RKIWeb">
+      <HintPath>..\Libraries(DLLs)\RKIWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureMag_config">
+      <HintPath>..\Libraries(DLLs)\SecureMag_config.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureMag_device">
+      <HintPath>..\Libraries(DLLs)\SecureMag_device.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureMag_msr">
+      <HintPath>..\Libraries(DLLs)\SecureMag_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureMag_parse">
+      <HintPath>..\Libraries(DLLs)\SecureMag_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="SpectrumPro_config">
+      <HintPath>..\Libraries(DLLs)\SpectrumPro_config.dll</HintPath>
+    </Reference>
+    <Reference Include="SpectrumPro_ctls">
+      <HintPath>..\Libraries(DLLs)\SpectrumPro_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="SpectrumPro_device">
+      <HintPath>..\Libraries(DLLs)\SpectrumPro_device.dll</HintPath>
+    </Reference>
+    <Reference Include="SpectrumPro_emv">
+      <HintPath>..\Libraries(DLLs)\SpectrumPro_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="SpectrumPro_lcd">
+      <HintPath>..\Libraries(DLLs)\SpectrumPro_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="SpectrumPro_msr">
+      <HintPath>..\Libraries(DLLs)\SpectrumPro_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="SpectrumPro_parse">
+      <HintPath>..\Libraries(DLLs)\SpectrumPro_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="SpectrumPro_pin">
+      <HintPath>..\Libraries(DLLs)\SpectrumPro_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="SpectrumPro_ws">
+      <HintPath>..\Libraries(DLLs)\SpectrumPro_ws.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TMS_device">
+      <HintPath>..\Libraries(DLLs)\TMS_device.dll</HintPath>
+    </Reference>
+    <Reference Include="UniMag_config">
+      <HintPath>..\Libraries(DLLs)\UniMag_config.dll</HintPath>
+    </Reference>
+    <Reference Include="UniMag_ctls">
+      <HintPath>..\Libraries(DLLs)\UniMag_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="UniMag_emv">
+      <HintPath>..\Libraries(DLLs)\UniMag_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="UniMag_lcd">
+      <HintPath>..\Libraries(DLLs)\UniMag_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="UniMag_msr">
+      <HintPath>..\Libraries(DLLs)\UniMag_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="UniMag_parse">
+      <HintPath>..\Libraries(DLLs)\UniMag_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="UniMag_pin">
+      <HintPath>..\Libraries(DLLs)\UniMag_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPayI_V_config">
+      <HintPath>..\Libraries(DLLs)\UniPayI_V_config.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPayI_V_ctls">
+      <HintPath>..\Libraries(DLLs)\UniPayI_V_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPayI_V_device">
+      <HintPath>..\Libraries(DLLs)\UniPayI_V_device.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPayI_V_emv">
+      <HintPath>..\Libraries(DLLs)\UniPayI_V_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPayI_V_lcd">
+      <HintPath>..\Libraries(DLLs)\UniPayI_V_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPayI_V_msr">
+      <HintPath>..\Libraries(DLLs)\UniPayI_V_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPayI_V_parse">
+      <HintPath>..\Libraries(DLLs)\UniPayI_V_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPayI_V_pin">
+      <HintPath>..\Libraries(DLLs)\UniPayI_V_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPay_config">
+      <HintPath>..\Libraries(DLLs)\UniPay_config.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPay_ctls">
+      <HintPath>..\Libraries(DLLs)\UniPay_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPay_device">
+      <HintPath>..\Libraries(DLLs)\UniPay_device.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPay_emv">
+      <HintPath>..\Libraries(DLLs)\UniPay_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPay_lcd">
+      <HintPath>..\Libraries(DLLs)\UniPay_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPay_msr">
+      <HintPath>..\Libraries(DLLs)\UniPay_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPay_parse">
+      <HintPath>..\Libraries(DLLs)\UniPay_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="UniPay_pin">
+      <HintPath>..\Libraries(DLLs)\UniPay_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="VendIII_config">
+      <HintPath>..\Libraries(DLLs)\VendIII_config.dll</HintPath>
+    </Reference>
+    <Reference Include="VendIII_ctls">
+      <HintPath>..\Libraries(DLLs)\VendIII_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="VendIII_device">
+      <HintPath>..\Libraries(DLLs)\VendIII_device.dll</HintPath>
+    </Reference>
+    <Reference Include="VendIII_emv">
+      <HintPath>..\Libraries(DLLs)\VendIII_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="VendIII_icc">
+      <HintPath>..\Libraries(DLLs)\VendIII_icc.dll</HintPath>
+    </Reference>
+    <Reference Include="VendIII_lcd">
+      <HintPath>..\Libraries(DLLs)\VendIII_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="VendIII_msr">
+      <HintPath>..\Libraries(DLLs)\VendIII_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="VendIII_parse">
+      <HintPath>..\Libraries(DLLs)\VendIII_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="VendIII_pin">
+      <HintPath>..\Libraries(DLLs)\VendIII_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="Vendi_config">
+      <HintPath>..\Libraries(DLLs)\Vendi_config.dll</HintPath>
+    </Reference>
+    <Reference Include="Vendi_ctls">
+      <HintPath>..\Libraries(DLLs)\Vendi_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="Vendi_device">
+      <HintPath>..\Libraries(DLLs)\Vendi_device.dll</HintPath>
+    </Reference>
+    <Reference Include="Vendi_emv">
+      <HintPath>..\Libraries(DLLs)\Vendi_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="Vendi_lcd">
+      <HintPath>..\Libraries(DLLs)\Vendi_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="Vendi_msr">
+      <HintPath>..\Libraries(DLLs)\Vendi_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="Vendi_parse">
+      <HintPath>..\Libraries(DLLs)\Vendi_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="Vendi_pin">
+      <HintPath>..\Libraries(DLLs)\Vendi_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="VP3300_config">
+      <HintPath>..\Libraries(DLLs)\VP3300_config.dll</HintPath>
+    </Reference>
+    <Reference Include="VP3300_ctls">
+      <HintPath>..\Libraries(DLLs)\VP3300_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="VP3300_device">
+      <HintPath>..\Libraries(DLLs)\VP3300_device.dll</HintPath>
+    </Reference>
+    <Reference Include="VP3300_emv">
+      <HintPath>..\Libraries(DLLs)\VP3300_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="VP3300_icc">
+      <HintPath>..\Libraries(DLLs)\VP3300_icc.dll</HintPath>
+    </Reference>
+    <Reference Include="VP3300_msr">
+      <HintPath>..\Libraries(DLLs)\VP3300_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="VP3300_parse">
+      <HintPath>..\Libraries(DLLs)\VP3300_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="VP3300_pin">
+      <HintPath>..\Libraries(DLLs)\VP3300_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="VP8800_config">
+      <HintPath>..\Libraries(DLLs)\VP8800_config.dll</HintPath>
+    </Reference>
+    <Reference Include="VP8800_ctls">
+      <HintPath>..\Libraries(DLLs)\VP8800_ctls.dll</HintPath>
+    </Reference>
+    <Reference Include="VP8800_device">
+      <HintPath>..\Libraries(DLLs)\VP8800_device.dll</HintPath>
+    </Reference>
+    <Reference Include="VP8800_emv">
+      <HintPath>..\Libraries(DLLs)\VP8800_emv.dll</HintPath>
+    </Reference>
+    <Reference Include="VP8800_icc">
+      <HintPath>..\Libraries(DLLs)\VP8800_icc.dll</HintPath>
+    </Reference>
+    <Reference Include="VP8800_lcd">
+      <HintPath>..\Libraries(DLLs)\VP8800_lcd.dll</HintPath>
+    </Reference>
+    <Reference Include="VP8800_msr">
+      <HintPath>..\Libraries(DLLs)\VP8800_msr.dll</HintPath>
+    </Reference>
+    <Reference Include="VP8800_parse">
+      <HintPath>..\Libraries(DLLs)\VP8800_parse.dll</HintPath>
+    </Reference>
+    <Reference Include="VP8800_pin">
+      <HintPath>..\Libraries(DLLs)\VP8800_pin.dll</HintPath>
+    </Reference>
+    <Reference Include="VP8800_ws">
+      <HintPath>..\Libraries(DLLs)\VP8800_ws.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JSONConverter\JSONConverter.csproj">
+      <Project>{fab91606-d6a5-4a1e-a3ed-556dbbdf244a}</Project>
+      <Name>JSONConverter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

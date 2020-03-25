@@ -1,0 +1,27 @@
+\hypertarget{namespace_form_sim}{}\section{Form\+Sim Namespace Reference}
+\label{namespace_form_sim}\index{Form\+Sim@{Form\+Sim}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_form_sim_1_1_encryption_info}{Encryption\+Info}}
+\begin{DoxyCompactList}\small\item\em Class \mbox{\hyperlink{class_form_sim_1_1_encryption_info}{Encryption\+Info}}. Represents the encryption format and key that the device is using. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_form_sim_1_1_form1}{Form1}}
+\item 
+interface \mbox{\hyperlink{interface_form_sim_1_1_f_r_c___handler}{F\+R\+C\+\_\+\+Handler}}
+\item 
+class \mbox{\hyperlink{class_form_sim_1_1_generic_handler}{Generic\+Handler}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_form_sim_1_1_generic_handler}{Generic\+Handler}} class is used as a super class for the more specific \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler}{H\+T\+T\+P\+Handler}} and the \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler}{T\+C\+P\+Handler}} classes which implement the protocol specific functionality. This class sets up the basic entry point for handling Function Request Codes (F\+R\+Cs) that should be implemented with the protocol specific handlers. By utilizing this entry point, Global timers are set up to check for time out occurences and customer references are maintained and tracked. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_form_sim_1_1_helper}{Helper}}
+\begin{DoxyCompactList}\small\item\em This is a helper class designed to do some parsing and padding. It was designed to reduce code re-\/use across both the \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler}{H\+T\+T\+P\+Handler}} and \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler}{T\+C\+P\+Handler}} classes. Due to the shared nature of this class, any changes made here should be tested with both the T\+CP and H\+T\+TP handlers after an update. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler}{H\+T\+T\+P\+Handler}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_form_sim_1_1_h_t_t_p_handler}{H\+T\+T\+P\+Handler}} class is designed to handle F\+R\+Cs over the H\+T\+TP protocol. Since this protocol uses key value pairs, it is important that the passed arguments be formatted and parsed correctly. This implementation handles both of those scenarios. See \mbox{\hyperlink{class_form_sim_1_1_generic_handler}{Generic\+Handler}} for the best implementation strategy of dealing with F\+R\+Cs in general. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler}{I\+D\+Tech\+Handler}}
+\item 
+class \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}} class is used as a logging device. The singleton provides a single point of logging to all threads which can be useful in debugging, as not all intermediate results will be returned to the UI when using the basic transaction flow. Current output path is c\+:/\+Users/tcotta.shift4/\+Desktop/\+Form\+Sim\+Log.\+log. \end{DoxyCompactList}\item 
+class {\bfseries Program}
+\item 
+class \mbox{\hyperlink{class_form_sim_1_1_rest_handler}{Rest\+Handler}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_form_sim_1_1_rest_handler}{Rest\+Handler}} class is designed to handle F\+RC\textquotesingle{}s over the H\+T\+TP protocol to the R\+E\+S\+Tful A\+PI. This implementation uses J\+S\+ON as the payload format, so serializing and deserializing are handled here. It also acts as a translation layer between the required Dictionary of strings, and the returned J\+S\+ON from the R\+E\+ST interface. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler}{T\+C\+P\+Handler}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_form_sim_1_1_t_c_p_handler}{T\+C\+P\+Handler}} class is designed to handle F\+R\+Cs over the T\+C\+P/\+IP protocol. Since this protocol uses byte sreams careful consideration must be made to ensure that transmission blocks are built appropraitely, and that received blocks are parsed appropriately. This implementation handles both of those scenarios. See \mbox{\hyperlink{class_form_sim_1_1_generic_handler}{Generic\+Handler}} for the best implementation strategy of dealing with F\+R\+Cs in general. \end{DoxyCompactList}\end{DoxyCompactItemize}

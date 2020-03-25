@@ -1,0 +1,175 @@
+\hypertarget{class_form_sim_1_1_i_d_tech_handler}{}\section{Form\+Sim.\+I\+D\+Tech\+Handler Class Reference}
+\label{class_form_sim_1_1_i_d_tech_handler}\index{Form\+Sim.\+I\+D\+Tech\+Handler@{Form\+Sim.\+I\+D\+Tech\+Handler}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_a856e5055aaa23ef21c2c8a90f808a522}{I\+D\+Tech\+Handler}} ()
+\item 
+bool \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_a4b2e99d93096fd3a983bd4a33441846a}{Initialize\+Devices}} ()
+\item 
+bool \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_a924d82c2d844241e40329c78b800d3e7}{pair\+Devices}} ()
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_a74b0877468bc7c1e01fb60c425a8302c}{start\+Transaction}} (double primary\+Amount, double secondary\+Amount)
+\item 
+\mbox{\hyperlink{class_form_sim_1_1_encryption_info}{Encryption\+Info}} \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_a045585e87977279a3b60ef53eb07acc9}{get\+Encryption\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Gets the encryption information for a given device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_ae4ee3560bc8a5c5d3ce011e30e8d5906}{minismart\+II}}
+\item 
+bool \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_a14a064de04694a6cc0880ac2e5a7d282}{secure\+Mag}}
+\item 
+bool \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_a030e82c9f1834c77746bab622ef63c92}{augusta}}
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_a16dfc3336bca902ad21771eebad7ce4a}{msg}}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_a5d9c224bcb3915493029fc7b58df2b97}{Fast\+E\+MV}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_ac039818aafdf35c179dbf0382d3d0f2f}{Message\+Call\+Back}} (I\+D\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Types sender, Device\+State state, byte\mbox{[}$\,$\mbox{]} data, I\+D\+T\+Transaction\+Data card, E\+M\+V\+\_\+\+Callback emv\+Callback, R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+DE transaction\+Result\+Code)
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_ae1a02c1882241dea211d41c6ce3927da}{get\+Display\+Message}} (int id)
+\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_a96e8dc0e78ffc3eed274ec450fd9d272}{Get\+Formatted\+Error\+Message}} (R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+DE return\+Code)
+\begin{DoxyCompactList}\small\item\em Gets the formatted error message for a given R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+DE. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_i_d_tech_handler_a280030b3a56291c1914f53de368bf65a}{fast\+E\+MV}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_a856e5055aaa23ef21c2c8a90f808a522}\label{class_form_sim_1_1_i_d_tech_handler_a856e5055aaa23ef21c2c8a90f808a522}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!I\+D\+Tech\+Handler@{I\+D\+Tech\+Handler}}
+\index{I\+D\+Tech\+Handler@{I\+D\+Tech\+Handler}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{I\+D\+Tech\+Handler()}{IDTechHandler()}}
+{\footnotesize\ttfamily Form\+Sim.\+I\+D\+Tech\+Handler.\+I\+D\+Tech\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_ae1a02c1882241dea211d41c6ce3927da}\label{class_form_sim_1_1_i_d_tech_handler_ae1a02c1882241dea211d41c6ce3927da}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!get\+Display\+Message@{get\+Display\+Message}}
+\index{get\+Display\+Message@{get\+Display\+Message}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{get\+Display\+Message()}{getDisplayMessage()}}
+{\footnotesize\ttfamily string Form\+Sim.\+I\+D\+Tech\+Handler.\+get\+Display\+Message (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_a045585e87977279a3b60ef53eb07acc9}\label{class_form_sim_1_1_i_d_tech_handler_a045585e87977279a3b60ef53eb07acc9}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!get\+Encryption\+Info@{get\+Encryption\+Info}}
+\index{get\+Encryption\+Info@{get\+Encryption\+Info}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{get\+Encryption\+Info()}{getEncryptionInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_form_sim_1_1_encryption_info}{Encryption\+Info}} Form\+Sim.\+I\+D\+Tech\+Handler.\+get\+Encryption\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the encryption information for a given device. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_form_sim_1_1_encryption_info}{Encryption\+Info}}.
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+A device must be first set active so that the S\+DK knows which device to send the command to. \mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_a96e8dc0e78ffc3eed274ec450fd9d272}\label{class_form_sim_1_1_i_d_tech_handler_a96e8dc0e78ffc3eed274ec450fd9d272}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!Get\+Formatted\+Error\+Message@{Get\+Formatted\+Error\+Message}}
+\index{Get\+Formatted\+Error\+Message@{Get\+Formatted\+Error\+Message}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{Get\+Formatted\+Error\+Message()}{GetFormattedErrorMessage()}}
+{\footnotesize\ttfamily static string Form\+Sim.\+I\+D\+Tech\+Handler.\+Get\+Formatted\+Error\+Message (\begin{DoxyParamCaption}\item[{R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+DE}]{return\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Gets the formatted error message for a given R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+DE. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em return\+Code} & The return code.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+System.\+String.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_a4b2e99d93096fd3a983bd4a33441846a}\label{class_form_sim_1_1_i_d_tech_handler_a4b2e99d93096fd3a983bd4a33441846a}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!Initialize\+Devices@{Initialize\+Devices}}
+\index{Initialize\+Devices@{Initialize\+Devices}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{Initialize\+Devices()}{InitializeDevices()}}
+{\footnotesize\ttfamily bool Form\+Sim.\+I\+D\+Tech\+Handler.\+Initialize\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_ac039818aafdf35c179dbf0382d3d0f2f}\label{class_form_sim_1_1_i_d_tech_handler_ac039818aafdf35c179dbf0382d3d0f2f}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!Message\+Call\+Back@{Message\+Call\+Back}}
+\index{Message\+Call\+Back@{Message\+Call\+Back}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{Message\+Call\+Back()}{MessageCallBack()}}
+{\footnotesize\ttfamily void Form\+Sim.\+I\+D\+Tech\+Handler.\+Message\+Call\+Back (\begin{DoxyParamCaption}\item[{I\+D\+T\+\_\+\+D\+E\+V\+I\+C\+E\+\_\+\+Types}]{sender,  }\item[{Device\+State}]{state,  }\item[{byte \mbox{[}$\,$\mbox{]}}]{data,  }\item[{I\+D\+T\+Transaction\+Data}]{card,  }\item[{E\+M\+V\+\_\+\+Callback}]{emv\+Callback,  }\item[{R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+DE}]{transaction\+Result\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_a924d82c2d844241e40329c78b800d3e7}\label{class_form_sim_1_1_i_d_tech_handler_a924d82c2d844241e40329c78b800d3e7}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!pair\+Devices@{pair\+Devices}}
+\index{pair\+Devices@{pair\+Devices}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{pair\+Devices()}{pairDevices()}}
+{\footnotesize\ttfamily bool Form\+Sim.\+I\+D\+Tech\+Handler.\+pair\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_a74b0877468bc7c1e01fb60c425a8302c}\label{class_form_sim_1_1_i_d_tech_handler_a74b0877468bc7c1e01fb60c425a8302c}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!start\+Transaction@{start\+Transaction}}
+\index{start\+Transaction@{start\+Transaction}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{start\+Transaction()}{startTransaction()}}
+{\footnotesize\ttfamily string Form\+Sim.\+I\+D\+Tech\+Handler.\+start\+Transaction (\begin{DoxyParamCaption}\item[{double}]{primary\+Amount,  }\item[{double}]{secondary\+Amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_a030e82c9f1834c77746bab622ef63c92}\label{class_form_sim_1_1_i_d_tech_handler_a030e82c9f1834c77746bab622ef63c92}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!augusta@{augusta}}
+\index{augusta@{augusta}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{augusta}{augusta}}
+{\footnotesize\ttfamily bool Form\+Sim.\+I\+D\+Tech\+Handler.\+augusta}
+
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_a280030b3a56291c1914f53de368bf65a}\label{class_form_sim_1_1_i_d_tech_handler_a280030b3a56291c1914f53de368bf65a}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!fast\+E\+MV@{fast\+E\+MV}}
+\index{fast\+E\+MV@{fast\+E\+MV}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{fast\+E\+MV}{fastEMV}}
+{\footnotesize\ttfamily string Form\+Sim.\+I\+D\+Tech\+Handler.\+fast\+E\+MV\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_ae4ee3560bc8a5c5d3ce011e30e8d5906}\label{class_form_sim_1_1_i_d_tech_handler_ae4ee3560bc8a5c5d3ce011e30e8d5906}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!minismart\+II@{minismart\+II}}
+\index{minismart\+II@{minismart\+II}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{minismart\+II}{minismartII}}
+{\footnotesize\ttfamily bool Form\+Sim.\+I\+D\+Tech\+Handler.\+minismart\+II}
+
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_a16dfc3336bca902ad21771eebad7ce4a}\label{class_form_sim_1_1_i_d_tech_handler_a16dfc3336bca902ad21771eebad7ce4a}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!msg@{msg}}
+\index{msg@{msg}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{msg}{msg}}
+{\footnotesize\ttfamily string Form\+Sim.\+I\+D\+Tech\+Handler.\+msg}
+
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_a14a064de04694a6cc0880ac2e5a7d282}\label{class_form_sim_1_1_i_d_tech_handler_a14a064de04694a6cc0880ac2e5a7d282}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!secure\+Mag@{secure\+Mag}}
+\index{secure\+Mag@{secure\+Mag}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{secure\+Mag}{secureMag}}
+{\footnotesize\ttfamily bool Form\+Sim.\+I\+D\+Tech\+Handler.\+secure\+Mag}
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_i_d_tech_handler_a5d9c224bcb3915493029fc7b58df2b97}\label{class_form_sim_1_1_i_d_tech_handler_a5d9c224bcb3915493029fc7b58df2b97}} 
+\index{Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}!Fast\+E\+MV@{Fast\+E\+MV}}
+\index{Fast\+E\+MV@{Fast\+E\+MV}!Form\+Sim\+::\+I\+D\+Tech\+Handler@{Form\+Sim\+::\+I\+D\+Tech\+Handler}}
+\subsubsection{\texorpdfstring{Fast\+E\+MV}{FastEMV}}
+{\footnotesize\ttfamily string Form\+Sim.\+I\+D\+Tech\+Handler.\+Fast\+E\+MV\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_i_d_tech_handler_8cs}{I\+D\+Tech\+Handler.\+cs}}\end{DoxyCompactItemize}

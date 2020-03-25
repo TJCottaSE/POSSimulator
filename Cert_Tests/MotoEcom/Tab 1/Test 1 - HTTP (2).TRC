@@ -1,0 +1,695 @@
+TxtTrace    00001FD4  Tue 08/14 10:38:01 U0276.TRC v 04.05.00/4.7.0.2302 Rollover DEFAULT  C:\Shift4\UTG2\Trace\  MaxFiles(16) BytesEach(20971520) 49 2302f 18/90 (j) [8,256Kb 8.06Mb] NETAPI 10:37:11a Tue 08/14
+TcpClient   000011EC  Tue 08/14 10:38:01.127  CE02 162.255.134.208 2/4 0 0 Tx(16) Rx(10) t0:0/r0 5 Idle
+EventQ      000007EC  Tue 08/14 10:38:01.222  _00003_    343 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:01.222  <Tx>  [Ready] SysHeartbeat 000     343 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// NOW   11 of 11 258 BinSpin _00003_ SPINMGR Ready
+BinSpinH    000007EC  Tue 08/14 10:38:01.222  _00003_ SPINMGR  RUN001 SleepWalk DispatchEvent
+BinSpin     000007EC  Tue 08/14 10:38:01.222  _00003_ SPINMGR  RUN001 0044  Posting SLEEPWALK
+Worker17    00001844  Tue 08/14 10:38:01.222  [W17] _00003_ SPINMGR  BinSpin Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:01.222  _00009_    344 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      00001844  Tue 08/14 10:38:01.222  _00003_    343 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Events      000007EC  Tue 08/14 10:38:01.222  <Tx>  [Ready] SysHeartbeat 000     344 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// NOW   10 of 11 258 Security _00009_ SECURITYMGR Ready
+BinSpin     00001844  Tue 08/14 10:38:01.222  _00003_ SPINMGR  RUN001 0045  <Rx>  [Ready] SysHeartbeat     343 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep//
+SecurityH   000007EC  Tue 08/14 10:38:01.222  _00009_ SECURITYMGR  RUN001 SleepWalk DispatchEvent
+Security    000007EC  Tue 08/14 10:38:01.222  _00009_ SECURITYMGR  RUN001 0044  Posting SLEEPWALK
+Worker17    00001844  Tue 08/14 10:38:01.222  [W17] _00003_ SPINMGR  BinSpin Ready worker.processmessage   ENDS 000 (+ 1)
+EventQ      000007EC  Tue 08/14 10:38:01.222  _00004_    345 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Worker16    000024B4  Tue 08/14 10:38:01.222  [W16] _00009_ SECURITYMGR  Security Ready worker.processmessage BEGINS 001
+Events      000007EC  Tue 08/14 10:38:01.222  <Tx>  [Ready] SysHeartbeat 000     345 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// NOW   7 of 11 258 Offlines _00004_ OFFMGR Ready
+OfflinesH   000007EC  Tue 08/14 10:38:01.222  _00004_ OFFMGR  RUN001 SleepWalk DispatchEvent
+Offlines    000007EC  Tue 08/14 10:38:01.222  _00004_ OFFMGR  RUN001 0045  Posting SLEEPWALK
+Worker17    00001844  Tue 08/14 10:38:01.222  [W17] _00004_ OFFMGR  Offlines Ready worker.processmessage BEGINS 001
+EventQ      000024B4  Tue 08/14 10:38:01.223  _00009_    344 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+EventQ      000007EC  Tue 08/14 10:38:01.223  _00007_    346 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      00001844  Tue 08/14 10:38:01.223  _00004_    345 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Offlines    00001844  Tue 08/14 10:38:01.223  _00004_ OFFMGR  RUN001 0046  <Rx>  [Ready] SysHeartbeat     345 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:01.223  <Tx>  [Ready] SysHeartbeat 000     346 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// NOW   6 of 11 258 MulTokAdd _00007_ MTOKMGR Ready
+MulTokAddH  000007EC  Tue 08/14 10:38:01.223  _00007_ MTOKMGR  RUN001 SleepWalk DispatchEvent
+MulTokAdd   000007EC  Tue 08/14 10:38:01.223  _00007_ MTOKMGR  RUN001 0045  Posting SLEEPWALK
+Security    000024B4  Tue 08/14 10:38:01.223  _00009_ SECURITYMGR  RUN001 0045  <Rx>  [Ready] SysHeartbeat     344 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep//
+Worker17    00001844  Tue 08/14 10:38:01.223  [W17] _00004_ OFFMGR  Offlines Ready worker.processmessage   ENDS 000 (+ 1)
+Worker16    000024B4  Tue 08/14 10:38:01.223  [W16] _00009_ SECURITYMGR  Security Ready worker.processmessage   ENDS 000 (+ 1)
+Worker20    000023D8  Tue 08/14 10:38:01.223  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:01.223  _00002_    347 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      000023D8  Tue 08/14 10:38:01.223  _00007_    346 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+MulTokAdd   000023D8  Tue 08/14 10:38:01.223  _00007_ MTOKMGR  RUN001 0046  <Rx>  [Ready] SysHeartbeat     346 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:01.223  <Tx>  [Pause] SysHeartbeat 000     347 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// NOW   5 of 11 258 Import _00002_ IMPORTMGR Pause
+Worker20    000023D8  Tue 08/14 10:38:01.223  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage   ENDS 000 (+ 1)
+ImportH     000007EC  Tue 08/14 10:38:01.223  _00002_ IMPORTMGR  RUN001 SleepWalk DispatchEvent
+Import      000007EC  Tue 08/14 10:38:01.224  _00002_ IMPORTMGR  RUN001 0041  Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:01.224  [W20] _00002_ IMPORTMGR  Import Pause worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:01.224  _00010_    348 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      000023D8  Tue 08/14 10:38:01.224  _00002_    347 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Import      000023D8  Tue 08/14 10:38:01.224  _00002_ IMPORTMGR  RUN001 0042  <Rx>  [Pause] SysHeartbeat     347 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:01.224  <Tx>  [Ready] SysHeartbeat 000     348 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// NOW   4 of 11 258 Global _00010_ GLOBALSTAT Ready
+Worker20    000023D8  Tue 08/14 10:38:01.224  [W20] _00002_ IMPORTMGR  Import Pause worker.processmessage   ENDS 000 (+ 1)
+GlobalH     000007EC  Tue 08/14 10:38:01.224  _00010_ GLOBALSTAT  RUN001 SleepWalk DispatchEvent
+Global      000007EC  Tue 08/14 10:38:01.224  _00010_ GLOBALSTAT  RUN001 Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:01.224  [W20] _00010_ GLOBALSTAT  Global Ready worker.processmessage BEGINS 001
+EventQ      000023D8  Tue 08/14 10:38:01.224  _00010_    348 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Global      000023D8  Tue 08/14 10:38:01.224  _00010_ GLOBALSTAT  RUN001 <Rx>  [Ready] SysHeartbeat     348 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep//
+Worker20    000023D8  Tue 08/14 10:38:01.224  [W20] _00010_ GLOBALSTAT  Global Ready worker.processmessage   ENDS 000 (+ 1)
+PinPad      00002ABC  Tue 08/14 10:38:01.612  TSC0001 CheckWelcomeReady
+PinPad      00002ABC  Tue 08/14 10:38:01.612  TSC0001 WaitWelcomeReady
+PinPad      00002ABC  Tue 08/14 10:38:01.612  TSC0001 CheckForOtherWork
+PinPad      00002ABC  Tue 08/14 10:38:01.614  TSC0001 Idle
+TcpClient   000011EC  Tue 08/14 10:38:02.127  CE02 162.255.134.208 2/4 0 0 Tx(16) Rx(10) t0:0/r0 4 Idle
+EventQ      000007EC  Tue 08/14 10:38:02.224  _00003_    349 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:02.224  <Tx>  [Ready] SysHeartbeat 000     349 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// NOW   11 of 11 258 BinSpin _00003_ SPINMGR Ready
+BinSpinH    000007EC  Tue 08/14 10:38:02.224  _00003_ SPINMGR  RUN001 SleepWalk DispatchEvent
+BinSpin     000007EC  Tue 08/14 10:38:02.224  _00003_ SPINMGR  RUN001 0045  Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:02.224  [W20] _00003_ SPINMGR  BinSpin Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:02.224  _00009_    350 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      000023D8  Tue 08/14 10:38:02.224  _00003_    349 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+BinSpin     000023D8  Tue 08/14 10:38:02.224  _00003_ SPINMGR  RUN001 0046  <Rx>  [Ready] SysHeartbeat     349 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:02.224  <Tx>  [Ready] SysHeartbeat 000     350 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// NOW   10 of 11 258 Security _00009_ SECURITYMGR Ready
+Worker20    000023D8  Tue 08/14 10:38:02.224  [W20] _00003_ SPINMGR  BinSpin Ready worker.processmessage   ENDS 000 (+ 1)
+SecurityH   000007EC  Tue 08/14 10:38:02.224  _00009_ SECURITYMGR  RUN001 SleepWalk DispatchEvent
+Security    000007EC  Tue 08/14 10:38:02.224  _00009_ SECURITYMGR  RUN001 0045  Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:02.224  [W20] _00009_ SECURITYMGR  Security Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:02.224  _00004_    351 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      000023D8  Tue 08/14 10:38:02.224  _00009_    350 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Security    000023D8  Tue 08/14 10:38:02.224  _00009_ SECURITYMGR  RUN001 0046  <Rx>  [Ready] SysHeartbeat     350 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:02.225  <Tx>  [Ready] SysHeartbeat 000     351 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// NOW   7 of 11 258 Offlines _00004_ OFFMGR Ready
+OfflinesH   000007EC  Tue 08/14 10:38:02.225  _00004_ OFFMGR  RUN001 SleepWalk DispatchEvent
+Offlines    000007EC  Tue 08/14 10:38:02.225  _00004_ OFFMGR  RUN001 0046  Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:02.225  [W20] _00009_ SECURITYMGR  Security Ready worker.processmessage   ENDS 000 (+ 1)
+EventQ      000007EC  Tue 08/14 10:38:02.225  _00007_    352 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:02.225  <Tx>  [Ready] SysHeartbeat 000     352 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// NOW   6 of 11 258 MulTokAdd _00007_ MTOKMGR Ready
+MulTokAddH  000007EC  Tue 08/14 10:38:02.225  _00007_ MTOKMGR  RUN001 SleepWalk DispatchEvent
+MulTokAdd   000007EC  Tue 08/14 10:38:02.225  _00007_ MTOKMGR  RUN001 0046  Posting SLEEPWALK
+Worker16    000024B4  Tue 08/14 10:38:02.225  [W16] _00004_ OFFMGR  Offlines Ready worker.processmessage BEGINS 001
+Worker20    000023D8  Tue 08/14 10:38:02.225  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:02.225  _00002_    353 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      000024B4  Tue 08/14 10:38:02.225  _00004_    351 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+EventQ      000023D8  Tue 08/14 10:38:02.225  _00007_    352 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+MulTokAdd   000023D8  Tue 08/14 10:38:02.225  _00007_ MTOKMGR  RUN001 0047  <Rx>  [Ready] SysHeartbeat     352 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep//
+Offlines    000024B4  Tue 08/14 10:38:02.225  _00004_ OFFMGR  RUN001 0047  <Rx>  [Ready] SysHeartbeat     351 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep//
+Worker20    000023D8  Tue 08/14 10:38:02.225  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage   ENDS 000 (+ 1)
+Events      000007EC  Tue 08/14 10:38:02.225  <Tx>  [Pause] SysHeartbeat 000     353 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// NOW   5 of 11 258 Import _00002_ IMPORTMGR Pause
+Worker16    000024B4  Tue 08/14 10:38:02.225  [W16] _00004_ OFFMGR  Offlines Ready worker.processmessage   ENDS 000 (+ 1)
+ImportH     000007EC  Tue 08/14 10:38:02.226  _00002_ IMPORTMGR  RUN001 SleepWalk DispatchEvent
+Import      000007EC  Tue 08/14 10:38:02.226  _00002_ IMPORTMGR  RUN001 0042  Posting SLEEPWALK
+Worker16    000024B4  Tue 08/14 10:38:02.226  [W16] _00002_ IMPORTMGR  Import Pause worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:02.226  _00010_    354 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      000024B4  Tue 08/14 10:38:02.226  _00002_    353 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Events      000007EC  Tue 08/14 10:38:02.226  <Tx>  [Ready] SysHeartbeat 000     354 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// NOW   4 of 11 258 Global _00010_ GLOBALSTAT Ready
+Import      000024B4  Tue 08/14 10:38:02.226  _00002_ IMPORTMGR  RUN001 0043  <Rx>  [Pause] SysHeartbeat     353 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep//
+GlobalH     000007EC  Tue 08/14 10:38:02.226  _00010_ GLOBALSTAT  RUN001 SleepWalk DispatchEvent
+Global      000007EC  Tue 08/14 10:38:02.226  _00010_ GLOBALSTAT  RUN001 Posting SLEEPWALK
+Worker16    000024B4  Tue 08/14 10:38:02.226  [W16] _00002_ IMPORTMGR  Import Pause worker.processmessage   ENDS 000 (+ 1)
+Worker20    000023D8  Tue 08/14 10:38:02.226  [W20] _00010_ GLOBALSTAT  Global Ready worker.processmessage BEGINS 001
+EventQ      000023D8  Tue 08/14 10:38:02.226  _00010_    354 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Global      000023D8  Tue 08/14 10:38:02.226  _00010_ GLOBALSTAT  RUN001 <Rx>  [Ready] SysHeartbeat     354 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep//
+Worker20    000023D8  Tue 08/14 10:38:02.226  [W20] _00010_ GLOBALSTAT  Global Ready worker.processmessage   ENDS 000 (+ 1)
+HttpApi     00002288  Tue 08/14 10:38:02.893  Allocate New Thread (HttpApi.1)
+Threads     00002288  Tue 08/14 10:38:02.893  Thread HttpApi.1 added at 18
+HttpApi.1   00000F44  Tue 08/14 10:38:02.895  Startup  ApiNumber(005)
+HttpApi.1   00000F44  Tue 08/14 10:38:02.895  Available: Startup Complete
+HttpApi     00002288  Tue 08/14 10:38:02.943  Opening HttpApi.1
+HttpApi.1   00002288  Tue 08/14 10:38:02.943  UpdateLastSocketOpenTimeStamp 395998129599 @1390
+HttpApi.1   00002288  Tue 08/14 10:38:02.943  ResponseQueue is empty
+HttpApi.1   00002288  Tue 08/14 10:38:02.943  Session (1) Assigned
+HttpApi.1   00002288  Tue 08/14 10:38:02.943  Socket 1752 Created
+HttpApi     00002288  Tue 08/14 10:38:02.943  Connected to 10.0.2.124
+HttpApi.1   00000F44  Tue 08/14 10:38:02.945  Data Received (FD_READ)
+HttpApi.1   00000F44  Tue 08/14 10:38:02.945  159 new bytes received (159 Total)
+HttpApi.1   00000F44  Tue 08/14 10:38:02.945  SleepWalk
+HttpApi.1   00000F44  Tue 08/14 10:38:02.995  Data can be Written (FD_WRITE)
+HttpApi.1   00000F44  Tue 08/14 10:38:02.995  SleepWalk
+TcpClient   000011EC  Tue 08/14 10:38:03.127  CE02 162.255.134.208 2/4 0 0 Tx(16) Rx(10) t0:0/r0 3 Idle
+HttpApi.1   00000F44  Tue 08/14 10:38:03.195  Tx(0) Rx(0)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.195  Header "Content-Type: application/x-www-form-urlencoded" not used 
+HttpApi.1   00000F44  Tue 08/14 10:38:03.195  Header "Host: 10.0.2.124:16448" not used 
+HttpApi.1   00000F44  Tue 08/14 10:38:03.195  Header "Content-Length" - contentbytes=299
+HttpApi.1   00000F44  Tue 08/14 10:38:03.195  Header "Expect: 100-continue" not used 
+HttpApi.1   00000F44  Tue 08/14 10:38:03.195  Header "Connection: Keep-Alive" not used 
+HttpApi.1   00000F44  Tue 08/14 10:38:03.195  Used(159) Content(299) StreamSize(159) - wait for more data
+EventQ      000007EC  Tue 08/14 10:38:03.226  _00003_    355 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:03.226  <Tx>  [Ready] SysHeartbeat 000     355 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// NOW   11 of 11 258 BinSpin _00003_ SPINMGR Ready
+BinSpinH    000007EC  Tue 08/14 10:38:03.226  _00003_ SPINMGR  RUN001 SleepWalk DispatchEvent
+BinSpin     000007EC  Tue 08/14 10:38:03.226  _00003_ SPINMGR  RUN001 0046  Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:03.226  [W20] _00003_ SPINMGR  BinSpin Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:03.226  _00009_    356 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:03.226  <Tx>  [Ready] SysHeartbeat 000     356 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// NOW   10 of 11 258 Security _00009_ SECURITYMGR Ready
+SecurityH   000007EC  Tue 08/14 10:38:03.226  _00009_ SECURITYMGR  RUN001 SleepWalk DispatchEvent
+Security    000007EC  Tue 08/14 10:38:03.226  _00009_ SECURITYMGR  RUN001 0046  Posting SLEEPWALK
+EventQ      000023D8  Tue 08/14 10:38:03.226  _00003_    355 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+BinSpin     000023D8  Tue 08/14 10:38:03.226  _00003_ SPINMGR  RUN001 0047  <Rx>  [Ready] SysHeartbeat     355 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep//
+EventQ      000007EC  Tue 08/14 10:38:03.226  _00008_    357 990 HEARTBEAT SYSTEM=>SECURE i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:03.226  <Tx>  [Ready] SysHeartbeat 000     357 990 HEARTBEAT SYSTEM=>SECURE i"SINGLETON" //beep// NOW   9 of 11 258 Secure _00008_ SECURE Ready
+SecureH     000007EC  Tue 08/14 10:38:03.226  _00008_ SECURE  RUN001 SleepWalk DispatchEvent
+Secure      000007EC  Tue 08/14 10:38:03.226  _00008_ SECURE  RUN001 0010  Posting SLEEPWALK
+Worker16    000024B4  Tue 08/14 10:38:03.226  [W16] _00009_ SECURITYMGR  Security Ready worker.processmessage BEGINS 001
+Worker20    000023D8  Tue 08/14 10:38:03.227  [W20] _00003_ SPINMGR  BinSpin Ready worker.processmessage   ENDS 000 (+ 1)
+Worker17    00001844  Tue 08/14 10:38:03.227  [W17] _00008_ SECURE  Secure Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:03.227  _00004_    358 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:03.227  <Tx>  [Ready] SysHeartbeat 000     358 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// NOW   7 of 11 258 Offlines _00004_ OFFMGR Ready
+OfflinesH   000007EC  Tue 08/14 10:38:03.227  _00004_ OFFMGR  RUN001 SleepWalk DispatchEvent
+Offlines    000007EC  Tue 08/14 10:38:03.227  _00004_ OFFMGR  RUN001 0047  Posting SLEEPWALK
+EventQ      00001844  Tue 08/14 10:38:03.227  _00008_    357 990 HEARTBEAT SYSTEM=>SECURE i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+EventQ      000024B4  Tue 08/14 10:38:03.227  _00009_    356 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Worker20    000023D8  Tue 08/14 10:38:03.227  [W20] _00004_ OFFMGR  Offlines Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:03.227  _00007_    359 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Secure      00001844  Tue 08/14 10:38:03.227  _00008_ SECURE  RUN001 0011  <Rx>  [Ready] SysHeartbeat     357 990 HEARTBEAT SYSTEM=>SECURE i"SINGLETON" //beep//
+Security    000024B4  Tue 08/14 10:38:03.227  _00009_ SECURITYMGR  RUN001 0047  <Rx>  [Ready] SysHeartbeat     356 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep//
+EventQ      000023D8  Tue 08/14 10:38:03.227  _00004_    358 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Events      000007EC  Tue 08/14 10:38:03.227  <Tx>  [Ready] SysHeartbeat 000     359 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// NOW   6 of 11 258 MulTokAdd _00007_ MTOKMGR Ready
+MulTokAddH  000007EC  Tue 08/14 10:38:03.227  _00007_ MTOKMGR  RUN001 SleepWalk DispatchEvent
+MulTokAdd   000007EC  Tue 08/14 10:38:03.227  _00007_ MTOKMGR  RUN001 0047  Posting SLEEPWALK
+Worker16    000024B4  Tue 08/14 10:38:03.227  [W16] _00009_ SECURITYMGR  Security Ready worker.processmessage   ENDS 000 (+ 1)
+Worker17    00001844  Tue 08/14 10:38:03.227  [W17] _00008_ SECURE  Secure Ready worker.processmessage   ENDS 000 (+ 1)
+Offlines    000023D8  Tue 08/14 10:38:03.227  _00004_ OFFMGR  RUN001 0048  <Rx>  [Ready] SysHeartbeat     358 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep//
+Worker18    00002AF0  Tue 08/14 10:38:03.227  [W18] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:03.228  _00002_    360 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Worker20    000023D8  Tue 08/14 10:38:03.228  [W20] _00004_ OFFMGR  Offlines Ready worker.processmessage   ENDS 000 (+ 1)
+EventQ      00002AF0  Tue 08/14 10:38:03.228  _00007_    359 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+MulTokAdd   00002AF0  Tue 08/14 10:38:03.228  _00007_ MTOKMGR  RUN001 0048  <Rx>  [Ready] SysHeartbeat     359 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:03.228  <Tx>  [Pause] SysHeartbeat 000     360 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// NOW   5 of 11 258 Import _00002_ IMPORTMGR Pause
+Worker18    00002AF0  Tue 08/14 10:38:03.228  [W18] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage   ENDS 000 (+ 1)
+ImportH     000007EC  Tue 08/14 10:38:03.228  _00002_ IMPORTMGR  RUN001 SleepWalk DispatchEvent
+Import      000007EC  Tue 08/14 10:38:03.228  _00002_ IMPORTMGR  RUN001 0043  Posting SLEEPWALK
+Worker18    00002AF0  Tue 08/14 10:38:03.228  [W18] _00002_ IMPORTMGR  Import Pause worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:03.228  _00010_    361 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      00002AF0  Tue 08/14 10:38:03.228  _00002_    360 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Import      00002AF0  Tue 08/14 10:38:03.228  _00002_ IMPORTMGR  RUN001 0044  <Rx>  [Pause] SysHeartbeat     360 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:03.228  <Tx>  [Ready] SysHeartbeat 000     361 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// NOW   4 of 11 258 Global _00010_ GLOBALSTAT Ready
+Worker18    00002AF0  Tue 08/14 10:38:03.228  [W18] _00002_ IMPORTMGR  Import Pause worker.processmessage   ENDS 000 (+ 1)
+GlobalH     000007EC  Tue 08/14 10:38:03.228  _00010_ GLOBALSTAT  RUN001 SleepWalk DispatchEvent
+Global      000007EC  Tue 08/14 10:38:03.228  _00010_ GLOBALSTAT  RUN001 Posting SLEEPWALK
+Worker18    00002AF0  Tue 08/14 10:38:03.228  [W18] _00010_ GLOBALSTAT  Global Ready worker.processmessage BEGINS 001
+EventQ      00002AF0  Tue 08/14 10:38:03.228  _00010_    361 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Global      00002AF0  Tue 08/14 10:38:03.229  _00010_ GLOBALSTAT  RUN001 <Rx>  [Ready] SysHeartbeat     361 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep//
+Worker18    00002AF0  Tue 08/14 10:38:03.229  [W18] _00010_ GLOBALSTAT  Global Ready worker.processmessage   ENDS 000 (+ 1)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.260  Data Received (FD_READ)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.260  299 new bytes received (458 Total)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.260  SleepWalk
+HttpApi.1   00000F44  Tue 08/14 10:38:03.260  Header "Content-Type: application/x-www-form-urlencoded" not used 
+HttpApi.1   00000F44  Tue 08/14 10:38:03.260  Header "Host: 10.0.2.124:16448" not used 
+HttpApi.1   00000F44  Tue 08/14 10:38:03.260  Header "Content-Length" - contentbytes=299
+HttpApi.1   00000F44  Tue 08/14 10:38:03.260  Header "Expect: 100-continue" not used 
+HttpApi.1   00000F44  Tue 08/14 10:38:03.260  Header "Connection: Keep-Alive" not used 
+HttpApi.1   00000F44  Tue 08/14 10:38:03.260  Complete Request Found - Used(159) Content(299) StreamSize(458)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(STX) Value(YES)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(VERBOSE) Value(YES)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(CONTENTTYPE) Value(XML)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(APISignature) Value(%24)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(APIFormat) Value(0)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(FunctionRequestCode) Value(CE)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(RequestorReference) Value(tony12345678)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(Vendor) Value(CottaCapital%3AFormSim%3A0.2)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(Date) Value(081418)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(Time) Value(103802)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(AuthToken) Value(D15D6347-E3D6-4BB4-7B5632F470EBC751)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(ClientGUID) Value(21B00A88-E976-66F2-88EA7F78281AFAE2)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(APIOptions) Value(ALLDATA)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Key(ETX) Value(YES)
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  Reference                  = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  ApiSignature               = $
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  ApiFormat                  = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  FunctionRequestCode        = CE EXCHANGE FOR ACCESS TOKEN
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  RequestorReference         = tony12345678
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  ErrorIndicator             = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  PrimaryErrorCode           = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  SecondaryErrorCode         = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  MerchantId                 = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  TranId                     = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  Invoice                    = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  CardNumber                 = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  Vendor                     = CottaCapital:FormSim:0.2
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  CardType                   = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  CardEntryMode              = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  CardPresent                = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  ExpirationDate             = XXXX
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  Clerk                      = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  Date                       = 081418
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  Time                       = 103802
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  SaleFlag                   = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.261  Rx@597  PrimaryAmount              = 0.00
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Rx@597  SecondaryAmount            = 0.00
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Rx@597  Response                   = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Rx@597  Authorization              = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Rx@597  AVSResult                  = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Rx@597  AVSStreetVerified          = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Rx@597  AVSZipVerified             = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Rx@597  ValidAVS                   = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Rx@597  TrackInformation           = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Rx@597  ApiOptions                 = ALLDATA
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Rx@597  AuthToken                  = D15D6347-E3D6-4BB4-7B5632F470EBC751
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Rx@597  ClientGUID                 = 21B00A88-E976-66F2-88EA7F78281AFAE2
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  EXCHANGE FOR ACCESS TOKEN 0000000000 0000000000 ReqRef(tony12345678) Unrestricted 10.0.2.124
+Factory     00000F44  Tue 08/14 10:38:03.262  Dispatching CE Ref(tony12345678)
+_WaitH      00000F44  Tue 08/14 10:38:03.262  _00012_ A00001  RUN000 registered for a new total of 12 //active//
+Events      00000F44  Tue 08/14 10:38:03.262  Task _00012_ A00001  _Wait A00001 registered as "SUSPENDED" for a total of 12
+Factory     00000F44  Tue 08/14 10:38:03.262  Dispatched _Wait
+EventQ      00000F44  Tue 08/14 10:38:03.262  _00012_    362 990 HEARTBEAT SYSTEM=>A00001 i"NONE" //run// added to EventQueue for a new total of   1 Pending Event
+_WaitH      00000F44  Tue 08/14 10:38:03.262  _00012_ A00001  RUN001 SleepWalk Assign 00000001 0000001 2018-08-14 10:38:03 
+_Wait       00000F44  Tue 08/14 10:38:03.262  00000001 0000001 0000  Posting SLEEPWALK
+Worker18    00002AF0  Tue 08/14 10:38:03.262  [W18] _00012_ A00001  _Wait SendRequest worker.processmessage BEGINS 001
+HttpApi.1   00000F44  Tue 08/14 10:38:03.262  Tx(0) Rx(1)
+EventQ      00002AF0  Tue 08/14 10:38:03.263  _00012_    362 990 HEARTBEAT SYSTEM=>A00001 i"NONE" //run// removed from EventQueue leaving a new total of  No Pending Events
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  <Rx>  [SendRequest] SysHeartbeat     362 990 HEARTBEAT SYSTEM=>A00001 i"NONE" //run//
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  TaskRequestWait ProcessRequest BEGINS
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  Reference                  = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  ApiSignature               = $
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  ApiFormat                  = 0
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  FunctionRequestCode        = CE EXCHANGE FOR ACCESS TOKEN
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  RequestorReference         = tony12345678
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  ErrorIndicator             = N
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  PrimaryErrorCode           = 0
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  SecondaryErrorCode         = 0
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  MerchantId                 = 0
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  TranId                     = 0
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  Invoice                    = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  CardNumber                 = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  Vendor                     = CottaCapital:FormSim:0.2
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  CardType                   = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  CardEntryMode              = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  CardPresent                = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  ExpirationDate             = XXXX
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  Clerk                      = 0
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  Date                       = 081418
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  Time                       = 103802
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  SaleFlag                   = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  PrimaryAmount              = 0.00
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  SecondaryAmount            = 0.00
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  Response                   = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  Authorization              = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  AVSResult                  = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  AVSStreetVerified          = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  AVSZipVerified             = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  ValidAVS                   = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.263  00000001 0000001 0001  Rx  TrackInformation           = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:03.264  00000001 0000001 0001  Rx  ApiOptions                 = ALLDATA
+_Wait       00002AF0  Tue 08/14 10:38:03.264  00000001 0000001 0001  Rx  AuthToken                  = D15D6347-E3D6-4BB4-7B5632F470EBC751
+_Wait       00002AF0  Tue 08/14 10:38:03.264  00000001 0000001 0001  Rx  ClientGUID                 = 21B00A88-E976-66F2-88EA7F78281AFAE2
+_Wait       00002AF0  Tue 08/14 10:38:03.264  00000001 0000001 0001  InterfaceType: xfaceUnrestricted
+_Wait       00002AF0  Tue 08/14 10:38:03.264  00000001 0000001 0001  UTG is online - Send request to the Engine(206)
+Engine      00002AF0  Tue 08/14 10:38:03.264  ReqRef(WT0000000001) Added for a new total of 1
+TcpClient   00002AF0  Tue 08/14 10:38:03.264  ++ActiveCircuits(1) h A //0510//      000000      NETAPI        0  0  0 New 1:00
+Express     00002AF0  Tue 08/14 10:38:03.264  New changed to SendLoginReq because Auth Circuit Created (zero) //0510// 
+Express     00002AF0  Tue 08/14 10:38:03.264  SleepWalk
+Express     00002AF0  Tue 08/14 10:38:03.264  416 Bytes NETAPI Request Appended to h A //0510//      000000      NETAPI        0  0  1 SendLoginReq 1:00 <NEW> Ref()
+Engine      00002AF0  Tue 08/14 10:38:03.264  AppendAuthCircuit(CE) //0510// Ref() ReqRef(WT0000000001)
+_Wait       00002AF0  Tue 08/14 10:38:03.264  00000001 0000001 0001  Request Reference(WT0000000001) sent online - Wait Response
+_Wait       00002AF0  Tue 08/14 10:38:03.264  00000001 0000001 0001  TaskRequestWait ProcessRequest ENDS
+_Wait       00002AF0  Tue 08/14 10:38:03.264  00000001 0000001 0001  Request was forwarded successfully - wait eighty seconds for response
+Worker18    00002AF0  Tue 08/14 10:38:03.264  [W18] _00012_ A00001  _Wait SendRequest worker.processmessage   ENDS 000 (+ 1)
+Express     000021B8  Tue 08/14 10:38:03.514  SendLoginReq changed to WaitLoginRes because LoginRequest Sent //0510// 
+TcpClient   000011EC  Tue 08/14 10:38:03.514  CE02 162.255.134.208 2/4 0 1 Tx(16) Rx(10) t1:0/r0 2 Active
+TcpClient   000011EC  Tue 08/14 10:38:03.514  <Tx>     Sa (L)Login          74      000000 cli0000 seq0000 "//0510// A 0000000265 0896 0001 0001 NETAPI       10.0.2.124       <2302>f" //0//
+TcpClient   000011EC  Tue 08/14 10:38:03.514  CE02 162.255.134.208 2/4 0 1 Tx(17) Rx(10) t0:0/r0 10 Active
+TcpClient   000011EC  Tue 08/14 10:38:03.514  CE02 162.255.134.208 2/4 0 1 Tx(17) Rx(10) t0:0/r0 10 Breather
+TcpClient   000011EC  Tue 08/14 10:38:03.532  Data Received (FD_READ)
+TcpClient   000011EC  Tue 08/14 10:38:03.532  105 new bytes received (105 Total) - ETX(True)
+TcpClient   000011EC  Tue 08/14 10:38:03.532  SleepWalk
+TcpClient   000011EC  Tue 08/14 10:38:03.532  <Rx>     Sa (L)Login          74 CE02 016546 cli0001 seq0000 "//0510// A 0000000265 0896 0001 0001 NETAPI       10.0.2.124       <2302>f" //0//
+TcpClient   000011EC  Tue 08/14 10:38:03.532  CE02 162.255.134.208 2/4 0 1 Tx(17) Rx(10) t0:0/r1 9 Active
+Express     000011EC  Tue 08/14 10:38:03.532  WaitLoginRes changed to SendReq because Login Response Received //0510// 016546
+Express     000011EC  Tue 08/14 10:38:03.532  SleepWalk
+Express     000021B8  Tue 08/14 10:38:03.533  ConnectText = ""
+TcpClient   000011EC  Tue 08/14 10:38:03.533  CE02 162.255.134.208 2/4 0 1 Tx(17) Rx(11) t0:0/r0 9 Active
+Express     000021B8  Tue 08/14 10:38:03.533  SendReq changed to WaitTx because Requests queued for Transmit //0510// 016546
+TcpClient   000011EC  Tue 08/14 10:38:03.533  CE02 162.255.134.208 2/4 0 1 Tx(17) Rx(11) t1:0/r0 9 Breather
+TcpClient   000011EC  Tue 08/14 10:38:03.533  CE02 162.255.134.208 2/4 0 1 Tx(17) Rx(11) t1:0/r0 9 Active
+Express     000011EC  Tue 08/14 10:38:03.533  0000000265 0896 KeyPage1024 === BEGINS  128 Bytes
+Express     000011EC  Tue 08/14 10:38:03.533  0000000265 0896 KeyPage1024 0000: 45 4E 47 49 4E 45 30 32 43 45 3A 32 30 31 38 31    ENGINE02CE:20181
+Express     000011EC  Tue 08/14 10:38:03.533  0000000265 0896 KeyPage1024 0016: 34 30 38 2B 54 75 65 2B 31 30 33 37 32 32 81 27    408+Tue+103722.'
+Express     000011EC  Tue 08/14 10:38:03.533  0000000265 0896 KeyPage1024 0032: 59 A0 64 89 4F 2C 8E 49 81 5D 3F 48 48 5D 45 47    Y.d.O,.I.]?HH]EG
+Express     000011EC  Tue 08/14 10:38:03.533  0000000265 0896 KeyPage1024 0048: 87 49 74 30 7A 56 67 99 5A 99 44 91 34 62 99 A0    .It0zVg.Z.D.4b..
+Express     000011EC  Tue 08/14 10:38:03.533  0000000265 0896 KeyPage1024 0064: 8A 54 45 52 47 79 43 67 73 23 92 54 64 23 4B 62    .TERGyCgs#.Td#Kb
+Express     000011EC  Tue 08/14 10:38:03.533  0000000265 0896 KeyPage1024 0080: 93 74 5E 58 24 92 43 3E 7D 5E 6E 6D 37 8F 74 2F    .t^X$.C>}^nm7.t/
+Express     000011EC  Tue 08/14 10:38:03.533  0000000265 0896 KeyPage1024 0096: 86 4E 84 6A 37 2E 5D 53 85 7D 27 6E 2D 43 8F 90    .N.j7.]S.}'n-C..
+Express     000011EC  Tue 08/14 10:38:03.533  0000000265 0896 KeyPage1024 0112: 4E 31 57 66 32 27 76 81 4A 3D 2F 9E 42 40 8F 6D    N1Wf2'v.J=/.B@.m
+Express     000011EC  Tue 08/14 10:38:03.533  0000000265 0896 KeyPage1024 === ENDS
+Express     000011EC  Tue 08/14 10:38:03.533  GetKey(JiT,) === BEGINS  32 Bytes
+Express     000011EC  Tue 08/14 10:38:03.533  GetKey(JiT,) 0000: 62 52 94 69 78 75 4A 48    bR.ixuJH
+Express     000011EC  Tue 08/14 10:38:03.533  GetKey(JiT,) 0008: 29 23 2E 38 31 37 2E 72    )#.817.r
+Express     000011EC  Tue 08/14 10:38:03.533  GetKey(JiT,) 0016: 68 5A 50 7B 8A 64 57 7C    hZP{.dW|
+Express     000011EC  Tue 08/14 10:38:03.534  GetKey(JiT,) 0024: 77 83 33 78 9B 58 92 7B    w.3x.X.{
+Express     000011EC  Tue 08/14 10:38:03.534  GetKey(JiT,) === ENDS
+TcpClient   000011EC  Tue 08/14 10:38:03.534  <Tx>     Sa (D)Detail        435 CE02 016546 cli0000 seq0001 "//0510// W JiT," //0//
+TcpClient   000011EC  Tue 08/14 10:38:03.534  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(11) t0:0/r0 10 Active
+TcpClient   000011EC  Tue 08/14 10:38:03.534  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(11) t0:0/r0 10 Breather
+Express     000021B8  Tue 08/14 10:38:03.783  WaitTx changed to WaitRes because all requests transmitted //0510// 016546
+EventQ      000007EC  Tue 08/14 10:38:04.228  _00003_    363 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:04.228  <Tx>  [Ready] SysHeartbeat 000     363 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// NOW   12 of 12 258 BinSpin _00003_ SPINMGR Ready
+BinSpinH    000007EC  Tue 08/14 10:38:04.228  _00003_ SPINMGR  RUN001 SleepWalk DispatchEvent
+BinSpin     000007EC  Tue 08/14 10:38:04.228  _00003_ SPINMGR  RUN001 0047  Posting SLEEPWALK
+Worker18    00002AF0  Tue 08/14 10:38:04.228  [W18] _00003_ SPINMGR  BinSpin Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:04.228  _00009_    364 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      00002AF0  Tue 08/14 10:38:04.228  _00003_    363 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Events      000007EC  Tue 08/14 10:38:04.228  <Tx>  [Ready] SysHeartbeat 000     364 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// NOW   11 of 12 258 Security _00009_ SECURITYMGR Ready
+BinSpin     00002AF0  Tue 08/14 10:38:04.228  _00003_ SPINMGR  RUN001 0048  <Rx>  [Ready] SysHeartbeat     363 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep//
+SecurityH   000007EC  Tue 08/14 10:38:04.228  _00009_ SECURITYMGR  RUN001 SleepWalk DispatchEvent
+Security    000007EC  Tue 08/14 10:38:04.228  _00009_ SECURITYMGR  RUN001 0047  Posting SLEEPWALK
+Worker18    00002AF0  Tue 08/14 10:38:04.228  [W18] _00003_ SPINMGR  BinSpin Ready worker.processmessage   ENDS 000 (+ 1)
+EventQ      000007EC  Tue 08/14 10:38:04.228  _00004_    365 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Worker20    000023D8  Tue 08/14 10:38:04.228  [W20] _00009_ SECURITYMGR  Security Ready worker.processmessage BEGINS 001
+Events      000007EC  Tue 08/14 10:38:04.228  <Tx>  [Ready] SysHeartbeat 000     365 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// NOW   8 of 12 258 Offlines _00004_ OFFMGR Ready
+OfflinesH   000007EC  Tue 08/14 10:38:04.228  _00004_ OFFMGR  RUN001 SleepWalk DispatchEvent
+Offlines    000007EC  Tue 08/14 10:38:04.228  _00004_ OFFMGR  RUN001 0048  Posting SLEEPWALK
+EventQ      000023D8  Tue 08/14 10:38:04.229  _00009_    364 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Worker18    00002AF0  Tue 08/14 10:38:04.229  [W18] _00004_ OFFMGR  Offlines Ready worker.processmessage BEGINS 001
+EventQ      00002AF0  Tue 08/14 10:38:04.229  _00004_    365 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Offlines    00002AF0  Tue 08/14 10:38:04.229  _00004_ OFFMGR  RUN001 0049  <Rx>  [Ready] SysHeartbeat     365 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep//
+EventQ      000007EC  Tue 08/14 10:38:04.229  _00007_    366 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Security    000023D8  Tue 08/14 10:38:04.229  _00009_ SECURITYMGR  RUN001 0048  <Rx>  [Ready] SysHeartbeat     364 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep//
+Worker18    00002AF0  Tue 08/14 10:38:04.229  [W18] _00004_ OFFMGR  Offlines Ready worker.processmessage   ENDS 000 (+ 1)
+Worker20    000023D8  Tue 08/14 10:38:04.229  [W20] _00009_ SECURITYMGR  Security Ready worker.processmessage   ENDS 000 (+ 1)
+Events      000007EC  Tue 08/14 10:38:04.229  <Tx>  [Ready] SysHeartbeat 000     366 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// NOW   7 of 12 258 MulTokAdd _00007_ MTOKMGR Ready
+MulTokAddH  000007EC  Tue 08/14 10:38:04.229  _00007_ MTOKMGR  RUN001 SleepWalk DispatchEvent
+MulTokAdd   000007EC  Tue 08/14 10:38:04.229  _00007_ MTOKMGR  RUN001 0048  Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:04.229  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:04.229  _00002_    367 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      000023D8  Tue 08/14 10:38:04.229  _00007_    366 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+MulTokAdd   000023D8  Tue 08/14 10:38:04.229  _00007_ MTOKMGR  RUN001 0049  <Rx>  [Ready] SysHeartbeat     366 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:04.229  <Tx>  [Pause] SysHeartbeat 000     367 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// NOW   6 of 12 258 Import _00002_ IMPORTMGR Pause
+ImportH     000007EC  Tue 08/14 10:38:04.229  _00002_ IMPORTMGR  RUN001 SleepWalk DispatchEvent
+Import      000007EC  Tue 08/14 10:38:04.229  _00002_ IMPORTMGR  RUN001 0044  Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:04.229  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage   ENDS 000 (+ 1)
+Worker18    00002AF0  Tue 08/14 10:38:04.230  [W18] _00002_ IMPORTMGR  Import Pause worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:04.230  _00010_    368 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      00002AF0  Tue 08/14 10:38:04.230  _00002_    367 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Events      000007EC  Tue 08/14 10:38:04.230  <Tx>  [Ready] SysHeartbeat 000     368 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// NOW   5 of 12 258 Global _00010_ GLOBALSTAT Ready
+Import      00002AF0  Tue 08/14 10:38:04.230  _00002_ IMPORTMGR  RUN001 0045  <Rx>  [Pause] SysHeartbeat     367 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep//
+GlobalH     000007EC  Tue 08/14 10:38:04.230  _00010_ GLOBALSTAT  RUN001 SleepWalk DispatchEvent
+Global      000007EC  Tue 08/14 10:38:04.230  _00010_ GLOBALSTAT  RUN001 Posting SLEEPWALK
+Worker18    00002AF0  Tue 08/14 10:38:04.230  [W18] _00002_ IMPORTMGR  Import Pause worker.processmessage   ENDS 000 (+ 1)
+EventQ      000007EC  Tue 08/14 10:38:04.230  _00012_    369 990 HEARTBEAT SYSTEM=>A00001 i"NONE" //beep// added to EventQueue for a new total of   1 Pending Event
+Worker20    000023D8  Tue 08/14 10:38:04.230  [W20] _00010_ GLOBALSTAT  Global Ready worker.processmessage BEGINS 001
+Events      000007EC  Tue 08/14 10:38:04.230  <Tx>  [WaitResponse] SysHeartbeat 000     369 990 HEARTBEAT SYSTEM=>A00001 i"NONE" //beep// NOW   1 of 12 258 _Wait _00012_ A00001 WaitResponse
+_WaitH      000007EC  Tue 08/14 10:38:04.230  _00012_ A00001  RUN001 SleepWalk DispatchEvent
+_Wait       000007EC  Tue 08/14 10:38:04.230  00000001 0000001 0001  Posting SLEEPWALK
+EventQ      000023D8  Tue 08/14 10:38:04.230  _00010_    368 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Worker18    00002AF0  Tue 08/14 10:38:04.230  [W18] _00012_ A00001  _Wait WaitResponse worker.processmessage BEGINS 001
+Global      000023D8  Tue 08/14 10:38:04.230  _00010_ GLOBALSTAT  RUN001 <Rx>  [Ready] SysHeartbeat     368 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep//
+EventQ      00002AF0  Tue 08/14 10:38:04.230  _00012_    369 990 HEARTBEAT SYSTEM=>A00001 i"NONE" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Worker20    000023D8  Tue 08/14 10:38:04.230  [W20] _00010_ GLOBALSTAT  Global Ready worker.processmessage   ENDS 000 (+ 1)
+_Wait       00002AF0  Tue 08/14 10:38:04.230  00000001 0000001 0002  <Rx>  [WaitResponse] SysHeartbeat     369 990 HEARTBEAT SYSTEM=>A00001 i"NONE" //beep//
+Worker18    00002AF0  Tue 08/14 10:38:04.231  [W18] _00012_ A00001  _Wait WaitResponse worker.processmessage   ENDS 000 (+ 1)
+Express     000021B8  Tue 08/14 10:38:04.283  Discard     h S //0509// CE02 016533      NETAPI        5  1  5 Complete 1:01
+Express     000021B8  Tue 08/14 10:38:04.283  Complete changed to Discard because Timer expired on completed circuit //0509// 016533
+TcpClient   000011EC  Tue 08/14 10:38:04.534  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(11) t0:0/r0 9 Active
+TcpClient   000011EC  Tue 08/14 10:38:04.534  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(11) t0:0/r0 9 Breather
+TcpClient   000011EC  Tue 08/14 10:38:04.606  Data Received (FD_READ)
+TcpClient   000011EC  Tue 08/14 10:38:04.606  366 new bytes received (366 Total) - ETX(True)
+TcpClient   000011EC  Tue 08/14 10:38:04.606  SleepWalk
+TcpClient   000011EC  Tue 08/14 10:38:04.606  <Rx>     Sa (D)Detail        335 CE02 016546 cli0000 seq0001 "//0510// W JiT," //0//
+TcpClient   000011EC  Tue 08/14 10:38:04.607  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(11) t0:0/r1 8 Active
+Express     000011EC  Tue 08/14 10:38:04.607  0000000265 0896 KeyPage1024 === BEGINS  128 Bytes
+Express     000011EC  Tue 08/14 10:38:04.607  0000000265 0896 KeyPage1024 0000: 45 4E 47 49 4E 45 30 32 43 45 3A 32 30 31 38 31    ENGINE02CE:20181
+Express     000011EC  Tue 08/14 10:38:04.607  0000000265 0896 KeyPage1024 0016: 34 30 38 2B 54 75 65 2B 31 30 33 37 32 32 81 27    408+Tue+103722.'
+Express     000011EC  Tue 08/14 10:38:04.607  0000000265 0896 KeyPage1024 0032: 59 A0 64 89 4F 2C 8E 49 81 5D 3F 48 48 5D 45 47    Y.d.O,.I.]?HH]EG
+Express     000011EC  Tue 08/14 10:38:04.607  0000000265 0896 KeyPage1024 0048: 87 49 74 30 7A 56 67 99 5A 99 44 91 34 62 99 A0    .It0zVg.Z.D.4b..
+Express     000011EC  Tue 08/14 10:38:04.607  0000000265 0896 KeyPage1024 0064: 8A 54 45 52 47 79 43 67 73 23 92 54 64 23 4B 62    .TERGyCgs#.Td#Kb
+Express     000011EC  Tue 08/14 10:38:04.607  0000000265 0896 KeyPage1024 0080: 93 74 5E 58 24 92 43 3E 7D 5E 6E 6D 37 8F 74 2F    .t^X$.C>}^nm7.t/
+Express     000011EC  Tue 08/14 10:38:04.607  0000000265 0896 KeyPage1024 0096: 86 4E 84 6A 37 2E 5D 53 85 7D 27 6E 2D 43 8F 90    .N.j7.]S.}'n-C..
+Express     000011EC  Tue 08/14 10:38:04.607  0000000265 0896 KeyPage1024 0112: 4E 31 57 66 32 27 76 81 4A 3D 2F 9E 42 40 8F 6D    N1Wf2'v.J=/.B@.m
+Express     000011EC  Tue 08/14 10:38:04.607  0000000265 0896 KeyPage1024 === ENDS
+Express     000011EC  Tue 08/14 10:38:04.607  GetKey(JiT,) === BEGINS  32 Bytes
+Express     000011EC  Tue 08/14 10:38:04.607  GetKey(JiT,) 0000: 62 52 94 69 78 75 4A 48    bR.ixuJH
+Express     000011EC  Tue 08/14 10:38:04.607  GetKey(JiT,) 0008: 29 23 2E 38 31 37 2E 72    )#.817.r
+Express     000011EC  Tue 08/14 10:38:04.607  GetKey(JiT,) 0016: 68 5A 50 7B 8A 64 57 7C    hZP{.dW|
+Express     000011EC  Tue 08/14 10:38:04.607  GetKey(JiT,) 0024: 77 83 33 78 9B 58 92 7B    w.3x.X.{
+Express     000011EC  Tue 08/14 10:38:04.607  GetKey(JiT,) === ENDS
+Express     000011EC  Tue 08/14 10:38:04.607  ProcessDetail //0510// 016546 0001 WaitRes
+Express     000011EC  Tue 08/14 10:38:04.607  SleepWalk
+TcpClient   000011EC  Tue 08/14 10:38:04.607  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(12) t0:0/r0 8 Active
+Engine      000021B8  Tue 08/14 10:38:04.607  AppendReceiveQueue //0510// 016546 Ref() 316 Bytes ReceiveQueueCount(1) AfterAdd - SleepWalk
+TcpClient   000011EC  Tue 08/14 10:38:04.607  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(12) t0:0/r0 8 Breather
+TcpClient   000011EC  Tue 08/14 10:38:04.608  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(12) t0:0/r0 8 Active
+Engine      000021A8  Tue 08/14 10:38:04.608  Tx(5) Rx(4) Req(1)
+Engine      000021A8  Tue 08/14 10:38:04.608  RemoveReceiveQueue //0510// 016546 Ref() 316 Bytes ReceiveQueueCount(1) BeforeDelete
+TcpClient   000011EC  Tue 08/14 10:38:04.608  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(12) t0:0/r0 8 Breather
+Engine      000021A8  Tue 08/14 10:38:04.608  Rx(CE) //0510// Ref() ReqRef(WT0000000001)
+HttpApi.1   000021A8  Tue 08/14 10:38:04.608  ReceiveResponse(WT0000000001:276)
+EventQ      000021A8  Tue 08/14 10:38:04.608  _00012_    370 990 HEARTBEAT SYSTEM=>A00001 i"NONE" //runres// added to EventQueue for a new total of   1 Pending Event
+_WaitH      000021A8  Tue 08/14 10:38:04.608  _00012_ A00001  RUN001 SleepWalk RequestFactory::DispatchResponse.2110
+_Wait       000021A8  Tue 08/14 10:38:04.608  00000001 0000001 0002  Posting SLEEPWALK
+Engine      000021A8  Tue 08/14 10:38:04.608  ReqRef(WT0000000001) Deleted
+Worker18    00002AF0  Tue 08/14 10:38:04.608  [W18] _00012_ A00001  _Wait WaitResponse worker.processmessage BEGINS 001
+Engine      000021A8  Tue 08/14 10:38:04.608  Tx(5) Rx(5) Req(0)
+Engine      000021A8  Tue 08/14 10:38:04.608  Idle
+EventQ      00002AF0  Tue 08/14 10:38:04.608  _00012_    370 990 HEARTBEAT SYSTEM=>A00001 i"NONE" //runres// removed from EventQueue leaving a new total of  No Pending Events
+_Wait       00002AF0  Tue 08/14 10:38:04.608  00000001 0000001 0003  <Rx>  [WaitResponse] SysHeartbeat     370 990 HEARTBEAT SYSTEM=>A00001 i"NONE" //runres//
+_Wait       00002AF0  Tue 08/14 10:38:04.608  00000001 0000001 0003  Tx CE:EXCHANGE FOR ACCESS TOKEN 0000000000 WT0000000001  tony12345678            0.00   ALLDATA //api// CottaCapital:FormSim:0.2
+_Wait       00002AF0  Tue 08/14 10:38:04.608  00000001 0000001 0003  Tx  Reference                  = WT0000000001
+_Wait       00002AF0  Tue 08/14 10:38:04.608  00000001 0000001 0003  Tx  ApiSignature               = $
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  ApiFormat                  = 0
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  FunctionRequestCode        = CE EXCHANGE FOR ACCESS TOKEN
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  RequestorReference         = tony12345678
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  ErrorIndicator             = N
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  PrimaryErrorCode           = 0
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  SecondaryErrorCode         = 0
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  MerchantId                 = 0
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  TranId                     = 0
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  Invoice                    = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  CardNumber                 = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  Vendor                     = CottaCapital:FormSim:0.2
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  CardType                   = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  CardEntryMode              = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  CardPresent                = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  ExpirationDate             = XXXX
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  Clerk                      = 0
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  Date                       = 081418
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  Time                       = 103802
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  SaleFlag                   = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  PrimaryAmount              = 0.00
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  SecondaryAmount            = 0.00
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  Response                   = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  Authorization              = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  AVSResult                  = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  AVSStreetVerified          = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  AVSZipVerified             = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  ValidAVS                   = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  TrackInformation           = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  ApiOptions                 = ALLDATA
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  AccessToken                = XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX0488
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  IdentitySerial             = 0000000000
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  IdentitySlot               = 0000
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  IdentityBuild              = 2302
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  IdentityBuildSuffix        = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  IdentityAddress            = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  IdentityStatus             = <nothing>
+_Wait       00002AF0  Tue 08/14 10:38:04.609  00000001 0000001 0003  Tx  ClientId                   = //0510//
+_Wait       00002AF0  Tue 08/14 10:38:04.610  00000001 0000001 0003  Tx  CircuitId                  = 016546
+HttpApi.1   00002AF0  Tue 08/14 10:38:04.610  CE TxResponse Ref(WT0000000001) ReqRef(tony12345678) N      0   0    Session 1=1? True)
+HttpApi.1   00002AF0  Tue 08/14 10:38:04.610  SleepWalk
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  CE Api Response Returned (tony12345678)
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  Reference                  = WT0000000001
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  ApiSignature               = $
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  ApiFormat                  = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  FunctionRequestCode        = CE EXCHANGE FOR ACCESS TOKEN
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  RequestorReference         = tony12345678
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  ErrorIndicator             = N
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  PrimaryErrorCode           = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  SecondaryErrorCode         = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  MerchantId                 = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  TranId                     = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  Invoice                    = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  CardNumber                 = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  Vendor                     = CottaCapital:FormSim:0.2
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  CardType                   = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  CardEntryMode              = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  CardPresent                = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  ExpirationDate             = XXXX
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  Clerk                      = 0
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  Date                       = 081418
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  Time                       = 103802
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  SaleFlag                   = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  PrimaryAmount              = 0.00
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  SecondaryAmount            = 0.00
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  Response                   = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.610  Tx  Authorization              = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  AVSResult                  = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  AVSStreetVerified          = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  AVSZipVerified             = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  ValidAVS                   = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  TrackInformation           = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  ApiOptions                 = ALLDATA
+_Wait       00002AF0  Tue 08/14 10:38:04.611  00000001 0000001 0003  Unassign
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  AccessToken                = XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX0488
+Events      00002AF0  Tue 08/14 10:38:04.611  Task "_Wait" unregistered leaving  11 active tasks
+_WaitH      00002AF0  Tue 08/14 10:38:04.611  _00012_ A00001  RUN001 unregistered leaving  11 active tasks
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  IdentitySerial             = 0000000000
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  IdentitySlot               = 0000
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  IdentityBuild              = 2302
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  IdentityBuildSuffix        = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  IdentityAddress            = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  IdentityStatus             = <nothing>
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  ClientId                   = //0510//
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx  CircuitId                  = 016546
+Worker18    00002AF0  Tue 08/14 10:38:04.611  [W18] _00012_ A00001  _Wait WaitResponse worker.processmessage   ENDS 000 (+ 1)
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  MSecsSinceLastSocketCloseOrOpen 1669ms @1368
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Socket 1752 Freed @874 // @1327
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  UpdateLastSocketCloseTimeStamp 396003657431 @1379
+HttpApi.1   00000F44  Tue 08/14 10:38:04.611  Tx(1) Rx(1)
+PinPad      00002ABC  Tue 08/14 10:38:04.614  TSC0001 CheckWelcomeReady
+PinPad      00002ABC  Tue 08/14 10:38:04.614  TSC0001 WaitWelcomeReady
+PinPad      00002ABC  Tue 08/14 10:38:04.614  TSC0001 CheckForOtherWork
+PinPad      00002ABC  Tue 08/14 10:38:04.615  TSC0001 Idle
+EventQ      000007EC  Tue 08/14 10:38:05.230  _00003_    371 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:05.230  <Tx>  [Ready] SysHeartbeat 000     371 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// NOW   11 of 11 258 BinSpin _00003_ SPINMGR Ready
+BinSpinH    000007EC  Tue 08/14 10:38:05.230  _00003_ SPINMGR  RUN001 SleepWalk DispatchEvent
+BinSpin     000007EC  Tue 08/14 10:38:05.230  _00003_ SPINMGR  RUN001 0048  Posting SLEEPWALK
+Worker18    00002AF0  Tue 08/14 10:38:05.230  [W18] _00003_ SPINMGR  BinSpin Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:05.230  _00009_    372 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      00002AF0  Tue 08/14 10:38:05.230  _00003_    371 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Events      000007EC  Tue 08/14 10:38:05.230  <Tx>  [Ready] SysHeartbeat 000     372 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// NOW   10 of 11 258 Security _00009_ SECURITYMGR Ready
+SecurityH   000007EC  Tue 08/14 10:38:05.230  _00009_ SECURITYMGR  RUN001 SleepWalk DispatchEvent
+Security    000007EC  Tue 08/14 10:38:05.230  _00009_ SECURITYMGR  RUN001 0048  Posting SLEEPWALK
+BinSpin     00002AF0  Tue 08/14 10:38:05.230  _00003_ SPINMGR  RUN001 0049  <Rx>  [Ready] SysHeartbeat     371 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep//
+EventQ      000007EC  Tue 08/14 10:38:05.230  _00004_    373 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Worker18    00002AF0  Tue 08/14 10:38:05.230  [W18] _00003_ SPINMGR  BinSpin Ready worker.processmessage   ENDS 000 (+ 1)
+Worker20    000023D8  Tue 08/14 10:38:05.230  [W20] _00009_ SECURITYMGR  Security Ready worker.processmessage BEGINS 001
+Events      000007EC  Tue 08/14 10:38:05.230  <Tx>  [Ready] SysHeartbeat 000     373 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// NOW   7 of 11 258 Offlines _00004_ OFFMGR Ready
+EventQ      000023D8  Tue 08/14 10:38:05.230  _00009_    372 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+OfflinesH   000007EC  Tue 08/14 10:38:05.231  _00004_ OFFMGR  RUN001 SleepWalk DispatchEvent
+Offlines    000007EC  Tue 08/14 10:38:05.231  _00004_ OFFMGR  RUN001 0049  Posting SLEEPWALK
+Security    000023D8  Tue 08/14 10:38:05.231  _00009_ SECURITYMGR  RUN001 0049  <Rx>  [Ready] SysHeartbeat     372 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep//
+Worker18    00002AF0  Tue 08/14 10:38:05.231  [W18] _00004_ OFFMGR  Offlines Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:05.231  _00007_    374 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Worker20    000023D8  Tue 08/14 10:38:05.231  [W20] _00009_ SECURITYMGR  Security Ready worker.processmessage   ENDS 000 (+ 1)
+EventQ      00002AF0  Tue 08/14 10:38:05.231  _00004_    373 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Events      000007EC  Tue 08/14 10:38:05.231  <Tx>  [Ready] SysHeartbeat 000     374 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// NOW   6 of 11 258 MulTokAdd _00007_ MTOKMGR Ready
+MulTokAddH  000007EC  Tue 08/14 10:38:05.231  _00007_ MTOKMGR  RUN001 SleepWalk DispatchEvent
+MulTokAdd   000007EC  Tue 08/14 10:38:05.231  _00007_ MTOKMGR  RUN001 0049  Posting SLEEPWALK
+Offlines    00002AF0  Tue 08/14 10:38:05.231  _00004_ OFFMGR  RUN001 0050  <Rx>  [Ready] SysHeartbeat     373 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep//
+EventQ      000007EC  Tue 08/14 10:38:05.231  _00002_    375 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Worker20    000023D8  Tue 08/14 10:38:05.231  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage BEGINS 001
+Events      000007EC  Tue 08/14 10:38:05.231  <Tx>  [Pause] SysHeartbeat 000     375 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// NOW   5 of 11 258 Import _00002_ IMPORTMGR Pause
+Worker18    00002AF0  Tue 08/14 10:38:05.231  [W18] _00004_ OFFMGR  Offlines Ready worker.processmessage   ENDS 000 (+ 1)
+EventQ      000023D8  Tue 08/14 10:38:05.231  _00007_    374 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+ImportH     000007EC  Tue 08/14 10:38:05.231  _00002_ IMPORTMGR  RUN001 SleepWalk DispatchEvent
+Import      000007EC  Tue 08/14 10:38:05.231  _00002_ IMPORTMGR  RUN001 0045  Posting SLEEPWALK
+MulTokAdd   000023D8  Tue 08/14 10:38:05.231  _00007_ MTOKMGR  RUN001 0050  <Rx>  [Ready] SysHeartbeat     374 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep//
+Worker18    00002AF0  Tue 08/14 10:38:05.231  [W18] _00002_ IMPORTMGR  Import Pause worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:05.231  _00010_    376 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      00002AF0  Tue 08/14 10:38:05.231  _00002_    375 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Worker20    000023D8  Tue 08/14 10:38:05.232  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage   ENDS 000 (+ 1)
+Events      000007EC  Tue 08/14 10:38:05.232  <Tx>  [Ready] SysHeartbeat 000     376 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// NOW   4 of 11 258 Global _00010_ GLOBALSTAT Ready
+Import      00002AF0  Tue 08/14 10:38:05.232  _00002_ IMPORTMGR  RUN001 0046  <Rx>  [Pause] SysHeartbeat     375 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep//
+GlobalH     000007EC  Tue 08/14 10:38:05.232  _00010_ GLOBALSTAT  RUN001 SleepWalk DispatchEvent
+Global      000007EC  Tue 08/14 10:38:05.232  _00010_ GLOBALSTAT  RUN001 Posting SLEEPWALK
+Worker18    00002AF0  Tue 08/14 10:38:05.232  [W18] _00002_ IMPORTMGR  Import Pause worker.processmessage   ENDS 000 (+ 1)
+Worker20    000023D8  Tue 08/14 10:38:05.232  [W20] _00010_ GLOBALSTAT  Global Ready worker.processmessage BEGINS 001
+EventQ      000023D8  Tue 08/14 10:38:05.232  _00010_    376 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Global      000023D8  Tue 08/14 10:38:05.232  _00010_ GLOBALSTAT  RUN001 <Rx>  [Ready] SysHeartbeat     376 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep//
+Worker20    000023D8  Tue 08/14 10:38:05.232  [W20] _00010_ GLOBALSTAT  Global Ready worker.processmessage   ENDS 000 (+ 1)
+TcpClient   000011EC  Tue 08/14 10:38:05.609  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(12) t0:0/r0 7 Active
+TcpClient   000011EC  Tue 08/14 10:38:05.609  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(12) t0:0/r0 7 Breather
+TcpClient   000011EC  Tue 08/14 10:38:05.933  Data Received (FD_READ)
+TcpClient   000011EC  Tue 08/14 10:38:05.933  40 new bytes received (40 Total) - ETX(True)
+TcpClient   000011EC  Tue 08/14 10:38:05.933  SleepWalk
+TcpClient   000011EC  Tue 08/14 10:38:05.933  <Rx>     Sa (H)Heartbeat       9 CE02 016546 cli0000 seq0000 "//0510// " //0//
+TcpClient   000011EC  Tue 08/14 10:38:05.933  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(12) t0:0/r1 7 Active
+Express     000011EC  Tue 08/14 10:38:05.933  ProcessHeartbeat //0510// 016546 ",," WaitRes
+Express     000011EC  Tue 08/14 10:38:05.933  SleepWalk
+TcpClient   000011EC  Tue 08/14 10:38:05.933  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(13) t0:0/r0 7 Active
+TcpClient   000011EC  Tue 08/14 10:38:05.933  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(13) t0:0/r0 7 Breather
+TcpClient   000011EC  Tue 08/14 10:38:05.933  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(13) t0:0/r0 7 Active
+TcpClient   000011EC  Tue 08/14 10:38:05.933  CE02 162.255.134.208 2/4 0 1 Tx(18) Rx(13) t0:0/r0 7 Breather
+EventQ      000007EC  Tue 08/14 10:38:06.233  _00003_    377 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:06.233  <Tx>  [Ready] SysHeartbeat 000     377 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// NOW   11 of 11 258 BinSpin _00003_ SPINMGR Ready
+BinSpinH    000007EC  Tue 08/14 10:38:06.233  _00003_ SPINMGR  RUN001 SleepWalk DispatchEvent
+BinSpin     000007EC  Tue 08/14 10:38:06.233  _00003_ SPINMGR  RUN001 0049  Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:06.233  [W20] _00003_ SPINMGR  BinSpin Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:06.233  _00009_    378 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      000023D8  Tue 08/14 10:38:06.233  _00003_    377 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+BinSpin     000023D8  Tue 08/14 10:38:06.233  _00003_ SPINMGR  RUN001 0050  <Rx>  [Ready] SysHeartbeat     377 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:06.233  <Tx>  [Ready] SysHeartbeat 000     378 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// NOW   10 of 11 258 Security _00009_ SECURITYMGR Ready
+Worker20    000023D8  Tue 08/14 10:38:06.233  [W20] _00003_ SPINMGR  BinSpin Ready worker.processmessage   ENDS 000 (+ 1)
+SecurityH   000007EC  Tue 08/14 10:38:06.233  _00009_ SECURITYMGR  RUN001 SleepWalk DispatchEvent
+Security    000007EC  Tue 08/14 10:38:06.233  _00009_ SECURITYMGR  RUN001 0049  Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:06.233  [W20] _00009_ SECURITYMGR  Security Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:06.233  _00004_    379 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      000023D8  Tue 08/14 10:38:06.233  _00009_    378 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Security    000023D8  Tue 08/14 10:38:06.233  _00009_ SECURITYMGR  RUN001 0050  <Rx>  [Ready] SysHeartbeat     378 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:06.234  <Tx>  [Ready] SysHeartbeat 000     379 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// NOW   7 of 11 258 Offlines _00004_ OFFMGR Ready
+OfflinesH   000007EC  Tue 08/14 10:38:06.234  _00004_ OFFMGR  RUN001 SleepWalk DispatchEvent
+Offlines    000007EC  Tue 08/14 10:38:06.234  _00004_ OFFMGR  RUN001 0050  Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:06.234  [W20] _00009_ SECURITYMGR  Security Ready worker.processmessage   ENDS 000 (+ 1)
+Worker18    00002AF0  Tue 08/14 10:38:06.234  [W18] _00004_ OFFMGR  Offlines Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:06.234  _00007_    380 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      00002AF0  Tue 08/14 10:38:06.234  _00004_    379 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Events      000007EC  Tue 08/14 10:38:06.234  <Tx>  [Ready] SysHeartbeat 000     380 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// NOW   6 of 11 258 MulTokAdd _00007_ MTOKMGR Ready
+Offlines    00002AF0  Tue 08/14 10:38:06.234  _00004_ OFFMGR  RUN001 0051  <Rx>  [Ready] SysHeartbeat     379 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep//
+MulTokAddH  000007EC  Tue 08/14 10:38:06.234  _00007_ MTOKMGR  RUN001 SleepWalk DispatchEvent
+MulTokAdd   000007EC  Tue 08/14 10:38:06.234  _00007_ MTOKMGR  RUN001 0050  Posting SLEEPWALK
+Worker18    00002AF0  Tue 08/14 10:38:06.234  [W18] _00004_ OFFMGR  Offlines Ready worker.processmessage   ENDS 000 (+ 1)
+EventQ      000007EC  Tue 08/14 10:38:06.234  _00002_    381 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Worker20    000023D8  Tue 08/14 10:38:06.234  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage BEGINS 001
+Events      000007EC  Tue 08/14 10:38:06.234  <Tx>  [Pause] SysHeartbeat 000     381 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// NOW   5 of 11 258 Import _00002_ IMPORTMGR Pause
+EventQ      000023D8  Tue 08/14 10:38:06.235  _00007_    380 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+ImportH     000007EC  Tue 08/14 10:38:06.235  _00002_ IMPORTMGR  RUN001 SleepWalk DispatchEvent
+Import      000007EC  Tue 08/14 10:38:06.235  _00002_ IMPORTMGR  RUN001 0046  Posting SLEEPWALK
+MulTokAdd   000023D8  Tue 08/14 10:38:06.235  _00007_ MTOKMGR  RUN001 0051  <Rx>  [Ready] SysHeartbeat     380 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep//
+Worker18    00002AF0  Tue 08/14 10:38:06.235  [W18] _00002_ IMPORTMGR  Import Pause worker.processmessage BEGINS 001
+Worker20    000023D8  Tue 08/14 10:38:06.235  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage   ENDS 000 (+ 1)
+EventQ      000007EC  Tue 08/14 10:38:06.235  _00010_    382 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      00002AF0  Tue 08/14 10:38:06.235  _00002_    381 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Events      000007EC  Tue 08/14 10:38:06.235  <Tx>  [Ready] SysHeartbeat 000     382 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// NOW   4 of 11 258 Global _00010_ GLOBALSTAT Ready
+Import      00002AF0  Tue 08/14 10:38:06.235  _00002_ IMPORTMGR  RUN001 0047  <Rx>  [Pause] SysHeartbeat     381 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep//
+GlobalH     000007EC  Tue 08/14 10:38:06.235  _00010_ GLOBALSTAT  RUN001 SleepWalk DispatchEvent
+Global      000007EC  Tue 08/14 10:38:06.235  _00010_ GLOBALSTAT  RUN001 Posting SLEEPWALK
+Worker18    00002AF0  Tue 08/14 10:38:06.235  [W18] _00002_ IMPORTMGR  Import Pause worker.processmessage   ENDS 000 (+ 1)
+Worker20    000023D8  Tue 08/14 10:38:06.235  [W20] _00010_ GLOBALSTAT  Global Ready worker.processmessage BEGINS 001
+EventQ      000023D8  Tue 08/14 10:38:06.235  _00010_    382 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Global      000023D8  Tue 08/14 10:38:06.235  _00010_ GLOBALSTAT  RUN001 <Rx>  [Ready] SysHeartbeat     382 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep//
+Worker20    000023D8  Tue 08/14 10:38:06.235  [W20] _00010_ GLOBALSTAT  Global Ready worker.processmessage   ENDS 000 (+ 1)
+TcpClient   000021B8  Tue 08/14 10:38:06.683  --ActiveCircuits(0) h A //0510// CE02 016546      NETAPI        1  1  1 WaitRes 56
+Express     000021B8  Tue 08/14 10:38:06.683  WaitRes changed to Complete because SetCircuitComplete called //0510// 016546
+Express     000021B8  Tue 08/14 10:38:06.683  Complete    h A //0510// CE02 016546      NETAPI        1  1  1 Complete 56
+TcpClient   000011EC  Tue 08/14 10:38:06.683  CE02 162.255.134.208 2/4 0 0 Tx(18) Rx(13) t1:0/r0 6 Active
+Express     000021B8  Tue 08/14 10:38:06.683  1 Circuits Freed
+TcpClient   000011EC  Tue 08/14 10:38:06.683  <Tx>     Sa (T)Logout         23 CE02 016546 cli0000 seq0000 "//0510// 08/14 10:38:06" //0//
+TcpClient   000011EC  Tue 08/14 10:38:06.683  CE02 162.255.134.208 2/4 0 0 Tx(19) Rx(13) t0:0/r0 10 Idle
+EventQ      000007EC  Tue 08/14 10:38:07.235  _00003_    383 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:07.235  <Tx>  [Ready] SysHeartbeat 000     383 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// NOW   11 of 11 258 BinSpin _00003_ SPINMGR Ready
+BinSpinH    000007EC  Tue 08/14 10:38:07.235  _00003_ SPINMGR  RUN001 SleepWalk DispatchEvent
+BinSpin     000007EC  Tue 08/14 10:38:07.235  _00003_ SPINMGR  RUN001 0050  Posting SLEEPWALK
+Worker20    000023D8  Tue 08/14 10:38:07.235  [W20] _00003_ SPINMGR  BinSpin Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:07.235  _00009_    384 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Events      000007EC  Tue 08/14 10:38:07.235  <Tx>  [Ready] SysHeartbeat 000     384 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// NOW   10 of 11 258 Security _00009_ SECURITYMGR Ready
+SecurityH   000007EC  Tue 08/14 10:38:07.235  _00009_ SECURITYMGR  RUN001 SleepWalk DispatchEvent
+Security    000007EC  Tue 08/14 10:38:07.235  _00009_ SECURITYMGR  RUN001 0050  Posting SLEEPWALK
+EventQ      000023D8  Tue 08/14 10:38:07.235  _00003_    383 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Worker18    00002AF0  Tue 08/14 10:38:07.235  [W18] _00009_ SECURITYMGR  Security Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:07.235  _00004_    385 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+BinSpin     000023D8  Tue 08/14 10:38:07.235  _00003_ SPINMGR  RUN001 0051  <Rx>  [Ready] SysHeartbeat     383 990 HEARTBEAT SYSTEM=>SPINMGR i"SINGLETON" //beep//
+EventQ      00002AF0  Tue 08/14 10:38:07.235  _00009_    384 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Events      000007EC  Tue 08/14 10:38:07.235  <Tx>  [Ready] SysHeartbeat 000     385 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// NOW   7 of 11 258 Offlines _00004_ OFFMGR Ready
+OfflinesH   000007EC  Tue 08/14 10:38:07.235  _00004_ OFFMGR  RUN001 SleepWalk DispatchEvent
+Offlines    000007EC  Tue 08/14 10:38:07.235  _00004_ OFFMGR  RUN001 0051  Posting SLEEPWALK
+Security    00002AF0  Tue 08/14 10:38:07.235  _00009_ SECURITYMGR  RUN001 0051  <Rx>  [Ready] SysHeartbeat     384 990 HEARTBEAT SYSTEM=>SECURITYMGR i"SINGLETON" //beep//
+EventQ      000007EC  Tue 08/14 10:38:07.235  _00007_    386 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+Worker18    00002AF0  Tue 08/14 10:38:07.235  [W18] _00009_ SECURITYMGR  Security Ready worker.processmessage   ENDS 000 (+ 1)
+Worker20    000023D8  Tue 08/14 10:38:07.235  [W20] _00003_ SPINMGR  BinSpin Ready worker.processmessage   ENDS 000 (+ 1)
+Events      000007EC  Tue 08/14 10:38:07.235  <Tx>  [Ready] SysHeartbeat 000     386 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// NOW   6 of 11 258 MulTokAdd _00007_ MTOKMGR Ready
+MulTokAddH  000007EC  Tue 08/14 10:38:07.235  _00007_ MTOKMGR  RUN001 SleepWalk DispatchEvent
+MulTokAdd   000007EC  Tue 08/14 10:38:07.236  _00007_ MTOKMGR  RUN001 0051  Posting SLEEPWALK
+Worker17    00001844  Tue 08/14 10:38:07.236  [W17] _00004_ OFFMGR  Offlines Ready worker.processmessage BEGINS 001
+Worker20    000023D8  Tue 08/14 10:38:07.236  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage BEGINS 001
+EventQ      000007EC  Tue 08/14 10:38:07.236  _00002_    387 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      00001844  Tue 08/14 10:38:07.236  _00004_    385 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Offlines    00001844  Tue 08/14 10:38:07.236  _00004_ OFFMGR  RUN001 0052  <Rx>  [Ready] SysHeartbeat     385 990 HEARTBEAT SYSTEM=>OFFMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:07.236  <Tx>  [Pause] SysHeartbeat 000     387 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// NOW   5 of 11 258 Import _00002_ IMPORTMGR Pause
+ImportH     000007EC  Tue 08/14 10:38:07.236  _00002_ IMPORTMGR  RUN001 SleepWalk DispatchEvent
+Import      000007EC  Tue 08/14 10:38:07.236  _00002_ IMPORTMGR  RUN001 0047  Posting SLEEPWALK
+EventQ      000023D8  Tue 08/14 10:38:07.236  _00007_    386 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+MulTokAdd   000023D8  Tue 08/14 10:38:07.236  _00007_ MTOKMGR  RUN001 0052  <Rx>  [Ready] SysHeartbeat     386 990 HEARTBEAT SYSTEM=>MTOKMGR i"SINGLETON" //beep//
+Worker18    00002AF0  Tue 08/14 10:38:07.236  [W18] _00002_ IMPORTMGR  Import Pause worker.processmessage BEGINS 001
+Worker20    000023D8  Tue 08/14 10:38:07.236  [W20] _00007_ MTOKMGR  MulTokAdd Ready worker.processmessage   ENDS 000 (+ 1)
+Worker17    00001844  Tue 08/14 10:38:07.236  [W17] _00004_ OFFMGR  Offlines Ready worker.processmessage   ENDS 000 (+ 1)
+EventQ      000007EC  Tue 08/14 10:38:07.236  _00010_    388 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// added to EventQueue for a new total of   1 Pending Event
+EventQ      00002AF0  Tue 08/14 10:38:07.236  _00002_    387 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Import      00002AF0  Tue 08/14 10:38:07.236  _00002_ IMPORTMGR  RUN001 0048  <Rx>  [Pause] SysHeartbeat     387 990 HEARTBEAT SYSTEM=>IMPORTMGR i"SINGLETON" //beep//
+Events      000007EC  Tue 08/14 10:38:07.236  <Tx>  [Ready] SysHeartbeat 000     388 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// NOW   4 of 11 258 Global _00010_ GLOBALSTAT Ready
+Worker18    00002AF0  Tue 08/14 10:38:07.236  [W18] _00002_ IMPORTMGR  Import Pause worker.processmessage   ENDS 000 (+ 1)
+GlobalH     000007EC  Tue 08/14 10:38:07.236  _00010_ GLOBALSTAT  RUN001 SleepWalk DispatchEvent
+Global      000007EC  Tue 08/14 10:38:07.236  _00010_ GLOBALSTAT  RUN001 Posting SLEEPWALK
+Worker18    00002AF0  Tue 08/14 10:38:07.236  [W18] _00010_ GLOBALSTAT  Global Ready worker.processmessage BEGINS 001
+EventQ      00002AF0  Tue 08/14 10:38:07.236  _00010_    388 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep// removed from EventQueue leaving a new total of  No Pending Events
+Global      00002AF0  Tue 08/14 10:38:07.236  _00010_ GLOBALSTAT  RUN001 <Rx>  [Ready] SysHeartbeat     388 990 HEARTBEAT SYSTEM=>GLOBALSTAT i"SINGLETON" //beep//
+Worker18    00002AF0  Tue 08/14 10:38:07.236  [W18] _00010_ GLOBALSTAT  Global Ready worker.processmessage   ENDS 000 (+ 1)
+TxtTrace    00001FD4  Tue 08/14 10:38:07 U0276.TRC v 04.05.00/4.7.0.2302 Closed DEFAULT  55 2302f 19/90 (j) [8,256Kb 8.06Mb] NETAPI 10:37:11a Tue 08/14

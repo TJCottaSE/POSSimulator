@@ -1,0 +1,131 @@
+\hypertarget{class_form_sim_1_1_log_writer}{}\section{Form\+Sim.\+Log\+Writer Class Reference}
+\label{class_form_sim_1_1_log_writer}\index{Form\+Sim.\+Log\+Writer@{Form\+Sim.\+Log\+Writer}}
+
+
+The \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}} class is used as a logging device. The singleton provides a single point of logging to all threads which can be useful in debugging, as not all intermediate results will be returned to the UI when using the basic transaction flow. Current output path is c\+:/\+Users/tcotta.shift4/\+Desktop/\+Form\+Sim\+Log.\+log.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_form_sim_1_1_log_writer_a68f7b66a739339396ee0b575813fd986}{Write}} (string value)
+\begin{DoxyCompactList}\small\item\em Writes a string to the log. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_form_sim_1_1_log_writer_ade1899b921aefffbe53695cfde35cd99}{Write}} (char value)
+\begin{DoxyCompactList}\small\item\em Writes a character to the log. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_form_sim_1_1_log_writer_a50cd130c993c0412f9e563f9baabb8b4}{Write}} (byte value)
+\begin{DoxyCompactList}\small\item\em Writes a byte to the log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}} \mbox{\hyperlink{class_form_sim_1_1_log_writer_ac885dc41c236f618e066cdcee8189f64}{get\+Instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets a handle to the \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_form_sim_1_1_log_writer_af6cb07c1c0002786e836f8f36526eb74}{Log\+Writer}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_form_sim_1_1_log_writer_ac5a2e70a6686c89095cb405bb5b5c7ea}{path}}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static readonly \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}} \mbox{\hyperlink{class_form_sim_1_1_log_writer_aa018a2effe4cf7a046fd44fe337386aa}{instance}} = new \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}} class is used as a logging device. The singleton provides a single point of logging to all threads which can be useful in debugging, as not all intermediate results will be returned to the UI when using the basic transaction flow. Current output path is c\+:/\+Users/tcotta.shift4/\+Desktop/\+Form\+Sim\+Log.\+log. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_log_writer_af6cb07c1c0002786e836f8f36526eb74}\label{class_form_sim_1_1_log_writer_af6cb07c1c0002786e836f8f36526eb74}} 
+\index{Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}!Log\+Writer@{Log\+Writer}}
+\index{Log\+Writer@{Log\+Writer}!Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}}
+\subsubsection{\texorpdfstring{Log\+Writer()}{LogWriter()}}
+{\footnotesize\ttfamily Form\+Sim.\+Log\+Writer.\+Log\+Writer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_log_writer_a68f7b66a739339396ee0b575813fd986}\label{class_form_sim_1_1_log_writer_a68f7b66a739339396ee0b575813fd986}} 
+\index{Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}!Write@{Write}}
+\index{Write@{Write}!Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}}
+\subsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Form\+Sim.\+Log\+Writer.\+Write (\begin{DoxyParamCaption}\item[{string}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a string to the log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The string to be written.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_form_sim_1_1_log_writer_ade1899b921aefffbe53695cfde35cd99}\label{class_form_sim_1_1_log_writer_ade1899b921aefffbe53695cfde35cd99}} 
+\index{Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}!Write@{Write}}
+\index{Write@{Write}!Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}}
+\subsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Form\+Sim.\+Log\+Writer.\+Write (\begin{DoxyParamCaption}\item[{char}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a character to the log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The character to be written.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_form_sim_1_1_log_writer_a50cd130c993c0412f9e563f9baabb8b4}\label{class_form_sim_1_1_log_writer_a50cd130c993c0412f9e563f9baabb8b4}} 
+\index{Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}!Write@{Write}}
+\index{Write@{Write}!Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}}
+\subsubsection{\texorpdfstring{Write()}{Write()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Form\+Sim.\+Log\+Writer.\+Write (\begin{DoxyParamCaption}\item[{byte}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes a byte to the log. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The byte to be written.\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_log_writer_aa018a2effe4cf7a046fd44fe337386aa}\label{class_form_sim_1_1_log_writer_aa018a2effe4cf7a046fd44fe337386aa}} 
+\index{Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}!instance@{instance}}
+\index{instance@{instance}!Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}}
+\subsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily readonly \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}} Form\+Sim.\+Log\+Writer.\+instance = new \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}}()\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_form_sim_1_1_log_writer_ac5a2e70a6686c89095cb405bb5b5c7ea}\label{class_form_sim_1_1_log_writer_ac5a2e70a6686c89095cb405bb5b5c7ea}} 
+\index{Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}!path@{path}}
+\index{path@{path}!Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}}
+\subsubsection{\texorpdfstring{path}{path}}
+{\footnotesize\ttfamily string Form\+Sim.\+Log\+Writer.\+path\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_form_sim_1_1_log_writer_ac885dc41c236f618e066cdcee8189f64}\label{class_form_sim_1_1_log_writer_ac885dc41c236f618e066cdcee8189f64}} 
+\index{Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Form\+Sim\+::\+Log\+Writer@{Form\+Sim\+::\+Log\+Writer}}
+\subsubsection{\texorpdfstring{get\+Instance}{getInstance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}} Form\+Sim.\+Log\+Writer.\+get\+Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Gets a handle to the \mbox{\hyperlink{class_form_sim_1_1_log_writer}{Log\+Writer}}. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_log_writer_8cs}{Log\+Writer.\+cs}}\end{DoxyCompactItemize}
